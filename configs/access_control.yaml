@@ -1,0 +1,58 @@
+# Lab 6 — Role-Based Access Control policy for the readmission API and pipelines.
+#
+# Principle of LEAST PRIVILEGE: every role gets only the permissions its job
+# needs, nothing more. If a key leaks, the damage is limited to that role.
+#
+#   viewer      -> can only look at model information (dashboards, auditors)
+#   clinician   -> scores ONE patient at a time and can see WHY (explanation);
+#                  cannot bulk-export predictions for a whole population
+#   analyst     -> population-level work: batch scoring + drift monitoring
+#   ml_engineer -> everything analyst has + operating the ML pipelines
+#                  (train / validate / retrain / register a model)
+#   admin       -> "*" wildcard = every permission (keep this key very rare)
+#
+# Authentication (who are you?) uses the X-API-Key header -> 401 if missing/invalid.
+# Authorisation (may you do this?) uses this file      -> 403 if role lacks permission.
+# API keys themselves are NEVER stored here — they come from the API_KEYS env var
+# (format name:role:key,...) and only their SHA-256 hashes are kept in memory.
+
+# Any role name not in this list is rejected when the policy is loaded.
+allowed_roles: [viewer, clinician, analyst, ml_engineer, admin]
+
+roles:
+  viewer:
+    description: Read-only access to model metadata.
+    permissions: ["model:read"]
+  clinician:
+    description: Single-patient scoring and explanations at the point of care.
+    permissions: ["model:read", "predict:single", "predict:explain"]
+  analyst:
+    description: Population analytics - batch scoring and drift monitoring.
+    permissions: ["model:read", "predict:single", "predict:batch", "monitor:drift"]
+  ml_engineer:
+    description: Operates the ML lifecycle (training, validation, retraining, registry).
+    permissions:
+      - "model:read"
+      - "predict:single"
+      - "predict:batch"
+      - "monitor:drift"
+      - "pipeline:train"
+      - "pipeline:validate"
+      - "pipeline:retrain"
+      - "model:register"
+  admin:
+    description: Full access (break-glass / platform owner).
+    permissions: ["*"]
+
+# Endpoint -> required permission. "public" endpoints need no key
+# (liveness/readiness probes and Prometheus scraping must work without secrets).
+endpoints:
+  "GET /": public
+  "GET /health": public
+  "GET /ready": public
+  "GET /metrics": public
+  "GET /model-info": "model:read"
+  "POST /predict": "predict:single"
+  "POST /predict/explain": "predict:explain"
+  "POST /predict/batch": "predict:batch"
+  "POST /monitor/drift": "monitor:drift"

@@ -1,0 +1,539 @@
+Healthcare
+Project Title
+Healthcare Patient Readmission Risk Prediction  End-to-End DevSecMLOps Project
+Main Objective
+Develop a machine learning system that predicts whether a hospital patient is likely to be readmitted within 30 days after discharge.
+The project must demonstrate the complete lifecycle:
+	•	Dataset collection or generation
+	•	Data validation
+	•	Exploratory data analysis
+	•	Data preprocessing
+	•	Feature engineering
+	•	Model training
+	•	Model evaluation
+	•	Experiment tracking
+	•	Model versioning
+	•	API development
+	•	Docker containerization
+	•	CI/CD automation
+	•	Security scanning
+	•	Infrastructure configuration
+	•	Monitoring
+	•	Logging
+	•	Drift detection
+	•	Automated retraining
+	•	Documentation
+	•	Testing
+Important Healthcare Requirements
+Use only public, anonymized, or synthetically generated healthcare data.
+Do not use real patient names, addresses, phone numbers, email addresses, medical record numbers, or other personally identifiable information.
+Include a clear disclaimer that the project is for educational and demonstration purposes only and must not be used for real clinical diagnosis or treatment decisions without professional validation.
+Dataset
+Create and include a synthetic CSV dataset named:
+data/raw/healthcare_readmission.csv
+Generate at least 5,000 patient records.
+The dataset must include the following input columns:
+	•	patient_id
+	•	age
+	•	gender
+	•	bmi
+	•	systolic_bp
+	•	diastolic_bp
+	•	heart_rate
+	•	blood_glucose
+	•	hba1c
+	•	cholesterol
+	•	number_of_medications
+	•	previous_admissions
+	•	length_of_stay
+	•	emergency_visits_last_year
+	•	chronic_disease_count
+	•	diabetes
+	•	hypertension
+	•	heart_disease
+	•	kidney_disease
+	•	smoking_status
+	•	alcohol_consumption
+	•	physical_activity_level
+	•	discharge_destination
+	•	follow_up_scheduled
+	•	insurance_type
+	•	admission_type
+Target/output column:
+	•	readmitted_30_days
+Target values:
+	•	0 = Not readmitted within 30 days
+	•	1 = Readmitted within 30 days
+Create realistic relationships between the features and target. For example, patients with more previous admissions, chronic illnesses, emergency visits, abnormal blood glucose, longer hospital stays, and no scheduled follow-up should have a higher probability of readmission.
+Include missing values, limited outliers, categorical variables, and class imbalance so that the preprocessing pipeline is realistic.
+Expected Single Prediction Input
+The REST API must accept input in the following format:
+{
+  "age": 67,
+  "gender": "Male",
+  "bmi": 31.5,
+  "systolic_bp": 145,
+  "diastolic_bp": 92,
+  "heart_rate": 88,
+  "blood_glucose": 178,
+  "hba1c": 8.2,
+  "cholesterol": 235,
+  "number_of_medications": 7,
+  "previous_admissions": 3,
+  "length_of_stay": 8,
+  "emergency_visits_last_year": 2,
+  "chronic_disease_count": 4,
+  "diabetes": 1,
+  "hypertension": 1,
+  "heart_disease": 1,
+  "kidney_disease": 0,
+  "smoking_status": "Former",
+  "alcohol_consumption": "Low",
+  "physical_activity_level": "Low",
+  "discharge_destination": "Home",
+  "follow_up_scheduled": 0,
+  "insurance_type": "Private",
+  "admission_type": "Emergency"
+}
+Expected Single Prediction Output
+{
+  "prediction": 1,
+  "prediction_label": "High Risk of 30-Day Readmission",
+  "readmission_probability": 0.78,
+  "risk_level": "High",
+  "model_version": "1.0.0",
+  "timestamp": "ISO-8601 timestamp"
+}
+Batch Prediction Input
+The API must support uploading a CSV file containing multiple patient records.
+Batch Prediction Output
+Return a CSV file containing:
+	•	patient_id
+	•	prediction
+	•	prediction_label
+	•	readmission_probability
+	•	risk_level
+	•	model_version
+	•	prediction_timestamp
+Technology Stack
+Use the following technologies:
+Programming and Machine Learning
+	•	Python 3.11
+	•	Pandas
+	•	NumPy
+	•	Scikit-learn
+	•	XGBoost or LightGBM
+	•	Matplotlib
+	•	SHAP
+	•	Joblib
+API
+	•	FastAPI
+	•	Pydantic
+	•	Uvicorn
+MLOps
+	•	MLflow for experiment tracking and model registry
+	•	DVC for dataset and model versioning
+	•	Evidently for data drift and model monitoring
+	•	Prefect or Apache Airflow for pipeline orchestration
+DevOps
+	•	Git
+	•	GitHub
+	•	GitHub Actions
+	•	Docker
+	•	Docker Compose
+	•	Makefile
+DevSecOps
+	•	Bandit for Python security analysis
+	•	Trivy for Docker image and dependency scanning
+	•	Gitleaks for secret detection
+	•	pip-audit for vulnerable Python dependencies
+	•	Checkov for infrastructure-as-code scanning
+	•	Dependabot configuration
+	•	CodeQL GitHub Action
+	•	pre-commit hooks
+Monitoring
+	•	Prometheus
+	•	Grafana
+	•	Structured application logging
+	•	Health-check endpoint
+	•	Prediction count and latency metrics
+	•	Drift reports
+Machine Learning Requirements
+Build a reproducible Scikit-learn pipeline containing:
+	•	Missing-value imputation
+	•	Outlier handling
+	•	Numerical scaling
+	•	Categorical encoding
+	•	Feature engineering
+	•	Class imbalance handling
+	•	Model training
+	•	Hyperparameter tuning
+	•	Probability calibration
+Train and compare at least three models:
+	•	Logistic Regression
+	•	Random Forest
+	•	XGBoost or HistGradientBoostingClassifier
+Evaluate models using:
+	•	Accuracy
+	•	Precision
+	•	Recall
+	•	F1-score
+	•	ROC-AUC
+	•	PR-AUC
+	•	Confusion matrix
+	•	Classification report
+	•	Calibration curve
+Because healthcare risk prediction may involve class imbalance, prioritize recall, PR-AUC, ROC-AUC, and clinically meaningful threshold selection rather than accuracy alone.
+Save the best model as:
+models/readmission_model.joblib
+Also save:
+	•	preprocessing pipeline
+	•	feature list
+	•	model metadata
+	•	selected threshold
+	•	evaluation metrics
+	•	model version
+}
+API Endpoints
+Create these FastAPI endpoints:
+	•	GET /
+	•	GET /health
+	•	GET /ready
+	•	GET /model-info
+	•	GET /metrics
+	•	POST /predict
+	•	POST /predict/explain
+	•	POST /predict/batch
+	•	POST /monitor/drift
+Add:
+	•	Input validation
+	•	Error handling
+	•	Request IDs
+	•	Structured logging
+	•	API documentation
+	•	Response schemas
+	•	Rate-limiting example
+	•	Secure HTTP headers
+	•	Maximum upload-size validation
+Do not expose stack traces or sensitive configuration in API responses.
+DevSecOps Requirements
+Implement security throughout the complete software lifecycle.
+Include:
+Secure Coding
+	•	Environment variables for secrets
+	•	.env.example
+	•	No hardcoded passwords or tokens
+	•	Input validation
+	•	Dependency pinning
+	•	Safe file-upload handling
+	•	Non-root Docker user
+	•	Minimal Docker image
+	•	Read-only filesystem guidance
+	•	Secret-management recommendations
+Security Scanning
+Configure GitHub Actions to run:
+	•	Unit tests
+	•	Integration tests
+	•	Linting
+	•	Type checking
+	•	Bandit
+	•	pip-audit
+	•	Gitleaks
+	•	Trivy
+	•	Checkov
+	•	CodeQL
+	•	Docker image build
+	•	Software Bill of Materials generation
+The pipeline must fail on critical security vulnerabilities.
+CI/CD Pipeline
+Create GitHub Actions workflows for:
+	•	Pull request validation
+	•	Unit and integration tests
+	•	Code-quality checking
+	•	Security scanning
+	•	Model training
+	•	Data validation
+	•	Docker image building
+	•	Container security scanning
+	•	Image publishing
+	•	Staging deployment
+	•	Production deployment example
+	•	Scheduled drift detection
+	•	Scheduled model retraining
+Use separate workflow files where appropriate.
+Include manual approval guidance before production deployment.
+Data Validation
+Implement automated data validation for:
+	•	Required columns
+	•	Data types
+	•	Allowed categories
+	•	Missing-value limits
+	•	Numerical ranges
+	•	Duplicate patient IDs
+	•	Schema changes
+	•	Target distribution
+	•	Class imbalance
+	•	Data leakage checks
+Create unit tests for invalid and valid datasets.
+Monitoring and Drift Detection
+Use Evidently to compare training data with production inference data.
+Monitor:
+	•	Missing values
+	•	Feature distribution changes
+	•	Prediction distribution
+	•	Data drift
+	•	Concept drift when labels become available
+	•	API latency
+	•	Error rate
+	•	Prediction volume
+	•	High-risk prediction percentage
+Save drift reports in:
+reports/drift/
+Create an automated retraining condition, such as:
+	•	Retrain when dataset drift exceeds 30%
+	•	Retrain when ROC-AUC falls below an approved threshold
+	•	Retrain when prediction distribution changes significantly
+Required GitHub Repository Structure
+Generate the complete repository using a structure similar to:
+healthcare-readmission-devsecmlops/
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── security.yml
+│   │   ├── model-training.yml
+│   │   ├── docker-publish.yml
+│   │   ├── drift-monitoring.yml
+│   │   └── retraining.yml
+│   ├── dependabot.yml
+│   ├── CODEOWNERS
+│   ├── ISSUE_TEMPLATE/
+│   └── pull_request_template.md
+├── api/
+│   ├── main.py
+│   ├── schemas.py
+│   ├── prediction_service.py
+│   ├── security.py
+│   ├── logging_config.py
+│   └── middleware.py
+├── configs/
+│   ├── config.yaml
+│   ├── model_config.yaml
+│   ├── monitoring_config.yaml
+│   └── logging.yaml
+├── data/
+│   ├── raw/
+│   │   └── healthcare_readmission.csv
+│   ├── processed/
+│   │   ├── train.csv
+│   │   └── test.csv
+│   ├── sample_input.json
+│   ├── sample_batch_input.csv
+│   └── data_dictionary.md
+├── docs/
+│   ├── architecture.md
+│   ├── api_documentation.md
+│   ├── deployment.md
+│   ├── security.md
+│   ├── model_card.md
+│   ├── data_card.md
+│   └── risk_assessment.md
+├── infrastructure/
+│   ├── terraform/
+│   ├── kubernetes/
+│   └── monitoring/
+├── models/
+│   ├── readmission_model.joblib
+│   ├── preprocessor.joblib
+│   ├── threshold.json
+│   ├── model_metadata.json
+│   └── metrics.json
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   └── 03_model_evaluation.ipynb
+├── pipelines/
+│   ├── training_pipeline.py
+│   ├── validation_pipeline.py
+│   ├── monitoring_pipeline.py
+│   └── retraining_pipeline.py
+├── reports/
+│   ├── figures/
+│   ├── evaluation/
+│   └── drift/
+├── scripts/
+│   ├── generate_dataset.py
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── register_model.py
+│   └── seed_monitoring_data.py
+├── src/
+│   ├── data/
+│   ├── features/
+│   ├── models/
+│   ├── monitoring/
+│   └── utils/
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   ├── security/
+│   └── test_api.py
+├── .dvcignore
+├── .env.example
+├── .gitignore
+├── .pre-commit-config.yaml
+├── Dockerfile
+├── docker-compose.yml
+├── Makefile
+├── dvc.yaml
+├── params.yaml
+├── prometheus.yml
+├── pyproject.toml
+├── requirements.txt
+├── requirements-dev.txt
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
+Architecture Documentation
+Create a Mermaid architecture diagram showing:
+Dataset
+   ↓
+Data Validation
+   ↓
+Preprocessing and Feature Engineering
+   ↓
+Model Training
+   ↓
+MLflow Experiment Tracking
+   ↓
+Model Registry
+   ↓
+Security and Quality Gate
+   ↓
+Docker Image
+   ↓
+Staging Deployment
+   ↓
+Production API
+   ↓
+Prometheus and Grafana Monitoring
+   ↓
+Evidently Drift Detection
+   ↓
+Automated Retraining
+Also include a Mermaid CI/CD flow diagram.
+README Requirements
+The README must contain:
+	•	Project overview
+	•	Business problem
+	•	Healthcare disclaimer
+	•	Main features
+	•	Architecture diagram
+	•	Technology stack
+	•	Repository structure
+	•	Dataset information
+	•	Input features
+	•	Output description
+	•	Installation instructions
+	•	Local development instructions
+	•	Dataset-generation command
+	•	Model-training command
+	•	MLflow instructions
+	•	API startup command
+	•	Docker instructions
+	•	API request examples
+	•	API response examples
+	•	Testing commands
+	•	Security scanning commands
+	•	Monitoring instructions
+	•	CI/CD explanation
+	•	Deployment guidance
+	•	Troubleshooting
+	•	Future improvements
+	•	License information
+Makefile Commands
+Include convenient commands such as:
+make install
+make generate-data
+make validate-data
+make preprocess
+make train
+make evaluate
+make test
+make lint
+make type-check
+make security-scan
+make docker-build
+make docker-up
+make docker-down
+make run-api
+make monitor
+make clean
+Total Project Inputs
+The project inputs must include:
+	•	Raw healthcare CSV dataset
+	•	Single-patient JSON request
+	•	Batch-patient CSV upload
+	•	Model configuration
+	•	Training hyperparameters
+	•	Data-validation configuration
+	•	Environment variables
+	•	Monitoring configuration
+	•	Deployment configuration
+Total Project Outputs
+The project outputs must include:
+	•	Processed training dataset
+	•	Processed testing dataset
+	•	Trained machine learning model
+	•	Preprocessing pipeline
+	•	Model evaluation metrics
+	•	Confusion matrix
+	•	ROC curve
+	•	Precision-recall curve
+	•	Feature-importance report
+	•	SHAP explanation plots
+	•	MLflow experiment records
+	•	Model registry entry
+	•	Prediction API
+	•	Single prediction JSON response
+	•	Batch prediction CSV response
+	•	Docker image
+	•	Security scan reports
+	•	Test coverage report
+	•	Prometheus metrics
+	•	Grafana dashboard configuration
+	•	Evidently drift report
+	•	Model card
+	•	Data card
+	•	Deployment documentation
+	•	GitHub Actions CI/CD workflows
+Output Instructions
+Generate the project file by file.
+For every file:
+	•	Display the complete relative file path.
+	•	Provide the complete executable file content.
+	•	Do not use placeholders such as “add your code here.”
+	•	Do not skip important files.
+	•	Ensure imports and file paths are consistent.
+	•	Ensure all commands in the README are functional.
+	•	Ensure the dataset-generation script creates the required CSV files.
+	•	Ensure the training pipeline runs after dataset generation.
+	•	Ensure the FastAPI application loads the trained model correctly.
+	•	Ensure tests correspond to the actual implementation.
+Start by providing:
+	•	Project overview
+	•	Architecture
+	•	Complete repository tree
+	•	Environment and dependency files
+	•	Synthetic dataset-generation script
+	•	Data-validation and preprocessing code
+	•	Training and evaluation pipeline
+	•	FastAPI application
+	•	Testing files
+	•	Docker and monitoring files
+	•	GitHub Actions workflows
+	•	Security configuration
+	•	Infrastructure examples
+	•	Complete README
+	•	Commands for running the entire project locally

@@ -1,0 +1,136 @@
+# =============================================================================
+# Deploy: staging (automatic) -> production (manual approval)   (Lab 5)
+# -----------------------------------------------------------------------------
+# Trigger: runs automatically after "Docker Publish" succeeds on main, or by
+# hand (workflow_dispatch) with an explicit image digest.
+#
+# Manual approval for production — how it works:
+#   The production job declares `environment: production`. GitHub pauses the
+#   job until a required reviewer approves it. One-time setup:
+#     Settings -> Environments -> New environment "production"
+#       [x] Required reviewers: add 1-6 people/teams (e.g. @org/ml-leads)
+#       [x] Prevent self-review (the person who pushed cannot approve)
+#       Wait timer (optional): e.g. 10 min soak time after staging
+#       Deployment branches and tags: "Selected" -> main and v*.*.* only
+#       Environment secrets: KUBE_CONFIG_PRODUCTION (only this env can read it)
+#     Create a "staging" environment the same way WITHOUT reviewers, holding
+#     KUBE_CONFIG_STAGING.
+#   Environment-scoped secrets mean the staging job can never read production
+#   credentials, and production credentials are released only after approval.
+#
+# This is an EXAMPLE deployment: if the kube-config secret is not configured,
+# the job renders the manifests offline (kubectl kustomize) and prints the
+# command it would run, instead of failing.
+# =============================================================================
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Docker Publish"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      image_digest:
+        description: "Image digest to deploy (sha256:...)"
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false # never cancel a deployment mid-way
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/healthcare-readmission-api
+  NAMESPACE: healthcare-readmission
+
+jobs:
+  resolve:
+    name: Resolve image
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # Only continue if the publish workflow actually succeeded.
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    outputs:
+      ref: ${{ steps.ref.outputs.ref }}
+    steps:
+      - id: ref
+        env:
+          INPUT_DIGEST: ${{ github.event.inputs.image_digest }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          image="${IMAGE,,}"  # GHCR image names must be lowercase
+          if [ -n "${INPUT_DIGEST}" ]; then
+            case "${INPUT_DIGEST}" in
+              sha256:[0-9a-f]*) echo "ref=${image}@${INPUT_DIGEST}" >> "$GITHUB_OUTPUT" ;;
+              *) echo "::error::image_digest must look like sha256:<hex>"; exit 1 ;;
+            esac
+          else
+            echo "ref=${image}:sha-${RUN_SHA::7}" >> "$GITHUB_OUTPUT"
+          fi
+
+  staging:
+    name: Deploy to staging
+    needs: [resolve]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: staging
+      url: https://staging.readmission.example.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Render Kubernetes manifests offline (kustomize build)
+        # kustomization.yaml deliberately excludes secret.example.yaml.
+        run: kubectl kustomize infrastructure/kubernetes/ > /dev/null
+      - name: Deploy
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
+          IMAGE_REF: ${{ needs.resolve.outputs.ref }}
+        run: |
+          if [ -z "${KUBE_CONFIG}" ]; then
+            echo "KUBE_CONFIG_STAGING not set -> example mode. Would run:"
+            echo "  kubectl -n ${NAMESPACE} set image deployment/readmission-api api=${IMAGE_REF}"
+            exit 0
+          fi
+          umask 077
+          printf '%s' "${KUBE_CONFIG}" > "${RUNNER_TEMP}/kubeconfig"
+          export KUBECONFIG="${RUNNER_TEMP}/kubeconfig"
+          kubectl apply -k infrastructure/kubernetes/
+          kubectl -n "${NAMESPACE}" set image deployment/readmission-api api="${IMAGE_REF}"
+          kubectl -n "${NAMESPACE}" rollout status deployment/readmission-api --timeout=300s
+      - name: Smoke test
+        run: echo "Example smoke test - curl -fsS https://staging.readmission.example.com/health"
+
+  production:
+    name: Deploy to production (manual approval)
+    needs: [resolve, staging]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # The pause-for-approval happens HERE, before any step runs.
+    environment:
+      name: production
+      url: https://readmission.example.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Deploy
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_PRODUCTION }}
+          IMAGE_REF: ${{ needs.resolve.outputs.ref }}
+        run: |
+          if [ -z "${KUBE_CONFIG}" ]; then
+            echo "KUBE_CONFIG_PRODUCTION not set -> example mode. Would run:"
+            echo "  kubectl -n ${NAMESPACE} set image deployment/readmission-api api=${IMAGE_REF}"
+            exit 0
+          fi
+          umask 077
+          printf '%s' "${KUBE_CONFIG}" > "${RUNNER_TEMP}/kubeconfig"
+          export KUBECONFIG="${RUNNER_TEMP}/kubeconfig"
+          kubectl apply -k infrastructure/kubernetes/
+          kubectl -n "${NAMESPACE}" set image deployment/readmission-api api="${IMAGE_REF}"
+          kubectl -n "${NAMESPACE}" rollout status deployment/readmission-api --timeout=300s

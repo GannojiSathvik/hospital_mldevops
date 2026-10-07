@@ -1,0 +1,99 @@
+# =============================================================================
+# Scheduled drift monitoring (Evidently)
+# -----------------------------------------------------------------------------
+# Daily at 06:00 UTC: compares the training (reference) data with recent
+# inference data using Evidently and uploads the HTML/JSON report from
+# reports/drift/. If drift crosses the retraining policy in
+# configs/monitoring_config.yaml, a warning annotation is raised; the actual
+# retraining is done by retraining.yml (weekly or on demand).
+#
+# CI has no live production traffic, so this demo seeds a synthetic
+# "production" inference log (scripts.seed_monitoring_data) before comparing.
+# In a real deployment you would instead download data/inference/ from the
+# production log store (S3 bucket, etc.).
+# =============================================================================
+name: Drift Monitoring
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: drift-monitoring
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  MLFLOW_TRACKING_URI: "sqlite:///mlflow.db"
+
+jobs:
+  drift:
+    name: Evidently drift report
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Building the throw-away reference model is not the RBAC-protected step here.
+      ENFORCE_PIPELINE_RBAC: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+      - run: pip install -r requirements.txt
+
+      - name: Build reference data + model
+        run: |
+          python -m scripts.generate_dataset
+          python -m scripts.preprocess
+          python -m pipelines.training_pipeline
+      - name: Seed demo inference log
+        run: |
+          if [ -f scripts/seed_monitoring_data.py ]; then
+            python -m scripts.seed_monitoring_data
+          else
+            echo "No seeding script; using existing data/inference/ if present."
+          fi
+
+      - name: Run monitoring pipeline
+        id: monitor
+        run: python -m pipelines.monitoring_pipeline
+
+      - name: Summarise drift
+        if: always()
+        run: |
+          latest="reports/drift/latest_summary.json"
+          [ -f "${latest}" ] || latest=""
+          if [ -n "${latest}" ]; then
+            {
+              echo "### Drift report"
+              echo '```json'
+              head -c 4000 "${latest}"
+              echo
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            if grep -q '"drift_detected": *true' "${latest}"; then
+              echo "::warning::Dataset drift detected — see the drift-report artifact; retraining.yml will act on it."
+            fi
+            if [ -f reports/drift/retrain_decision.json ]; then
+              { echo "### Retrain decision"; echo '```json'; cat reports/drift/retrain_decision.json; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+          fi
+
+      - name: Upload drift reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drift-report-${{ github.run_id }}
+          path: reports/drift/
+          retention-days: 30
+          if-no-files-found: warn

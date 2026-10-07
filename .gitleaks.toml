@@ -1,0 +1,23 @@
+# Gitleaks configuration: default rules + a narrow allowlist.
+# Only the obviously-fake demo values from .env.example are allowed — a real
+# key pasted into .env.example (or anywhere else) is still reported.
+title = "healthcare-readmission gitleaks config"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Fake demo keys in .env.example (BOTH path AND value must match)"
+condition = "AND"
+paths = ['''^\.env\.example$''']
+regexes = [
+  '''demo-(viewer|clinician|analyst|ml-engineer|admin)-key-change-me''',
+  '''demo-grafana-password-change-me''',
+]
+
+[[allowlists]]
+description = "Ephemeral CI-only keys in workflows and tests (not secrets; exist only in throw-away runners)"
+regexes = [
+  '''ci-(viewer|clinician|analyst|ml|admin)(-only)?-key''',
+  '''REPLACE_ME[A-Za-z0-9_:]*''',
+]

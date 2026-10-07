@@ -1,0 +1,11 @@
+# Loads every dashboard JSON from /var/lib/grafana/dashboards (mounted read-only).
+apiVersion: 1
+providers:
+  - name: readmission-dashboards
+    orgId: 1
+    folder: Healthcare Readmission
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    options:
+      path: /var/lib/grafana/dashboards

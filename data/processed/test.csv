@@ -1,0 +1,1201 @@
+patient_id,age,gender,bmi,systolic_bp,diastolic_bp,heart_rate,blood_glucose,hba1c,cholesterol,number_of_medications,previous_admissions,length_of_stay,emergency_visits_last_year,chronic_disease_count,diabetes,hypertension,heart_disease,kidney_disease,smoking_status,alcohol_consumption,physical_activity_level,discharge_destination,follow_up_scheduled,insurance_type,admission_type,readmitted_30_days
+P005800,70,Male,36.0,161,73,91,190.0,8.2,263.0,15,3,5,0,4,1,1,1,0,Never,None,Moderate,Home,1,Medicare,Elective,0
+P004019,59,Female,29.6,143,82,83,91.0,4.8,206.0,11,1,4,3,5,0,1,1,0,Never,,Moderate,Home,0,Private,Urgent,0
+P004672,57,Female,36.9,130,75,84,107.0,4.8,179.0,5,0,2,1,1,0,1,0,0,Former,None,Moderate,Home,0,Private,Elective,0
+P002381,60,Female,26.5,112,65,77,60.0,4.7,194.0,2,0,1,0,0,0,0,0,0,Former,Low,Moderate,Rehabilitation,1,Private,Emergency,1
+P005631,34,Male,26.6,89,60,59,144.0,7.0,184.0,6,1,3,2,3,1,0,0,0,Former,Low,High,Home,0,Private,Elective,0
+P005450,66,Male,30.1,117,84,71,91.0,5.3,303.0,7,1,5,1,1,0,0,1,0,Former,None,Low,Home,0,Medicare,Emergency,0
+P002783,72,Female,30.4,102,61,88,93.0,5.6,177.0,1,0,1,0,0,0,0,0,0,Former,Moderate,High,Home,0,Medicare,Urgent,0
+P004056,70,Female,33.0,116,66,75,171.0,7.5,179.0,6,1,9,1,5,1,1,0,0,Current,None,High,Home Health Care,1,Medicare,Elective,0
+P004127,79,Female,38.2,138,79,96,108.0,5.4,110.0,3,1,6,0,2,0,1,0,0,Never,,Moderate,Skilled Nursing Facility,1,Medicare,Emergency,1
+P001360,60,Female,32.6,132,91,79,184.0,8.0,318.0,4,0,3,0,1,1,0,0,0,Current,Moderate,Low,Rehabilitation,1,Uninsured,Urgent,1
+P001924,81,Male,24.4,134,75,99,66.0,5.1,212.0,3,2,4,0,1,0,0,0,0,Current,None,Low,Home Health Care,1,Medicare,Emergency,0
+P003948,34,Male,26.8,130,65,92,102.0,5.1,241.0,4,0,6,0,1,0,0,0,0,Never,Moderate,Low,Home,0,Private,Emergency,0
+P005531,53,Male,30.3,89,58,86,119.0,7.2,192.0,2,2,4,0,2,1,0,0,0,Never,None,Moderate,Home,1,Medicare,Urgent,0
+P001199,86,Male,32.2,140,75,81,161.0,6.9,238.0,4,3,9,1,5,1,1,0,1,Former,Moderate,Moderate,Home,1,Medicare,Urgent,0
+P003057,57,Female,35.8,122,62,92,107.0,4.2,131.0,1,1,4,1,0,0,0,0,0,Never,None,Low,Home,1,Private,Emergency,0
+P004315,64,Female,34.2,111,51,98,60.0,5.9,257.0,6,1,4,0,2,0,0,1,0,Former,High,High,Home Health Care,1,Private,Elective,0
+P002182,68,Female,25.6,133,87,69,143.0,7.9,217.0,3,0,4,1,3,1,1,0,0,Never,None,Low,Home Health Care,0,Medicare,Elective,0
+P001520,35,Male,30.6,124,84,74,76.0,4.6,213.0,7,1,4,1,4,0,1,0,0,Current,None,Low,Home Health Care,0,Private,Emergency,1
+P001349,78,Male,26.0,139,72,83,71.0,4.9,243.0,3,0,7,2,2,0,1,0,0,Former,High,High,Home,1,Medicare,Urgent,0
+P004471,68,Male,46.1,143,96,85,171.0,7.5,110.0,5,1,6,0,2,1,0,1,0,Former,Moderate,Moderate,Other,1,Medicare,Emergency,1
+P001105,48,Female,31.5,87,72,82,120.0,5.2,179.0,3,0,3,0,2,0,0,1,0,Current,Moderate,Low,Home,1,Private,Urgent,0
+P003307,71,Male,39.4,105,59,85,170.0,7.6,170.0,1,3,3,2,2,1,0,0,0,Former,Low,High,Home,0,Medicare,Urgent,1
+P005986,73,Female,23.9,145,91,78,116.0,5.8,160.0,5,0,7,1,3,0,1,0,1,Former,Low,Moderate,Home,0,Medicare,Emergency,0
+P002578,50,Female,23.6,143,81,68,94.0,5.3,176.0,3,2,2,0,1,0,0,1,0,Never,Moderate,Moderate,Other,0,Medicaid,Emergency,0
+P002820,77,Male,29.9,120,69,80,71.0,6.2,225.0,6,3,6,2,2,0,1,1,0,Never,Low,Low,Home Health Care,1,Medicare,Emergency,0
+P000236,54,Female,33.8,136,81,80,109.0,4.9,133.0,6,3,2,0,1,0,1,0,0,Former,Low,High,Home,0,Medicaid,Elective,0
+P005604,70,Male,32.9,103,72,84,137.0,4.9,223.0,0,0,4,1,0,0,0,0,0,Never,None,Moderate,Home,0,Medicare,Elective,0
+P000169,62,Male,32.6,127,89,76,149.0,7.6,221.0,5,1,2,1,2,1,1,0,0,Never,,Low,Home,0,Medicaid,Urgent,0
+P001422,61,Male,28.0,100,76,76,116.0,4.9,226.0,1,0,6,1,2,0,1,0,0,Former,Moderate,High,Home,1,Medicaid,Elective,0
+P001526,80,Other,33.7,132,76,73,86.0,5.4,177.0,5,5,5,3,2,0,1,1,0,Never,None,Moderate,Skilled Nursing Facility,1,Medicare,Elective,1
+P000614,71,Male,23.2,133,81,83,136.0,5.3,198.0,1,0,4,0,0,0,0,0,0,Never,None,Low,Home,1,Medicare,Emergency,0
+P002342,61,Female,20.4,125,72,79,,4.6,199.0,2,0,7,1,2,0,0,0,1,Never,None,Low,Home,0,Private,Emergency,0
+P000748,72,Male,29.0,138,82,86,111.0,5.5,246.0,6,2,7,1,3,0,1,1,0,Never,None,Low,Home,0,Medicare,Urgent,0
+P005073,93,Male,30.7,150,92,79,75.0,4.9,235.0,8,2,4,2,2,0,0,1,1,Never,Moderate,Moderate,Rehabilitation,1,Medicare,Urgent,0
+P002736,58,Female,30.6,155,87,74,101.0,5.0,216.0,4,1,12,3,2,0,0,0,0,Never,None,Moderate,Home,1,Uninsured,Emergency,0
+P005812,71,Female,18.5,149,82,67,127.0,5.6,168.0,4,4,6,1,2,0,1,0,1,Former,None,High,Home Health Care,1,Medicare,Elective,0
+P005752,69,Male,27.9,135,77,109,122.0,4.8,214.0,2,3,4,1,1,0,0,0,0,Former,Moderate,Moderate,Home,1,Medicare,Emergency,0
+P003761,57,Female,23.2,123,84,97,64.0,4.5,242.0,4,4,10,0,2,0,0,0,1,Former,,Low,Skilled Nursing Facility,1,Uninsured,Emergency,1
+P003069,95,Male,37.5,123,60,72,219.0,8.0,205.0,5,3,6,2,4,1,1,1,1,Never,,High,Home,1,Medicaid,Urgent,1
+P002572,74,Male,27.8,151,107,67,189.0,8.4,237.0,3,3,8,0,2,1,1,0,0,Never,None,Moderate,Home,0,Medicare,Emergency,0
+P000298,58,Female,21.4,160,96,76,109.0,5.8,195.0,0,2,8,4,4,0,1,0,1,Former,High,High,Home Health Care,1,Medicaid,Emergency,0
+P004498,32,Female,28.2,96,70,88,132.0,5.0,218.0,4,0,4,2,1,0,0,0,0,Current,None,Low,Other,1,Private,Elective,0
+P003554,38,Male,36.5,128,72,66,81.0,4.9,225.0,2,0,4,1,0,0,0,0,0,Never,None,Low,Home,1,Medicaid,Urgent,0
+P003499,61,Male,,126,63,77,89.0,5.0,169.0,5,1,4,2,1,0,1,0,0,Never,Moderate,Moderate,Home,0,Medicare,Urgent,0
+P002878,56,Female,30.3,137,78,67,92.0,5.3,230.0,6,2,8,3,2,0,1,0,0,Current,Moderate,Low,Home,1,Medicaid,Emergency,1
+P000279,82,Female,29.2,150,79,87,70.0,4.3,244.0,8,3,6,3,5,0,1,1,0,Former,None,Moderate,Home,1,Medicare,Emergency,1
+P000306,48,Male,24.2,127,83,73,77.0,5.7,196.0,2,1,4,1,0,0,0,0,0,Former,High,Low,Home Health Care,1,Private,Emergency,0
+P004288,54,Male,22.7,122,69,76,60.0,5.1,110.0,7,1,5,1,2,0,0,0,1,Former,None,Moderate,Home,1,Private,Emergency,0
+P005200,61,Female,26.6,151,81,70,121.0,4.9,150.0,4,2,3,3,3,0,1,0,0,Never,,Low,Home,1,Private,Elective,0
+P004696,69,Female,23.2,145,72,65,170.0,7.2,206.0,2,0,3,0,1,1,0,0,0,Never,Low,Low,Rehabilitation,1,Medicare,Elective,1
+P002307,93,Male,22.7,130,69,108,226.0,8.4,211.0,3,3,4,1,2,1,0,1,0,Former,Low,Low,Home,1,Medicare,Emergency,0
+P002990,85,Male,29.7,141,97,76,158.0,7.1,255.0,10,2,10,2,5,1,1,0,1,Former,Moderate,Moderate,Home Health Care,0,Private,Emergency,1
+P002580,85,Female,17.1,128,75,84,132.0,5.2,223.0,6,1,5,3,4,0,1,1,0,Current,High,Low,Home Health Care,1,Medicare,Urgent,0
+P001328,40,Male,21.5,116,80,83,,5.5,198.0,2,0,10,0,0,0,0,0,0,Former,None,Low,Home,0,Private,Emergency,0
+P000777,48,Female,26.2,92,69,70,73.0,5.2,167.0,4,0,9,1,0,0,0,0,0,Current,None,High,Other,0,Private,Emergency,0
+P004345,56,Female,17.2,115,70,93,107.0,5.8,211.0,6,2,8,0,2,0,0,0,0,Current,None,Moderate,Home,1,Private,Emergency,0
+P001657,70,Female,37.1,133,69,78,101.0,5.2,269.0,2,0,6,0,1,0,0,0,0,Former,None,Low,Home,1,Medicare,Emergency,0
+P005598,53,Other,23.4,130,66,87,134.0,5.6,127.0,6,1,5,1,3,0,1,0,0,Never,None,Moderate,Home,0,Private,Elective,0
+P002829,39,Male,27.4,100,64,91,76.0,4.5,157.0,4,1,6,3,1,0,0,0,0,Former,Moderate,Moderate,Home,1,Medicaid,Emergency,0
+P002195,67,Female,32.4,146,83,82,178.0,,184.0,2,3,3,0,3,1,0,1,1,Never,None,High,Home,1,Medicare,Urgent,1
+P001582,62,Male,40.8,137,70,58,106.0,5.1,284.0,3,1,9,1,2,0,1,0,0,Never,Low,Moderate,Home Health Care,0,Private,Urgent,1
+P005709,67,Female,24.1,146,93,100,109.0,5.3,145.0,2,5,6,5,2,0,1,0,0,Never,Low,High,Home,1,Medicare,Elective,1
+P000311,82,Female,23.3,135,67,82,89.0,4.8,143.0,1,0,7,0,1,0,1,0,0,Former,None,Moderate,Home Health Care,1,Medicare,Emergency,0
+P005051,70,Female,28.6,139,79,66,,4.9,205.0,2,0,3,0,2,0,1,0,0,Never,Moderate,Moderate,Rehabilitation,1,Medicare,Elective,0
+P005687,87,Male,29.1,153,94,76,180.0,7.8,203.0,4,1,11,1,3,1,1,0,1,Former,Moderate,Moderate,Home Health Care,0,Medicare,Emergency,0
+P004914,48,Female,30.4,138,81,66,174.0,7.0,156.0,3,1,3,0,1,1,0,0,0,Never,Low,High,Home Health Care,1,Private,Emergency,0
+P002050,47,Female,28.8,115,68,98,111.0,5.8,,4,0,4,0,1,0,0,0,0,Never,Low,High,Home,1,Private,Emergency,0
+P001743,72,Male,27.5,139,80,65,120.0,4.8,201.0,4,1,5,0,1,0,1,0,0,Current,Low,Moderate,Home,1,Medicare,Emergency,0
+P004000,45,Female,35.2,118,78,54,111.0,5.7,200.0,3,1,5,0,1,0,1,0,0,Never,None,High,Home,1,Private,Emergency,0
+P003975,54,Male,36.6,146,104,58,174.0,8.3,196.0,6,1,3,0,3,1,1,0,0,Never,None,Moderate,Home,1,Medicaid,Elective,0
+P005049,64,Female,33.1,150,107,62,176.0,8.1,192.0,2,1,3,0,1,1,0,0,0,Never,Moderate,High,Home,1,Private,Emergency,0
+P001355,93,Male,26.2,131,68,74,199.0,7.6,180.0,8,1,5,0,3,1,0,0,0,Current,None,Moderate,Home,1,Medicare,Elective,0
+P000405,72,Male,23.5,145,99,75,199.0,7.6,178.0,1,0,3,0,1,1,0,0,0,Former,Low,Low,Home,1,Medicare,Elective,0
+P004689,61,Female,30.7,124,75,84,97.0,6.2,187.0,6,0,4,1,3,0,1,0,0,Current,Low,Moderate,Rehabilitation,1,Uninsured,Urgent,0
+P003379,50,Female,29.8,106,61,88,76.0,4.1,243.0,3,0,5,0,2,0,0,0,1,Current,Moderate,Moderate,Home,1,Medicaid,Emergency,0
+P004484,67,Female,20.9,95,65,59,174.0,6.1,173.0,3,0,4,0,0,0,0,0,0,Never,High,High,Other,1,Medicare,Elective,0
+P002588,85,Male,29.2,133,74,78,165.0,6.7,213.0,2,4,7,2,4,1,1,0,0,Former,Low,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P003024,53,Male,25.1,103,51,69,62.0,,147.0,3,5,3,1,2,0,1,0,0,Current,Low,Moderate,Home,1,Uninsured,Emergency,1
+P000701,81,Male,28.9,159,86,81,158.0,7.0,142.0,5,2,4,1,4,1,1,0,0,Current,Low,Moderate,Home,0,Medicare,Urgent,0
+P002492,53,Male,22.6,114,75,97,111.0,4.9,214.0,1,0,4,0,1,0,0,0,0,Never,None,Moderate,Home,0,Private,Urgent,0
+P003134,55,Male,28.5,128,64,87,170.0,8.1,223.0,4,1,8,1,3,1,1,0,0,Former,None,Moderate,Home Health Care,1,Private,Emergency,0
+P002822,68,Female,29.8,154,65,69,77.0,4.5,224.0,6,0,5,0,2,0,1,1,0,Former,None,Moderate,Home Health Care,1,Medicare,Urgent,0
+P005354,52,Female,24.2,87,56,84,76.0,4.0,191.0,7,0,6,1,3,0,0,0,0,Former,None,Low,Home,1,Uninsured,Elective,0
+P000145,52,Female,33.8,137,84,88,,8.3,230.0,10,2,8,4,5,1,1,1,0,Former,Moderate,Moderate,Home,1,Medicare,Elective,0
+P005272,81,Female,25.8,141,87,82,177.0,7.2,157.0,6,3,3,3,4,1,1,1,1,Former,Moderate,Low,Skilled Nursing Facility,0,Medicare,Urgent,0
+P003971,41,Male,24.5,114,68,81,147.0,6.0,268.0,0,0,1,1,0,0,0,0,0,Never,High,Moderate,Skilled Nursing Facility,1,Uninsured,Emergency,0
+P000678,70,Female,30.8,117,85,72,60.0,5.3,209.0,5,2,5,0,2,0,1,1,0,,Low,Low,Home,1,Medicare,Urgent,0
+P005285,68,Female,33.5,133,90,79,179.0,7.8,181.0,5,1,6,1,2,1,0,0,0,Former,None,Low,Home,0,Medicare,Emergency,1
+P004256,79,Female,27.4,131,70,72,168.0,8.6,170.0,3,1,5,1,3,1,1,0,1,Former,None,Low,Skilled Nursing Facility,0,Medicare,Urgent,1
+P005712,18,Male,30.5,85,66,68,141.0,7.6,110.0,5,3,10,2,3,1,0,0,0,Never,None,Moderate,Home,1,Medicaid,Emergency,0
+P000061,39,Female,29.9,121,55,80,88.0,5.0,233.0,6,2,6,3,2,0,1,0,0,Former,None,Moderate,Home,0,Private,Emergency,1
+P004899,69,Male,21.5,107,76,76,79.0,4.9,193.0,2,0,3,0,0,0,0,0,0,Never,None,Low,Rehabilitation,1,Medicare,Emergency,0
+P003796,61,Female,30.2,110,88,79,111.0,5.7,188.0,3,0,5,0,0,0,0,0,0,Current,None,Moderate,Home,1,Private,Elective,0
+P002224,52,Male,29.2,133,79,80,105.0,4.9,227.0,5,1,10,4,2,0,0,0,0,Former,None,Moderate,Home,1,Uninsured,Emergency,0
+P005541,66,Female,26.9,119,78,73,90.0,5.2,232.0,3,0,7,0,1,0,0,1,0,Former,None,Moderate,Other,0,Medicare,Emergency,0
+P005636,29,Male,27.9,109,63,74,102.0,4.6,274.0,4,1,9,0,1,0,0,0,0,Never,None,Moderate,Home,0,Private,Emergency,1
+P001033,56,Female,28.0,108,84,87,93.0,6.1,204.0,1,0,7,1,0,0,0,0,0,Never,Moderate,Low,Rehabilitation,0,Medicaid,Elective,0
+P004229,54,Male,18.2,103,66,97,95.0,5.0,177.0,0,3,5,2,0,0,0,0,0,Former,Moderate,Moderate,Home,0,Private,Emergency,0
+P001106,75,Female,30.8,153,94,77,,4.3,241.0,7,1,7,1,3,0,1,0,0,Current,None,Low,Other,1,Medicare,Emergency,0
+P001277,55,Male,31.2,116,71,81,98.0,5.6,183.0,0,0,2,0,0,0,0,0,0,Never,Moderate,Moderate,Home,0,Medicaid,Emergency,0
+P005745,72,Male,18.6,147,84,94,157.0,7.4,191.0,3,2,5,1,2,1,0,0,1,Former,Low,Low,Home,0,Medicaid,Urgent,1
+P001536,50,Other,17.6,105,73,80,110.0,4.6,195.0,2,0,6,0,0,0,0,0,0,Former,High,Low,Other,0,Medicaid,Emergency,0
+P004857,42,Male,32.5,120,72,82,81.0,4.7,186.0,1,0,8,0,0,0,0,0,0,Former,Low,Low,Skilled Nursing Facility,1,Uninsured,Emergency,0
+P003864,89,Male,19.4,133,77,76,92.0,5.5,175.0,6,1,3,1,2,0,1,1,0,Current,Low,Moderate,Rehabilitation,0,Medicare,Elective,1
+P000592,68,Male,23.4,130,85,77,114.0,6.3,204.0,6,0,9,1,2,0,1,1,0,Former,,Moderate,Home,1,Medicare,Emergency,0
+P001124,60,Female,26.5,131,57,78,252.0,8.7,231.0,5,1,7,1,2,1,1,0,0,,None,Moderate,Home,0,Private,Emergency,0
+P005660,67,Female,30.7,104,79,74,71.0,4.4,253.0,2,0,6,2,2,0,0,1,1,Never,Low,Moderate,Home,0,Medicare,Elective,0
+P000004,78,Female,34.2,140,92,88,159.0,,128.0,8,3,3,1,5,1,0,1,1,Former,Low,Low,Other,1,Medicare,Urgent,0
+P002263,66,Female,26.5,112,65,80,123.0,5.5,175.0,2,3,5,2,2,0,0,0,0,Former,Low,Moderate,Home,1,Medicaid,Emergency,1
+P005224,70,Female,33.3,128,76,84,90.0,4.8,199.0,2,0,4,0,2,0,0,0,0,Current,Moderate,High,Home,1,Medicare,Elective,0
+P001000,76,Female,16.8,138,86,67,70.0,4.0,295.0,5,0,8,1,3,0,1,1,0,Former,Low,Low,Other,1,Medicaid,Emergency,1
+P001642,72,Female,27.7,157,79,69,136.0,5.6,151.0,5,0,61,0,4,0,1,0,0,Never,None,Moderate,Other,1,Medicare,Urgent,0
+P003331,64,Female,37.1,132,73,91,73.0,5.2,,6,0,3,0,1,0,0,0,0,Never,Low,Moderate,Home,1,Private,Elective,0
+P003747,39,Female,35.7,103,76,69,127.0,5.7,110.0,1,0,2,1,0,0,0,0,0,Never,None,Moderate,Home Health Care,0,Private,Urgent,0
+P000135,42,Male,33.1,118,87,65,,7.9,186.0,8,1,4,0,2,1,0,0,0,Never,None,Low,Skilled Nursing Facility,1,Uninsured,Urgent,0
+P001901,56,Male,36.7,137,83,87,189.0,8.3,287.0,3,2,6,0,1,1,0,0,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P001129,60,Male,59.6,119,70,68,82.0,4.5,177.0,6,0,3,1,2,0,0,0,0,Never,Low,High,Home,1,Private,Emergency,0
+P005421,78,Male,37.8,136,88,88,192.0,7.8,169.0,3,0,5,2,2,1,0,0,0,Current,Low,Low,Home Health Care,1,Private,Emergency,0
+P002314,65,Female,25.8,129,84,83,100.0,4.6,196.0,5,3,4,1,2,0,0,0,0,Never,Low,Moderate,Home,1,Medicare,Elective,0
+P003657,61,Female,25.0,121,71,85,83.0,6.3,223.0,3,0,6,0,2,0,0,0,1,Current,None,Low,Rehabilitation,1,Uninsured,Emergency,0
+P004846,77,Female,30.5,148,81,71,158.0,7.5,219.0,4,1,3,0,2,1,1,0,0,Never,None,Moderate,Home,0,Private,Emergency,1
+P004828,60,Female,20.7,113,81,71,92.0,4.5,189.0,6,0,8,1,1,0,0,0,0,Current,None,Low,Home,1,Uninsured,Emergency,0
+P003754,75,Female,23.5,129,81,56,170.0,7.1,216.0,0,0,3,0,1,1,0,0,0,Former,Moderate,Moderate,Skilled Nursing Facility,1,Medicare,Urgent,0
+P003267,23,Male,26.1,85,64,78,121.0,,200.0,2,1,5,0,0,0,0,0,0,Former,Moderate,High,Skilled Nursing Facility,0,Private,Emergency,0
+P002939,58,Male,20.5,106,68,79,83.0,6.0,207.0,2,1,8,0,0,0,0,0,0,Never,None,High,Home,0,Private,Emergency,0
+P003644,54,Male,35.2,124,66,83,187.0,8.1,131.0,5,2,7,3,3,1,0,0,0,Never,Low,Moderate,Rehabilitation,1,Private,Urgent,1
+P001357,58,Female,26.8,139,89,94,153.0,7.5,144.0,6,2,6,1,3,1,1,0,0,Former,Moderate,Moderate,Home,1,Uninsured,Elective,0
+P005065,60,Male,28.6,131,80,85,82.0,5.9,136.0,5,0,6,0,3,0,1,1,0,Never,High,Moderate,Home,0,Private,Urgent,0
+P003431,40,Female,29.7,110,65,88,76.0,5.4,182.0,2,0,4,1,0,0,0,0,0,Never,Low,High,Home,1,Private,Urgent,0
+P004639,57,Male,36.2,121,66,100,171.0,7.1,190.0,1,2,5,1,2,1,1,0,0,Former,Low,Moderate,Home,0,Medicaid,Urgent,0
+P001950,94,Male,31.6,140,75,88,65.0,4.8,171.0,1,1,3,1,1,0,1,0,0,Never,Moderate,Low,Home Health Care,0,Medicare,Urgent,0
+P004549,66,Male,32.7,137,89,84,69.0,5.0,183.0,4,0,4,0,2,0,1,0,0,Former,Low,Low,Rehabilitation,1,Medicare,Emergency,0
+P003242,51,Female,24.0,136,84,102,60.0,4.8,204.0,3,0,1,0,1,0,0,0,0,Former,Low,Low,Home,1,Private,Elective,0
+P004050,65,Male,28.5,164,96,81,110.0,4.9,200.0,2,0,6,0,1,0,1,0,0,Never,Low,High,Home,1,Medicare,Urgent,0
+P002254,28,Other,25.5,88,57,74,93.0,4.2,193.0,3,0,1,0,0,0,0,0,0,Former,,Low,Home,1,Medicare,Urgent,0
+P001970,76,Male,38.6,138,89,76,180.0,7.9,273.0,8,3,7,0,4,1,1,1,0,Never,Low,Low,Rehabilitation,0,Private,Elective,0
+P003846,29,Male,35.1,98,62,67,173.0,7.1,135.0,3,3,6,1,3,1,0,0,0,Never,Low,Low,Home,0,Private,Emergency,1
+P001410,72,Female,29.5,98,81,90,180.0,8.5,152.0,8,2,9,3,4,1,0,0,0,Current,Low,Low,Home Health Care,0,Private,Emergency,0
+P004169,63,Other,28.6,143,79,77,82.0,5.2,209.0,2,0,9,2,2,0,1,0,0,Former,Low,High,Home Health Care,1,Private,Emergency,0
+P000963,49,Female,32.8,114,71,76,106.0,5.8,250.0,0,1,2,0,1,0,0,0,0,Former,High,Low,Home,1,Uninsured,Elective,1
+P001174,49,Male,19.0,140,91,57,109.0,5.3,227.0,1,1,5,0,1,0,1,0,0,Never,Moderate,High,Home,0,Private,Elective,0
+P000616,45,Male,61.2,129,69,80,107.0,6.2,169.0,0,0,3,0,0,0,0,0,0,Never,Low,Moderate,Home,0,Private,Elective,0
+P005731,32,Male,16.6,139,90,73,102.0,5.8,157.0,5,1,6,1,3,0,0,0,0,Never,Moderate,High,Home Health Care,1,Medicaid,Elective,0
+P005610,71,Female,30.7,124,79,68,173.0,8.1,209.0,2,0,6,2,1,1,0,0,0,Never,Low,High,Home,0,Medicare,Emergency,0
+P002993,63,Female,29.8,110,66,68,108.0,5.9,137.0,2,2,5,0,1,0,1,0,0,,None,Low,Home,0,Medicaid,Elective,1
+P003722,74,Male,26.4,127,87,91,165.0,7.1,198.0,7,2,7,1,5,1,1,0,1,Former,Low,Low,Home,0,Medicare,Emergency,1
+P001501,56,Male,29.5,114,69,95,85.0,5.3,258.0,1,1,4,1,2,0,0,0,0,Never,Low,Moderate,Home,1,Private,Urgent,0
+P001831,75,Female,27.9,132,94,83,67.0,5.4,172.0,2,1,6,0,0,0,0,0,0,Current,None,Low,Home,0,Private,Elective,0
+P001598,68,Female,36.6,129,86,81,175.0,7.3,178.0,6,0,8,0,3,1,1,0,0,Never,None,Low,Home,0,Medicare,Urgent,1
+P003292,68,Male,23.9,136,92,83,119.0,5.0,190.0,6,0,8,0,2,0,0,0,0,Never,Moderate,High,Home,0,Medicare,Emergency,0
+P001127,91,Female,25.8,170,92,86,118.0,5.5,132.0,3,0,4,1,1,0,1,0,0,Never,High,Low,Home,1,Private,Elective,0
+P002281,83,Female,27.6,142,75,88,164.0,8.1,230.0,7,1,8,2,4,1,1,1,0,Never,None,Moderate,Home,1,Medicare,Urgent,0
+P002697,71,Male,19.7,105,61,100,104.0,5.0,215.0,4,0,10,1,2,0,0,0,0,Former,None,High,Home Health Care,0,Medicare,Emergency,0
+P005482,56,Male,28.9,128,82,67,90.0,4.4,155.0,4,1,7,0,1,0,0,0,0,Former,Moderate,Moderate,Home,1,Uninsured,Urgent,0
+P005741,75,Male,34.1,137,63,85,191.0,7.4,,8,2,3,1,3,1,1,0,1,Former,Moderate,High,Home Health Care,0,Medicare,Elective,0
+P002013,74,Male,25.1,124,65,92,150.0,6.6,189.0,5,3,7,5,5,1,1,0,0,Never,Moderate,Moderate,Home,1,Medicare,Elective,0
+P005398,82,Male,36.3,152,98,89,145.0,5.9,202.0,3,3,8,2,2,0,1,0,0,Never,None,Moderate,Rehabilitation,1,Medicare,Emergency,1
+P005787,72,Female,20.7,136,67,95,104.0,5.7,233.0,3,0,6,1,1,0,1,0,0,,None,Moderate,Home,0,Medicare,Emergency,0
+P004244,53,Male,31.2,131,74,63,152.0,5.9,184.0,2,0,3,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Private,Urgent,0
+P002171,51,Female,22.8,91,75,68,68.0,5.2,219.0,5,0,6,1,2,0,0,0,0,Never,Moderate,Moderate,Home,1,Medicaid,Urgent,0
+P004273,70,Male,25.0,116,67,73,109.0,6.4,247.0,1,1,5,1,1,0,0,0,0,Former,None,Low,Home,1,Medicare,Emergency,0
+P004826,54,Female,37.2,119,78,77,205.0,7.6,176.0,5,2,7,1,3,1,0,0,0,Former,None,Low,Home,1,Private,Elective,0
+P002540,73,Male,21.8,154,80,79,98.0,4.5,215.0,8,2,3,2,3,0,1,1,0,Never,,Moderate,Skilled Nursing Facility,1,Private,Elective,0
+P002465,53,Male,24.6,118,80,64,120.0,4.6,239.0,1,0,5,0,0,0,0,0,0,Former,None,Moderate,Home,1,Medicare,Emergency,0
+P004515,65,Male,30.5,111,78,54,86.0,4.5,190.0,3,0,4,0,0,0,0,0,0,Former,Moderate,Moderate,Rehabilitation,1,Private,Elective,0
+P000789,48,Female,22.2,146,87,96,87.0,5.2,182.0,4,2,6,1,2,0,0,1,0,Never,None,Moderate,Home,1,Private,Emergency,1
+P004664,54,Male,26.2,108,74,81,90.0,5.2,188.0,1,1,4,0,1,0,0,0,0,Never,Low,Low,Home,0,Medicare,Urgent,0
+P002168,38,Male,32.7,87,63,78,191.0,7.7,246.0,4,3,5,3,3,1,0,0,1,Current,,Moderate,Home,0,Private,Emergency,1
+P001386,65,Male,,113,71,69,123.0,5.2,193.0,3,1,3,0,1,0,0,0,1,Never,None,Low,Home Health Care,1,Medicare,Emergency,0
+P003476,73,Male,,135,69,82,69.0,5.0,262.0,0,0,1,0,0,0,0,0,0,Never,None,Low,Other,1,Private,Urgent,0
+P005474,58,Male,36.8,143,76,75,190.0,7.6,205.0,3,2,8,0,3,1,1,1,0,Former,Low,Low,Home,0,Medicare,Elective,0
+P005500,52,Female,27.3,136,74,51,74.0,5.5,215.0,5,3,10,2,3,0,1,0,0,Never,None,High,Home Health Care,1,Private,Emergency,0
+P002614,58,Male,31.4,125,77,85,86.0,5.0,182.0,1,0,7,1,1,0,1,0,0,Never,None,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P005879,83,Male,30.2,128,81,83,208.0,8.4,169.0,3,1,8,2,2,1,0,0,0,Never,Moderate,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P005557,68,Female,29.0,109,55,88,182.0,7.4,210.0,3,1,7,3,2,1,0,0,0,Current,Low,Moderate,Home Health Care,0,Medicare,Emergency,0
+P004990,76,Female,32.2,125,75,97,99.0,5.6,190.0,2,0,6,0,1,0,0,0,0,Former,Low,Moderate,Home,0,Private,Emergency,0
+P004146,36,Male,30.1,107,81,84,81.0,,212.0,1,1,9,0,1,0,0,0,0,Former,Moderate,Low,Home,0,Uninsured,Emergency,0
+P002301,57,Male,30.1,102,78,86,73.0,5.3,181.0,6,4,11,4,5,0,0,0,0,Former,Low,Low,Home,1,Private,Elective,1
+P002438,68,Female,23.6,151,81,70,142.0,5.0,150.0,5,2,5,1,3,0,1,1,1,,Low,High,Skilled Nursing Facility,1,Medicare,Urgent,0
+P001324,41,Female,29.1,147,84,73,,6.9,210.0,10,0,14,0,3,1,1,0,0,Never,High,Moderate,Home,0,Uninsured,Emergency,0
+P002574,67,Female,34.5,152,90,93,205.0,7.9,132.0,8,1,11,2,5,1,1,0,1,Former,None,Moderate,Home,1,Medicare,Emergency,0
+P005366,94,Male,37.6,119,84,84,178.0,7.9,193.0,7,4,4,0,2,1,1,0,0,Never,None,High,Skilled Nursing Facility,1,Medicare,Urgent,1
+P005319,35,Male,26.8,132,76,68,,4.8,179.0,3,4,6,2,2,0,0,0,0,Never,Low,Moderate,Home,1,Private,Emergency,0
+P005686,38,Male,31.7,115,85,68,95.0,5.7,113.0,2,0,7,1,1,0,0,0,0,Never,None,Low,Home,1,Private,Emergency,1
+P000863,63,Male,38.8,142,79,75,71.0,4.4,213.0,5,1,4,0,2,0,0,0,0,Current,None,Low,Home Health Care,1,Private,Urgent,0
+P003077,64,Male,15.0,143,87,82,193.0,8.2,146.0,0,1,3,2,2,1,1,0,0,Never,Moderate,Low,Rehabilitation,1,Medicaid,Emergency,0
+P004778,44,Female,27.3,132,69,82,208.0,8.3,207.0,9,3,10,1,4,1,0,0,0,Former,High,Low,Home Health Care,1,Private,Emergency,0
+P000815,55,Female,19.3,112,82,86,126.0,6.1,155.0,3,0,7,0,1,0,0,0,0,Former,Low,Low,Home,0,Uninsured,Emergency,0
+P005193,69,Male,30.5,149,84,83,107.0,5.5,208.0,2,3,8,2,3,0,1,0,0,Never,Low,Moderate,Home,1,Uninsured,Urgent,0
+P002136,59,Male,27.9,137,75,58,124.0,5.0,210.0,4,2,1,0,2,0,0,0,1,Never,None,Low,Home Health Care,1,Private,Urgent,0
+P004117,81,Female,28.0,134,80,107,168.0,8.0,202.0,2,1,5,1,3,1,1,1,0,Former,Low,High,Home,1,Private,Emergency,1
+P002470,64,Male,28.1,123,76,52,150.0,5.4,241.0,2,0,6,1,0,0,0,0,0,Former,High,High,Home,0,Medicaid,Elective,0
+P000421,65,Female,38.0,110,61,72,132.0,5.3,224.0,2,0,5,0,0,0,0,0,0,Current,Low,High,Skilled Nursing Facility,0,Uninsured,Emergency,0
+P005591,65,Female,19.9,129,60,64,122.0,5.5,147.0,3,0,6,0,2,0,0,0,1,Former,Low,Moderate,Home,0,Private,Urgent,0
+P005582,71,Male,22.3,131,67,85,87.0,5.0,221.0,1,0,5,1,0,0,0,0,0,Never,None,Low,Rehabilitation,0,Private,Urgent,0
+P002863,52,Female,26.2,130,84,66,125.0,5.1,110.0,4,3,2,1,1,0,0,0,0,Current,None,Low,Skilled Nursing Facility,0,Private,Urgent,0
+P004134,63,Male,36.5,132,75,79,192.0,8.0,298.0,5,2,5,2,2,1,0,0,0,Never,Low,Moderate,Home,0,Private,Emergency,1
+P005955,61,Female,28.7,85,71,55,115.0,4.9,179.0,4,1,4,0,2,0,0,0,0,Current,None,High,Home,1,Private,Urgent,0
+P003132,54,Female,25.4,145,95,60,179.0,7.7,186.0,6,0,10,0,2,1,1,0,0,Never,,Low,Home Health Care,1,Medicaid,Emergency,0
+P005411,76,Male,24.3,124,74,77,101.0,5.7,126.0,2,2,7,0,2,0,1,0,0,Never,Low,Moderate,Home Health Care,1,Medicare,Elective,0
+P005740,81,Male,30.8,131,93,91,200.0,8.2,177.0,3,2,5,1,2,1,0,0,1,Former,None,Moderate,Home,0,Medicare,Emergency,1
+P003374,55,Male,38.0,138,78,78,198.0,7.6,153.0,1,0,3,0,2,1,1,0,0,Current,None,Low,Home,1,Private,Urgent,0
+P003046,58,Male,24.5,141,76,104,101.0,4.5,187.0,6,2,4,2,2,0,0,1,1,Never,None,High,Home,1,Medicaid,Emergency,0
+P001281,82,Male,26.9,143,91,80,108.0,5.6,217.0,3,0,3,0,2,0,1,0,0,Never,None,Moderate,Home,0,Medicare,Emergency,0
+P004055,73,Female,29.8,139,79,65,190.0,8.0,245.0,5,2,8,0,5,1,1,1,0,Former,Low,Low,Home,0,Medicare,Emergency,0
+P001133,54,Female,34.5,104,69,67,60.0,5.2,147.0,6,4,6,1,4,0,0,0,0,Never,None,Low,Home,0,Uninsured,Emergency,0
+P000055,57,Other,28.0,139,78,63,102.0,,,3,0,4,0,1,0,1,0,0,Current,Low,Low,Home,1,Uninsured,Urgent,0
+P005057,60,Male,32.8,132,80,82,64.0,4.3,151.0,3,1,6,0,3,0,1,0,1,,Low,Low,Other,1,Medicaid,Emergency,1
+P004372,55,Male,27.0,105,66,72,99.0,4.8,185.0,3,2,2,0,1,0,0,0,0,Former,None,Low,Home Health Care,1,Medicaid,Urgent,0
+P002488,77,Male,25.5,134,69,68,163.0,6.9,180.0,2,0,6,1,3,1,1,0,0,Never,Low,High,Skilled Nursing Facility,0,Medicare,Emergency,0
+P003280,58,Female,33.2,147,71,61,70.0,,178.0,4,1,4,0,1,0,0,0,0,Former,Low,Low,Home,0,Medicaid,Urgent,0
+P004033,73,Female,22.3,134,78,92,101.0,4.9,191.0,3,0,5,0,1,0,0,0,0,Former,Moderate,Moderate,Home,0,Medicare,Emergency,0
+P001038,56,Female,26.8,154,82,77,93.0,5.6,161.0,3,1,3,1,2,0,1,0,0,Never,None,Moderate,Home,1,Private,Urgent,0
+P005870,94,Male,24.0,160,108,86,118.0,5.3,174.0,5,3,7,1,1,0,1,0,0,Never,Moderate,Low,Skilled Nursing Facility,1,Uninsured,Emergency,0
+P004025,51,Male,24.1,142,81,76,103.0,5.3,194.0,4,2,3,0,2,0,0,1,0,Former,Low,Low,Home,1,Medicaid,Emergency,0
+P002339,80,Female,24.8,158,97,72,127.0,5.7,271.0,3,3,7,2,2,0,1,1,0,Former,High,Moderate,Other,1,Medicare,Emergency,0
+P000393,57,Female,28.1,117,64,57,156.0,7.8,210.0,4,1,5,1,2,1,0,0,0,Never,Low,High,Rehabilitation,0,Medicaid,Urgent,1
+P002212,79,Female,23.3,104,84,75,,8.2,,8,1,8,2,3,1,1,0,0,Former,Low,Moderate,Skilled Nursing Facility,1,Medicare,Emergency,0
+P004114,72,Male,,138,84,78,431.0,4.9,,5,0,5,1,2,0,1,0,0,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P002426,81,Female,22.0,145,63,95,149.0,7.6,251.0,10,1,6,1,2,1,1,0,0,Never,Moderate,High,Rehabilitation,0,Private,Emergency,0
+P003819,87,Female,,123,77,74,123.0,4.8,184.0,0,1,5,3,1,0,0,0,0,Never,None,High,Home Health Care,0,Medicare,Emergency,0
+P004259,87,Female,35.4,156,85,93,70.0,5.5,168.0,4,1,2,3,1,0,1,0,0,Former,Low,High,Home Health Care,0,Private,Emergency,0
+P003862,75,Male,25.6,158,83,91,104.0,5.9,189.0,7,3,8,0,4,0,1,0,0,Never,Low,Moderate,Rehabilitation,1,Private,Emergency,0
+P001643,28,Female,37.8,115,86,84,83.0,5.4,213.0,2,3,5,2,1,0,0,1,0,Former,Moderate,High,Home,0,Uninsured,Urgent,0
+P002157,69,Male,28.5,118,70,84,95.0,5.2,202.0,7,1,6,1,3,0,1,0,0,Never,None,Low,Home,1,Medicare,Emergency,0
+P000276,70,Male,27.3,114,80,71,76.0,5.1,239.0,2,0,9,0,0,0,0,0,0,Current,Moderate,Moderate,Home,1,Medicare,Emergency,0
+P002364,71,Female,26.4,146,87,74,108.0,5.8,211.0,4,2,3,0,1,0,1,0,0,Current,None,Low,Home,1,Medicare,Elective,0
+P003172,74,Female,35.1,165,82,80,,5.1,170.0,3,1,8,1,2,0,1,1,0,Never,Low,Low,Skilled Nursing Facility,1,Private,Emergency,0
+P002029,67,Female,33.9,138,79,63,147.0,8.1,175.0,9,1,4,0,4,1,1,0,0,Former,Moderate,Low,Home,0,Medicare,Urgent,0
+P003412,34,Male,32.1,137,87,105,78.0,5.1,236.0,1,0,3,0,1,0,1,0,0,Never,High,Low,Home,0,Medicaid,Emergency,0
+P000133,74,Female,30.1,118,67,83,152.0,7.3,240.0,10,2,2,3,3,1,0,1,0,Current,None,Moderate,Home,0,Medicare,Urgent,0
+P000847,100,Male,24.8,117,71,91,80.0,4.5,267.0,2,1,11,0,2,0,1,1,0,Never,Low,Moderate,Home Health Care,0,Medicaid,Emergency,1
+P004652,79,Male,28.6,118,70,89,166.0,7.7,198.0,4,0,5,1,2,1,1,0,0,Former,High,Low,Home,0,Private,Emergency,0
+P001264,57,Female,29.3,132,76,74,96.0,4.5,214.0,9,1,3,0,2,0,0,0,1,,Moderate,Moderate,Home,1,Private,Emergency,0
+P005237,51,Male,34.5,102,78,58,102.0,6.3,216.0,4,3,6,0,0,0,0,0,0,Former,Low,Low,Home,0,Private,Emergency,0
+P003950,63,Female,38.7,150,80,70,186.0,7.3,137.0,1,0,6,0,2,1,0,1,0,Former,None,Moderate,Home,1,Private,Emergency,0
+P004152,86,Female,28.7,123,74,83,179.0,7.9,194.0,7,0,9,1,3,1,0,1,1,Former,None,Moderate,Skilled Nursing Facility,0,Medicare,Emergency,1
+P004070,31,Female,22.5,101,81,86,79.0,4.7,226.0,2,0,5,1,1,0,0,0,0,,Moderate,High,Home Health Care,1,Private,Urgent,0
+P003260,59,Female,32.1,124,83,87,91.0,4.5,260.0,3,0,4,1,1,0,0,0,0,,Low,Low,Home,1,Uninsured,Emergency,0
+P005195,85,Male,15.0,133,77,55,82.0,6.0,206.0,1,0,4,2,1,0,1,0,0,Never,Low,Low,Home,1,Medicare,Elective,1
+P001438,20,Male,44.8,118,98,89,114.0,5.9,223.0,2,1,7,0,1,0,0,0,0,Former,None,Low,Home,0,Private,Urgent,0
+P003906,100,Male,19.4,150,91,77,61.0,5.2,209.0,6,3,5,6,4,0,1,1,0,Never,Low,High,Home,1,Private,Emergency,1
+P002491,76,Male,25.8,138,78,84,93.0,4.4,201.0,1,0,4,1,0,0,0,0,0,Never,None,Moderate,Home Health Care,0,Medicare,Emergency,0
+P005950,100,Female,29.2,126,72,78,198.0,7.9,238.0,4,1,6,0,3,1,0,1,0,Never,None,Moderate,Home,1,Medicare,Elective,0
+P005128,85,Female,25.0,151,90,76,156.0,6.7,186.0,2,1,1,2,3,0,1,1,1,Former,Moderate,Low,Home Health Care,0,Medicare,Urgent,0
+P004077,25,Female,26.1,106,58,86,,,157.0,3,0,4,0,0,0,0,0,0,Former,None,High,Home Health Care,1,Uninsured,Emergency,0
+P001811,35,Female,30.2,121,80,84,170.0,6.8,135.0,8,1,8,2,4,1,1,0,0,Current,Moderate,Low,Home Health Care,1,Private,Emergency,1
+P000924,55,Male,36.6,109,71,85,192.0,8.2,200.0,4,1,3,0,1,1,0,0,0,Current,Low,Low,Home,0,Private,Elective,1
+P005150,44,Female,34.0,133,76,80,157.0,7.3,228.0,5,2,6,1,3,1,1,0,1,Never,None,Moderate,Home,1,Private,Emergency,1
+P002459,36,Other,32.4,118,72,91,107.0,5.1,219.0,1,1,2,0,0,0,0,0,0,Former,Low,High,Skilled Nursing Facility,0,Private,Elective,0
+P000419,63,Female,30.3,137,73,106,166.0,8.6,154.0,5,3,4,1,2,1,1,0,0,Former,,Low,Home Health Care,0,Private,Urgent,0
+P003278,32,Female,,99,68,78,115.0,4.7,152.0,3,0,5,1,0,0,0,0,0,Current,Low,Moderate,Home,1,Uninsured,Emergency,0
+P005420,46,Male,20.8,132,85,84,89.0,4.9,195.0,4,0,4,0,2,0,0,0,1,Never,None,Moderate,Home,0,Medicaid,Elective,0
+P000704,63,Male,20.6,121,78,85,419.0,4.9,155.0,1,2,3,0,1,0,0,0,1,,None,Low,Rehabilitation,1,Private,Emergency,0
+P005485,76,Female,17.7,140,86,101,148.0,4.8,258.0,2,2,3,2,1,0,0,1,0,Former,Low,Moderate,Skilled Nursing Facility,0,Medicare,Urgent,1
+P003274,58,Female,37.0,129,80,84,160.0,7.4,222.0,3,0,4,0,2,1,0,0,0,Former,Moderate,Low,Other,1,Private,Emergency,0
+P005033,83,Female,33.9,137,90,87,168.0,7.5,162.0,7,2,7,0,3,1,1,0,0,,Moderate,Moderate,Home,1,Medicare,Emergency,0
+P001618,37,Male,27.4,122,79,82,92.0,4.6,268.0,8,0,5,0,3,0,1,1,1,Never,Moderate,Moderate,Home,1,Private,Urgent,0
+P001511,65,Female,31.5,129,90,62,133.0,5.7,185.0,0,1,5,0,2,0,0,0,0,Former,Low,High,Rehabilitation,1,Medicare,Elective,0
+P002937,37,Male,22.6,106,54,72,78.0,4.9,172.0,0,1,3,0,1,0,0,0,0,Former,Low,Low,Home,0,Medicaid,Emergency,0
+P004051,77,Female,28.1,129,64,89,121.0,6.3,185.0,9,1,6,2,3,0,1,1,0,Never,None,High,Rehabilitation,1,Medicare,Elective,0
+P001142,29,Female,33.4,98,70,84,123.0,,217.0,3,3,1,2,2,0,0,1,0,Former,Moderate,Low,Home,1,Medicaid,Urgent,0
+P003951,53,Female,20.6,114,86,71,111.0,5.3,227.0,3,0,3,0,1,0,0,0,0,Former,Moderate,Low,Home,1,Private,Urgent,0
+P000629,48,Female,24.8,141,99,79,145.0,5.0,164.0,1,0,4,0,0,0,0,0,0,Never,Moderate,Moderate,Home,1,Medicaid,Emergency,0
+P001733,61,Female,29.1,107,53,97,80.0,4.6,133.0,2,2,7,0,0,0,0,0,0,Never,,Low,Home Health Care,1,Private,Urgent,0
+P003913,57,Male,15.0,109,89,92,88.0,5.6,,3,2,4,1,2,0,0,1,0,Never,Low,Low,Home,0,Medicaid,Elective,0
+P003348,67,Female,28.9,152,80,85,60.0,5.8,162.0,4,3,3,1,2,0,1,0,0,,None,Moderate,Skilled Nursing Facility,0,Medicare,Urgent,0
+P000071,45,Male,25.5,120,72,51,122.0,5.1,207.0,0,0,3,0,0,0,0,0,0,,None,Low,Other,0,Private,Elective,0
+P005501,57,Male,31.9,109,74,83,200.0,7.3,190.0,1,0,4,2,1,1,0,0,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P000721,63,Male,36.1,167,88,79,183.0,7.8,281.0,9,3,5,4,4,1,1,1,0,Never,None,Low,Other,0,Uninsured,Urgent,1
+P004393,48,Female,40.7,127,82,84,74.0,5.2,232.0,1,0,9,0,1,0,1,0,0,Never,Low,Low,Home,1,Uninsured,Emergency,0
+P000073,50,Female,18.9,113,59,82,93.0,5.9,201.0,2,2,5,1,3,0,0,1,0,Never,None,Moderate,Rehabilitation,0,Private,Emergency,0
+P003221,85,Male,25.4,105,55,67,199.0,8.0,238.0,7,2,5,0,3,1,0,0,1,Never,Moderate,High,Home,1,Medicare,Urgent,0
+P001616,72,Male,23.9,126,83,78,174.0,5.8,174.0,4,2,3,1,1,0,1,0,0,Former,Low,Moderate,Skilled Nursing Facility,1,Uninsured,Elective,0
+P005250,51,Female,,135,90,66,105.0,5.4,177.0,6,0,5,2,3,0,1,0,0,Former,Low,Low,Home Health Care,1,Private,Elective,0
+P004608,83,Female,34.1,162,90,73,156.0,6.9,152.0,2,0,4,0,2,1,1,0,0,Never,High,Moderate,Skilled Nursing Facility,0,Medicare,Elective,0
+P005465,49,Male,27.7,123,87,75,77.0,6.0,148.0,6,0,3,0,2,0,0,0,0,,None,Low,Home,1,Private,Elective,0
+P002387,40,Male,18.7,125,78,80,121.0,5.0,253.0,6,1,5,0,1,0,1,0,0,Never,Low,Moderate,Home,1,Medicaid,Urgent,0
+P004908,50,Female,32.0,143,79,73,158.0,,202.0,3,0,5,1,1,1,0,0,0,Never,None,Moderate,Home,1,Uninsured,Elective,0
+P003291,61,Female,31.8,138,85,70,69.0,4.4,255.0,3,1,6,1,2,0,1,0,1,Never,None,Low,Home,1,Medicaid,Emergency,0
+P002262,52,Male,31.0,134,90,89,105.0,4.7,211.0,9,1,4,2,4,0,1,1,0,Current,Low,Moderate,Home,1,Medicaid,Elective,0
+P005364,59,Female,29.5,124,75,75,148.0,5.2,217.0,2,3,9,1,2,0,1,0,0,Never,None,Low,Home,1,Private,Elective,0
+P005556,66,Male,19.2,121,70,84,70.0,5.0,135.0,6,0,7,2,1,0,0,1,0,Former,Moderate,Low,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P001647,62,Female,32.5,124,76,57,117.0,5.6,228.0,5,3,7,2,2,0,0,0,0,Former,Low,Low,Home,0,Medicaid,Elective,0
+P004452,60,Male,38.5,122,69,84,175.0,7.6,244.0,2,0,3,2,1,1,0,0,0,Former,Moderate,Low,Home Health Care,0,Uninsured,Emergency,0
+P003654,75,Male,,164,83,100,92.0,4.9,227.0,1,2,7,1,3,0,1,1,0,,None,Moderate,Home,1,Medicare,Emergency,0
+P002380,63,Male,27.4,108,76,93,120.0,5.9,137.0,1,0,3,0,0,0,0,0,0,Former,Moderate,Moderate,Rehabilitation,1,Private,Urgent,0
+P005948,51,Male,32.9,152,90,50,215.0,8.3,242.0,4,1,6,2,2,1,0,0,1,Never,None,Moderate,Home,0,Private,Urgent,0
+P005939,68,Female,29.6,146,89,88,190.0,8.0,140.0,7,3,1,0,3,1,1,1,0,Former,Moderate,Moderate,Home,1,Medicare,Elective,0
+P003791,57,Male,26.4,138,69,90,170.0,7.4,,5,1,4,2,3,1,1,1,0,Former,None,High,Home,1,Uninsured,Emergency,0
+P002372,60,Female,24.0,132,67,61,86.0,4.4,139.0,6,1,9,2,2,0,1,0,0,Former,None,Low,Home,1,Private,Emergency,0
+P004063,54,Male,24.3,113,68,79,60.0,5.0,247.0,1,0,10,0,0,0,0,0,0,Never,,Moderate,Home,0,Medicaid,Emergency,1
+P004075,46,Female,28.1,102,68,67,,4.7,190.0,3,1,6,0,1,0,0,0,0,Never,None,Low,Home,0,Private,Emergency,0
+P001485,76,Female,28.4,134,91,61,111.0,4.8,274.0,3,2,7,1,2,0,0,0,1,Never,Low,Moderate,Other,1,Private,Emergency,0
+P005399,38,Female,,113,62,89,96.0,4.7,182.0,2,0,4,0,0,0,0,0,0,Never,None,Moderate,Home,1,Private,Urgent,0
+P000973,67,Female,28.2,132,89,85,80.0,5.0,201.0,8,2,6,1,2,0,0,1,0,Current,None,Low,Home,1,Private,Emergency,0
+P003376,55,Female,22.2,117,78,77,105.0,5.0,,2,1,6,0,1,0,0,0,0,Current,Low,Moderate,Home,0,Medicaid,Emergency,0
+P004257,38,Male,19.9,131,77,76,98.0,5.6,235.0,5,2,6,1,2,0,1,0,0,Current,None,Low,Home,0,Private,Elective,0
+P002823,74,Male,30.3,123,78,93,186.0,8.0,,5,0,7,3,2,1,0,0,1,Never,Low,Low,Home Health Care,1,Medicare,Emergency,0
+P002008,47,Female,26.0,118,60,55,82.0,5.0,160.0,4,1,7,0,2,0,0,0,0,Current,None,Low,Home,0,Medicaid,Emergency,0
+P003230,42,Female,24.6,96,68,78,114.0,5.6,196.0,1,0,5,0,2,0,0,0,0,Never,Moderate,Moderate,Home,1,Medicaid,Elective,0
+P000401,61,Female,27.6,98,64,98,96.0,4.7,155.0,5,1,4,0,2,0,0,0,0,,Low,Low,Home,1,Private,Emergency,0
+P001059,66,Other,15.0,114,67,78,99.0,5.6,176.0,2,0,5,0,0,0,0,0,0,Former,Moderate,Moderate,Home,0,Medicare,Urgent,0
+P002998,99,Male,,140,83,72,117.0,4.1,193.0,2,2,6,0,1,0,1,0,0,Former,Moderate,Moderate,Home Health Care,1,Medicaid,Urgent,0
+P000900,41,Female,26.6,89,53,71,185.0,7.9,148.0,4,0,6,0,2,1,0,0,1,Former,None,Low,Home,1,Private,Emergency,0
+P004086,64,Female,34.5,124,64,105,194.0,7.8,172.0,6,3,4,4,2,1,1,0,0,Never,Moderate,High,Home,1,Private,Urgent,1
+P001931,38,Female,32.5,95,65,85,103.0,6.2,203.0,3,0,7,0,1,0,0,0,0,Former,Moderate,Low,Home,0,Uninsured,Emergency,0
+P000351,70,Male,29.1,140,84,77,148.0,5.4,228.0,8,2,5,1,3,0,1,1,0,Never,Moderate,Low,Home,0,Medicare,Elective,1
+P000882,78,Female,26.7,130,68,88,203.0,7.2,210.0,5,2,6,1,2,1,0,1,0,Current,Moderate,High,Home Health Care,0,Medicare,Emergency,1
+P002969,94,Male,27.7,164,87,108,86.0,4.7,184.0,3,1,1,0,2,0,1,1,0,Never,Low,Low,Skilled Nursing Facility,1,Medicare,Elective,0
+P000037,62,Female,24.1,124,90,63,63.0,5.0,274.0,4,0,4,0,0,0,0,0,0,Never,Moderate,Moderate,Home,1,Private,Elective,0
+P004547,24,Female,24.7,92,77,72,118.0,4.8,205.0,2,1,4,4,2,0,0,0,0,Current,Moderate,Low,Home,1,Medicaid,Emergency,0
+P003509,72,Female,32.6,152,101,75,163.0,8.0,227.0,6,2,6,1,3,1,1,0,0,Current,Moderate,Moderate,Home,1,Private,Emergency,0
+P004681,88,Female,28.7,135,88,71,128.0,,208.0,3,0,1,0,1,0,0,0,0,Current,,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P001040,74,Male,32.7,148,87,67,104.0,4.8,431.0,3,2,6,1,2,0,1,0,0,Former,Low,High,Home Health Care,1,Private,Elective,0
+P000950,18,Female,25.4,110,69,79,167.0,5.5,261.0,1,0,6,0,0,0,0,0,0,Current,Moderate,Low,Other,1,Uninsured,Emergency,0
+P001369,83,Female,30.6,169,105,91,96.0,4.6,168.0,7,0,12,1,4,0,1,1,0,Never,Moderate,Low,Home,1,Medicare,Emergency,0
+P002310,68,Male,23.2,140,85,56,198.0,7.4,262.0,4,2,9,1,3,1,1,0,0,Never,None,High,Home,1,Medicare,Emergency,0
+P005297,53,Male,34.9,162,92,89,174.0,7.3,156.0,8,1,13,2,5,1,1,0,0,Former,Moderate,Moderate,Rehabilitation,1,Private,Emergency,0
+P003062,67,Female,39.3,148,83,84,176.0,5.2,210.0,2,2,6,2,2,0,1,0,0,Never,High,Moderate,Home,1,Medicare,Emergency,0
+P002560,86,Male,29.5,135,83,110,99.0,,214.0,2,1,4,1,1,0,1,0,0,Current,None,Moderate,Home Health Care,1,Uninsured,Urgent,0
+P000730,47,Male,36.3,109,86,65,96.0,5.0,224.0,5,0,4,3,2,0,0,0,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P005095,72,Male,31.5,137,78,79,204.0,8.7,135.0,7,2,10,1,1,1,0,0,0,Never,Low,Low,Home Health Care,0,Medicare,Emergency,1
+P001326,79,Male,26.6,118,72,67,106.0,5.6,195.0,3,0,4,1,1,0,0,1,0,Former,Low,Low,Home,0,Medicare,Elective,0
+P004236,73,Female,26.2,133,79,80,111.0,4.9,255.0,2,1,3,1,1,0,0,1,0,Never,Moderate,Moderate,Home Health Care,1,Medicare,Urgent,0
+P003985,52,Male,15.0,136,90,60,101.0,4.8,190.0,0,2,6,0,0,0,0,0,0,Current,Low,Low,Skilled Nursing Facility,1,Uninsured,Urgent,0
+P000552,72,Male,22.3,135,86,88,,5.8,176.0,3,0,9,2,2,0,1,1,0,Former,None,Moderate,Home,1,Medicaid,Emergency,0
+P004205,85,Female,27.0,148,82,80,148.0,6.9,214.0,8,6,4,2,6,1,1,1,1,Never,None,Low,Home Health Care,1,Medicare,Urgent,1
+P005516,58,Female,43.9,138,83,64,117.0,5.3,140.0,11,0,10,1,3,0,1,0,0,Former,Low,High,Other,1,Medicaid,Emergency,0
+P005815,76,Male,28.3,142,75,89,75.0,5.2,131.0,5,3,13,0,3,0,1,0,0,Current,Low,High,Skilled Nursing Facility,0,Medicare,Emergency,1
+P004493,53,Female,22.0,121,75,78,104.0,4.4,,3,0,6,0,0,0,0,0,0,Former,Low,Low,Home,1,Medicare,Elective,0
+P003936,67,Female,31.4,122,84,78,111.0,5.7,157.0,3,0,5,0,1,0,0,0,0,Never,Low,Moderate,Other,0,Medicaid,Emergency,0
+P000494,71,Female,29.4,118,62,72,158.0,7.3,155.0,10,2,7,1,3,1,0,1,0,Never,None,Low,Home,1,Medicare,Urgent,0
+P004216,85,Female,21.1,137,95,93,,4.6,149.0,4,0,9,0,1,0,0,1,0,Never,Moderate,Moderate,Home Health Care,1,Uninsured,Emergency,0
+P002664,43,Female,34.9,135,77,77,181.0,6.0,203.0,4,2,7,1,2,0,1,0,0,Current,None,Moderate,Home,0,Medicaid,Emergency,1
+P004424,54,Male,33.2,110,72,73,71.0,5.4,158.0,6,0,6,1,2,0,0,0,0,,Low,High,Home,0,Medicare,Emergency,0
+P003966,52,Male,31.6,114,73,69,179.0,7.1,212.0,6,1,9,5,5,1,1,0,0,Never,,Low,Skilled Nursing Facility,1,Private,Elective,1
+P004907,76,Male,17.8,154,79,68,102.0,6.4,208.0,3,2,9,0,2,0,1,0,0,Never,Moderate,Low,Home Health Care,1,Uninsured,Urgent,0
+P002480,60,Male,27.7,126,95,76,142.0,7.5,169.0,4,3,9,1,3,1,0,0,0,Former,None,Low,Home,0,Medicaid,Emergency,1
+P005616,58,Male,25.3,141,79,48,125.0,5.7,195.0,4,0,5,1,2,0,1,0,0,Never,Low,Low,Rehabilitation,0,Private,Elective,1
+P002278,92,Female,32.7,168,95,77,113.0,5.1,182.0,7,2,3,2,4,0,1,1,1,Never,Low,Moderate,Skilled Nursing Facility,0,Medicare,Urgent,1
+P002704,82,Female,32.0,153,92,98,106.0,4.6,226.0,8,2,9,1,2,0,1,1,0,Never,Moderate,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P001370,78,Female,33.2,143,75,92,106.0,5.5,216.0,2,0,4,0,0,0,0,0,0,Never,None,High,Skilled Nursing Facility,0,Medicare,Elective,0
+P003110,52,Female,25.1,128,79,89,69.0,5.2,225.0,2,0,5,0,1,0,0,0,0,Current,None,Low,Home,1,Private,Urgent,0
+P004035,53,Female,24.3,116,75,91,79.0,4.8,147.0,4,0,3,2,1,0,0,0,0,Never,Moderate,Moderate,Home Health Care,0,Private,Urgent,0
+P001926,46,Male,30.7,122,79,88,69.0,5.3,233.0,4,2,7,3,4,0,1,1,0,Former,Low,Low,Home,1,Private,Elective,1
+P000828,62,Male,28.6,142,77,102,200.0,7.3,177.0,3,0,4,2,3,1,1,0,0,,Low,Moderate,Other,0,Medicaid,Emergency,0
+P003440,93,Female,31.1,135,81,75,98.0,5.4,,12,0,9,2,4,0,1,1,0,Former,Moderate,Low,Home,1,Medicare,Emergency,1
+P004889,61,Female,26.2,125,87,94,121.0,5.2,192.0,2,0,2,0,0,0,0,0,0,,Moderate,Moderate,Skilled Nursing Facility,0,Medicaid,Urgent,0
+P002439,79,Male,39.2,149,86,75,75.0,5.5,211.0,1,1,9,0,1,0,1,0,0,Never,Moderate,Low,Home Health Care,1,Medicare,Emergency,0
+P002217,64,Female,19.7,117,76,97,100.0,5.5,190.0,0,0,1,0,0,0,0,0,0,Never,High,Moderate,Other,0,Private,Urgent,0
+P004022,69,Female,28.5,155,74,74,157.0,7.6,228.0,6,1,5,1,3,1,1,0,1,Never,None,Low,Home Health Care,1,Medicaid,Urgent,0
+P000182,67,Female,22.7,146,86,88,82.0,4.7,207.0,2,0,3,0,3,0,1,1,0,Current,Moderate,Moderate,Rehabilitation,0,Private,Urgent,0
+P005794,81,Male,28.9,137,62,84,103.0,5.0,189.0,5,3,9,2,4,0,1,0,0,Never,Moderate,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P005853,74,Male,32.9,89,66,77,92.0,6.2,210.0,2,1,4,0,1,0,0,1,0,Never,Low,Moderate,Home,1,Medicare,Urgent,0
+P005776,69,Female,26.9,150,89,83,104.0,4.9,119.0,2,0,5,0,3,0,1,0,1,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P001439,45,Female,24.4,99,78,79,117.0,4.7,174.0,2,1,2,1,1,0,0,0,0,Former,Low,High,Home,1,Private,Elective,0
+P005899,71,Male,31.8,148,97,88,100.0,6.0,193.0,2,1,8,2,0,0,0,0,0,Never,High,High,Home,1,Medicare,Emergency,0
+P001235,69,Male,22.2,141,73,63,102.0,5.7,259.0,5,2,5,1,1,0,0,0,0,Never,None,High,Home,1,Medicare,Emergency,0
+P003892,43,Female,21.6,118,72,83,546.0,4.9,186.0,1,1,3,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P002218,63,Female,34.1,142,80,72,126.0,4.9,206.0,4,0,6,0,2,0,1,0,0,Former,Low,Moderate,Home,1,Medicaid,Urgent,0
+P001820,60,Male,19.2,121,72,63,177.0,7.1,211.0,7,2,6,1,3,1,0,0,0,Never,Low,High,Rehabilitation,0,Private,Emergency,0
+P002851,62,Female,18.9,120,91,83,87.0,5.0,199.0,2,1,2,0,1,0,0,0,1,Current,None,Low,Home,0,Medicaid,Urgent,0
+P000452,69,Male,24.0,113,72,66,174.0,7.2,184.0,2,0,3,0,1,1,0,0,0,Never,None,High,Home,0,Medicare,Emergency,0
+P004164,44,Female,41.4,111,74,68,103.0,6.1,196.0,3,0,8,0,1,0,0,0,0,Former,None,High,Home,0,Medicaid,Emergency,0
+P005271,77,Female,25.3,145,81,76,210.0,7.9,165.0,9,2,6,2,3,1,1,0,0,Never,Moderate,Moderate,Skilled Nursing Facility,0,Medicare,Emergency,0
+P004780,64,Male,29.1,147,88,88,102.0,4.3,247.0,3,1,5,1,2,0,0,0,0,Never,,Moderate,Home Health Care,1,Medicaid,Emergency,1
+P004640,55,Other,34.5,141,77,98,101.0,5.9,325.0,8,4,5,2,6,0,1,1,1,Never,Low,High,Home,0,Medicare,Urgent,1
+P001591,43,Male,27.8,136,81,77,,5.0,204.0,2,1,3,1,1,0,1,0,0,Never,Moderate,Low,Home,1,Medicaid,Urgent,0
+P003739,54,Male,25.4,109,72,83,135.0,,,7,1,5,2,2,0,1,1,0,Never,Low,High,Home Health Care,1,Private,Elective,0
+P002672,86,Female,35.2,152,69,73,178.0,7.4,202.0,10,0,3,0,4,1,1,1,1,Never,None,Moderate,Home,1,Medicare,Elective,0
+P000722,81,Female,31.0,127,79,85,87.0,5.6,188.0,1,1,2,0,1,0,0,1,0,Never,None,Moderate,Home Health Care,0,Medicare,Urgent,1
+P003205,70,Male,27.0,162,98,97,137.0,6.3,,8,0,3,1,2,0,1,0,0,Former,None,Low,Home,0,Medicare,Urgent,0
+P001991,70,Male,27.0,152,83,82,81.0,4.5,211.0,4,0,1,2,0,0,0,0,0,Never,Moderate,Low,Home Health Care,0,Medicare,Elective,0
+P001265,63,Male,26.5,118,77,104,60.0,4.1,221.0,5,1,11,1,3,0,1,0,0,Former,Moderate,Moderate,Rehabilitation,1,Private,Elective,1
+P003323,66,Female,25.0,126,77,69,72.0,4.5,172.0,4,2,3,1,1,0,0,1,0,Former,,Low,Other,1,Medicare,Emergency,0
+P004533,91,Female,18.6,133,79,82,129.0,6.3,229.0,3,0,4,1,1,0,0,1,0,Current,Low,High,Other,1,Medicare,Elective,0
+P003127,63,Female,27.9,126,74,96,81.0,4.6,177.0,3,1,8,1,0,0,0,0,0,Current,Moderate,Low,Home Health Care,1,Private,Emergency,0
+P005978,56,Male,31.4,113,78,92,76.0,5.0,174.0,1,1,7,0,0,0,0,0,0,Never,Moderate,High,Rehabilitation,0,Medicare,Emergency,0
+P002189,94,Female,25.7,162,109,87,186.0,7.5,211.0,2,2,7,1,3,1,0,1,0,Former,Low,Low,Home Health Care,0,Private,Emergency,0
+P003010,75,Male,20.5,145,80,76,151.0,5.7,189.0,0,0,3,0,0,0,0,0,0,Never,None,High,Skilled Nursing Facility,0,Medicare,Emergency,1
+P005191,66,Male,42.3,154,92,78,82.0,5.3,138.0,2,1,5,1,1,0,1,0,0,Never,None,Moderate,Skilled Nursing Facility,1,Medicare,Elective,0
+P000910,48,Male,39.6,116,67,62,89.0,5.1,218.0,1,0,2,2,0,0,0,0,0,Never,Low,Low,Home,0,Private,Elective,0
+P000916,81,Male,32.2,144,80,80,165.0,7.1,164.0,5,0,6,2,3,1,1,0,0,Never,Low,Low,Rehabilitation,1,Medicare,Emergency,0
+P005925,45,Female,30.1,158,109,68,243.0,8.5,209.0,3,0,5,1,2,1,0,0,0,Current,Moderate,Low,Home,0,Uninsured,Urgent,0
+P001934,83,Female,34.0,123,81,78,97.0,5.7,211.0,2,1,6,0,2,0,1,1,0,Never,Low,Low,Home,1,Medicaid,Emergency,0
+P001568,66,Male,16.3,139,87,79,76.0,6.3,187.0,2,1,4,3,0,0,0,0,0,Former,Moderate,Moderate,Home,1,Medicare,Urgent,0
+P003294,72,Female,29.9,112,53,91,62.0,5.3,211.0,3,0,4,0,1,0,0,0,1,Never,,Low,Rehabilitation,0,Private,Urgent,0
+P005944,22,Male,25.2,97,74,87,,8.2,205.0,2,0,2,0,1,1,0,0,0,Current,None,Moderate,Home,0,Private,Emergency,0
+P003005,60,Male,38.3,137,85,68,133.0,,226.0,4,0,4,0,1,0,0,1,0,Never,None,Low,Home,1,Medicaid,Urgent,0
+P000654,47,Female,27.3,148,82,67,141.0,6.0,184.0,4,3,3,2,2,0,1,0,0,,Moderate,High,Home Health Care,1,Private,Urgent,0
+P000191,90,Male,37.6,109,69,76,102.0,5.8,183.0,8,3,3,1,4,0,1,0,0,Former,,Moderate,Home,1,Medicaid,Emergency,0
+P000786,68,Male,24.6,127,77,60,,5.6,223.0,5,0,9,0,2,0,0,1,0,Never,Low,Low,Home,0,Medicare,Emergency,0
+P001918,79,Female,29.9,182,85,84,193.0,7.8,242.0,4,0,6,1,3,1,1,0,0,Former,None,Moderate,Home,0,Medicare,Emergency,0
+P000027,72,Male,,116,83,87,106.0,4.9,188.0,4,0,7,3,1,0,0,1,0,Former,Moderate,Low,Home,1,Medicare,Emergency,0
+P002802,79,Male,39.2,143,83,97,196.0,5.3,243.0,4,0,2,0,1,0,1,0,0,Never,None,Moderate,Other,1,Medicare,Elective,0
+P005471,60,Male,30.7,107,76,76,197.0,7.8,231.0,3,3,4,3,2,1,0,0,0,Never,Moderate,Moderate,Rehabilitation,0,Medicaid,Urgent,1
+P000589,68,Female,24.0,155,99,92,93.0,5.1,243.0,1,2,6,0,3,0,1,0,0,Never,None,Low,Home,1,Medicare,Elective,0
+P000775,64,Female,27.3,120,83,64,93.0,5.2,197.0,3,1,5,1,1,0,0,0,0,Current,Moderate,High,Home,1,Private,Emergency,1
+P005308,59,Male,23.5,143,77,80,60.0,5.4,234.0,2,0,7,0,3,0,1,0,0,Current,Moderate,Low,Home,0,Private,Emergency,0
+P001865,68,Female,29.3,125,68,76,138.0,8.0,,7,3,6,2,3,1,1,1,0,Former,Low,Low,Rehabilitation,1,Medicare,Urgent,1
+P005632,87,Male,30.4,161,92,55,139.0,4.7,175.0,4,3,6,1,2,0,1,0,0,Former,,Low,Home,1,Medicare,Elective,0
+P001772,65,Female,26.0,95,60,74,131.0,6.2,252.0,4,0,7,1,3,0,0,1,0,Former,Moderate,Low,Home,0,Medicare,Emergency,0
+P002092,73,Female,32.1,143,77,100,61.0,5.1,229.0,0,1,5,0,1,0,1,0,0,Never,Moderate,High,Home,0,Medicaid,Emergency,0
+P004255,52,Female,25.8,121,61,91,164.0,8.1,158.0,4,0,4,0,1,1,0,0,0,Former,Low,Moderate,Home,0,Private,Emergency,0
+P005266,62,Male,32.5,104,59,104,190.0,7.1,209.0,3,0,6,0,1,1,0,0,0,Never,Low,Low,Home,1,Uninsured,Emergency,0
+P003056,47,Male,21.3,126,73,88,104.0,,280.0,3,1,7,1,2,0,0,1,0,Never,None,High,Skilled Nursing Facility,1,Private,Emergency,1
+P004649,67,Female,24.1,131,75,84,112.0,5.7,196.0,0,0,2,0,0,0,0,0,0,Former,Moderate,Low,Home,0,Medicare,Emergency,0
+P000696,52,Female,30.8,102,78,95,147.0,7.7,198.0,7,1,6,1,4,1,0,0,0,Never,None,Moderate,Home,0,Private,Emergency,0
+P002350,75,Female,21.1,109,67,102,91.0,4.7,190.0,3,0,5,0,1,0,0,0,0,Never,Low,Moderate,Rehabilitation,0,Medicaid,Elective,1
+P001869,58,Male,20.2,137,95,91,130.0,5.8,131.0,1,1,3,2,1,0,0,0,0,Never,None,Low,Home,1,Private,Urgent,0
+P003162,72,Female,32.1,131,95,69,112.0,5.7,168.0,5,0,6,1,1,0,1,0,0,Never,Low,High,Home,1,Medicare,Urgent,0
+P005670,72,Female,33.5,140,88,70,91.0,5.4,165.0,0,1,6,2,1,0,0,0,1,Current,Low,Moderate,Home,1,Uninsured,Urgent,0
+P001882,85,Male,38.7,127,85,77,197.0,8.0,236.0,11,5,4,4,4,1,1,0,1,,Low,Low,Home Health Care,1,Private,Elective,0
+P003337,60,Male,24.5,132,74,98,146.0,6.6,110.0,4,1,3,2,1,1,0,0,0,Former,None,Low,Home,1,Private,Emergency,0
+P004003,68,Male,61.7,152,87,68,172.0,7.4,110.0,4,0,4,2,4,1,1,0,1,Never,Moderate,Low,Home,1,Medicaid,Elective,0
+P003867,70,Female,29.1,106,81,96,61.0,5.0,221.0,2,0,3,0,1,0,0,1,0,Never,None,Low,Home Health Care,1,Medicare,Elective,0
+P004499,68,Female,33.2,139,72,74,110.0,5.1,244.0,5,0,6,1,2,0,0,0,0,Former,,Moderate,Home,0,Medicaid,Urgent,0
+P005002,60,Male,32.6,147,74,72,96.0,5.6,201.0,3,0,4,1,1,0,0,0,1,Current,None,Low,Home,1,Medicaid,Elective,1
+P004742,62,Female,24.6,155,87,88,198.0,7.9,184.0,2,1,7,1,2,1,1,0,0,Never,Low,Low,Home,1,Private,Urgent,1
+P001467,45,Female,22.7,127,80,82,105.0,5.3,161.0,5,0,7,1,2,0,0,0,0,Former,Low,Low,Home,1,Private,Urgent,1
+P003691,75,Male,32.0,147,86,76,171.0,7.7,223.0,4,0,9,1,2,1,1,0,0,Former,None,Moderate,Home,1,Medicare,Emergency,0
+P003070,51,Male,24.0,119,77,89,81.0,5.7,209.0,1,0,3,0,0,0,0,0,0,Never,Moderate,Moderate,Skilled Nursing Facility,0,Medicare,Elective,0
+P001056,86,Male,27.6,115,76,63,139.0,7.1,212.0,8,1,4,1,4,1,0,0,0,Never,None,Moderate,Home,1,Medicare,Elective,1
+P001013,56,Female,23.2,152,81,86,71.0,5.0,140.0,2,2,6,0,1,0,1,0,0,Never,Low,Low,Home,1,Medicaid,Emergency,0
+P001109,84,Female,22.0,124,84,86,122.0,5.2,179.0,2,1,4,0,1,0,0,0,0,Former,None,Low,Rehabilitation,0,Medicare,Emergency,0
+P004018,79,Male,43.9,130,75,69,170.0,8.5,208.0,10,3,5,5,5,1,1,1,0,Former,None,Low,Skilled Nursing Facility,0,Medicare,Elective,0
+P004338,57,Female,31.7,124,87,67,119.0,4.7,254.0,6,0,4,1,2,0,0,0,0,Former,None,Low,Rehabilitation,1,Medicaid,Elective,0
+P004450,64,Female,22.7,129,88,94,95.0,4.5,134.0,1,1,8,0,1,0,1,0,0,Never,Low,Moderate,Skilled Nursing Facility,1,Uninsured,Emergency,0
+P005013,43,Female,25.5,137,77,74,180.0,6.8,213.0,5,0,6,2,2,1,0,0,0,,None,Low,Home,1,Private,Emergency,0
+P004699,80,Female,15.0,132,89,79,125.0,5.4,110.0,3,2,2,2,1,0,0,0,1,Former,,Moderate,Other,0,Medicare,Emergency,0
+P003396,73,Other,24.3,126,60,79,120.0,5.2,179.0,3,1,3,2,1,0,1,0,0,Never,None,Low,Home,1,Medicare,Emergency,0
+P001815,67,Female,24.6,141,68,95,117.0,5.1,244.0,1,0,5,0,1,0,0,0,1,Former,Moderate,High,Home,1,Medicare,Emergency,0
+P000938,63,Female,36.6,128,83,80,146.0,7.2,236.0,7,1,7,1,2,1,0,0,0,Former,None,High,Home,1,Private,Elective,0
+P003623,51,Female,,122,76,81,169.0,6.7,235.0,6,1,5,0,2,1,0,0,0,Current,Low,Moderate,Other,1,Private,Emergency,1
+P000382,84,Male,27.2,133,66,95,88.0,5.3,209.0,8,1,5,2,2,0,1,0,1,Former,None,Moderate,Home,0,Medicare,Emergency,0
+P002921,53,Female,24.4,118,72,72,168.0,7.4,218.0,4,0,6,0,3,1,0,1,0,Never,Low,Moderate,Home,0,Private,Elective,0
+P003002,74,Male,25.4,89,62,85,223.0,7.8,205.0,5,0,6,1,2,1,0,0,0,Never,Moderate,Moderate,Home,0,Medicare,Emergency,0
+P002146,54,Female,30.9,152,85,97,90.0,5.5,208.0,6,1,6,3,2,0,1,0,0,Former,Low,Moderate,Home,1,Private,Emergency,0
+P005142,21,Female,27.4,114,82,70,83.0,4.4,216.0,0,1,8,2,1,0,0,0,0,Current,Low,Low,Home,1,Medicaid,Emergency,0
+P005707,79,Male,25.5,153,82,72,86.0,5.1,180.0,3,4,3,1,2,0,1,0,0,Never,Moderate,High,Home,1,Medicare,Emergency,1
+P004148,94,Female,19.8,128,66,70,85.0,4.7,233.0,2,2,2,1,1,0,0,1,0,Current,Moderate,Moderate,Home,0,Private,Elective,0
+P004727,59,Male,28.9,136,78,76,126.0,6.1,115.0,3,0,6,1,1,0,0,0,0,Current,None,Moderate,Other,0,Private,Urgent,0
+P001384,62,Male,29.7,137,85,77,121.0,5.7,228.0,3,2,4,0,1,0,0,0,0,Never,Low,High,Home,1,Private,Emergency,0
+P004109,86,Male,25.4,153,84,90,166.0,7.5,234.0,5,1,6,0,3,1,1,1,0,Never,High,High,Home,0,Medicare,Emergency,0
+P004398,57,Male,28.4,108,61,88,76.0,4.9,257.0,7,4,6,2,3,0,0,1,0,Never,Moderate,Moderate,Home,0,Private,Emergency,1
+P002385,74,Male,30.8,150,94,88,83.0,5.4,159.0,4,1,6,1,3,0,1,1,0,Never,Moderate,High,Home,1,Medicare,Emergency,0
+P004430,42,Female,31.3,118,91,98,,5.1,222.0,3,2,8,2,1,0,0,0,0,Former,None,Moderate,Home Health Care,0,Uninsured,Urgent,0
+P003394,48,Female,32.6,103,68,90,61.0,4.4,135.0,2,0,5,0,0,0,0,0,0,Former,Moderate,Moderate,Home,1,Private,Emergency,0
+P002024,63,Male,30.4,131,84,71,141.0,5.5,230.0,8,1,9,3,3,0,1,1,0,Former,None,Low,Home,1,Private,Emergency,1
+P005390,60,Male,22.6,110,68,67,127.0,,206.0,6,0,6,0,2,0,0,1,0,Current,Low,Low,Home,0,Private,Emergency,0
+P000525,85,Female,30.7,121,79,91,114.0,5.0,,9,2,10,4,5,0,1,1,0,Current,,Low,Home,1,Medicare,Urgent,1
+P005190,48,Male,28.4,102,61,56,90.0,4.9,177.0,5,2,7,0,2,0,0,1,0,Never,Moderate,Moderate,Rehabilitation,1,Medicaid,Emergency,0
+P000793,72,Female,27.2,121,67,69,,4.8,271.0,3,4,5,2,1,0,0,1,0,Current,Low,High,Home,1,Medicaid,Elective,0
+P001367,47,Female,,118,83,88,476.0,,196.0,6,3,8,1,4,0,0,0,0,Former,,High,Home,1,Medicaid,Emergency,0
+P005646,34,Female,22.7,100,75,80,60.0,,228.0,2,2,2,1,1,0,0,0,0,Former,Moderate,Low,Home,0,Uninsured,Urgent,0
+P002197,61,Female,,135,89,72,145.0,6.3,162.0,5,1,6,0,1,0,1,0,0,Never,Low,Low,Home,0,Private,Emergency,0
+P004342,81,Male,28.3,127,80,83,82.0,4.7,208.0,7,1,4,0,2,0,1,0,0,Current,None,Moderate,Home,1,Medicare,Elective,0
+P003386,70,Female,36.4,139,82,79,111.0,5.7,,8,0,3,1,4,0,1,1,1,Former,High,Moderate,Home,0,Medicare,Urgent,0
+P000849,53,Female,,116,66,79,156.0,7.4,207.0,4,1,4,1,3,1,0,0,0,Former,Low,Moderate,Home,1,Private,Emergency,0
+P004160,71,Female,20.3,109,77,92,121.0,5.7,153.0,1,0,4,0,0,0,0,0,0,Former,Low,Moderate,Home,1,Private,Elective,0
+P001282,31,Other,23.4,100,74,68,495.0,5.5,198.0,5,0,7,0,1,0,0,0,0,Never,Low,Low,Home,1,Uninsured,Emergency,0
+P005299,73,Male,35.1,126,66,69,89.0,,195.0,7,1,5,1,3,0,0,0,0,Current,None,Low,Home,0,Medicare,Elective,0
+P000389,68,Male,23.7,93,52,74,93.0,5.1,180.0,5,3,8,2,4,0,0,0,1,Never,None,High,Rehabilitation,1,Medicare,Elective,0
+P000682,73,Male,37.7,116,67,86,195.0,7.1,204.0,2,2,3,2,2,1,0,0,0,Never,Moderate,Low,Home,0,Private,Urgent,1
+P001030,80,Male,25.2,123,72,64,60.0,4.4,244.0,7,1,2,1,2,0,1,0,1,Current,Moderate,Moderate,Rehabilitation,1,Medicaid,Elective,0
+P003384,54,Female,31.6,152,93,70,153.0,7.7,196.0,1,2,7,2,3,1,1,0,0,Never,Moderate,Moderate,Home Health Care,1,Private,Emergency,0
+P000489,51,Female,27.0,125,77,90,74.0,5.3,191.0,0,0,4,1,0,0,0,0,0,Never,None,Low,Home,1,Private,Urgent,0
+P003345,42,Female,28.5,112,66,73,78.0,4.3,186.0,3,0,3,0,0,0,0,0,0,Current,Low,High,Home,1,Private,Urgent,0
+P000130,50,Male,32.8,128,81,83,96.0,5.4,203.0,2,0,7,2,1,0,0,0,0,Former,Moderate,Moderate,Home,0,Medicare,Elective,0
+P002353,63,Female,27.2,135,76,74,82.0,4.7,210.0,5,1,4,1,2,0,1,1,0,Never,Low,High,Home,1,Medicare,Emergency,0
+P003275,35,Female,27.6,133,101,65,95.0,4.7,168.0,1,3,5,1,1,0,0,0,0,Never,None,Moderate,Home,1,Medicaid,Emergency,0
+P001152,78,Female,21.6,126,80,67,184.0,7.9,227.0,5,3,2,4,2,1,0,0,1,Current,Low,Moderate,Rehabilitation,0,Medicare,Elective,0
+P005018,56,Male,31.0,105,57,63,60.0,4.7,203.0,6,1,5,1,1,0,1,0,0,,Low,Low,Home,1,Uninsured,Urgent,0
+P003879,44,Other,26.9,146,75,50,108.0,5.1,154.0,0,1,8,0,1,0,0,0,0,,Moderate,Low,Home,1,Private,Emergency,0
+P002435,60,Male,19.4,122,59,69,110.0,5.0,201.0,1,0,5,0,2,0,0,0,0,Former,Low,Low,Home,1,Medicare,Emergency,0
+P000159,57,Male,28.4,108,70,64,76.0,4.3,110.0,2,1,2,1,0,0,0,0,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P000496,78,Male,31.2,136,83,59,167.0,6.7,146.0,6,2,5,1,2,0,1,1,0,Never,Low,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P003237,80,Male,30.1,168,93,77,103.0,5.0,207.0,3,2,8,0,2,0,1,0,0,Former,None,High,Home Health Care,0,Medicare,Emergency,0
+P004903,64,Male,19.6,128,78,82,93.0,5.7,165.0,2,0,7,0,1,0,0,0,0,Never,Low,Moderate,Home,1,Private,Elective,0
+P005674,59,Male,22.1,132,82,62,,5.6,194.0,1,1,3,1,0,0,0,0,0,Current,Moderate,Low,Home,1,Private,Emergency,0
+P001716,66,Female,25.4,110,73,83,157.0,5.5,238.0,2,3,5,0,1,0,0,0,0,Never,High,High,Home,0,Medicare,Elective,1
+P004534,42,Male,34.5,105,63,59,170.0,8.0,206.0,2,1,5,1,1,1,0,0,0,Former,Low,Low,Home,0,Uninsured,Emergency,0
+P005433,48,Male,23.2,104,64,60,131.0,5.6,260.0,0,1,3,2,0,0,0,0,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P003557,61,Male,35.0,114,77,58,190.0,8.5,193.0,8,1,5,0,3,1,0,0,0,Never,None,Moderate,Home Health Care,1,Private,Emergency,0
+P001472,81,Male,38.0,119,68,72,94.0,5.3,135.0,2,0,9,1,3,0,1,1,0,Never,None,High,Home,1,Medicare,Emergency,0
+P001382,21,Female,25.6,115,86,81,69.0,5.1,215.0,1,0,4,1,1,0,0,0,0,Former,Low,Low,Home Health Care,1,Private,Emergency,0
+P000615,52,Male,27.7,152,72,95,88.0,5.2,176.0,3,2,4,1,2,0,1,0,0,Current,Moderate,Moderate,Home,1,Medicaid,Emergency,0
+P005967,52,Male,,148,90,67,70.0,4.2,154.0,3,0,2,1,2,0,1,0,0,Former,Low,Low,Home,1,Uninsured,Emergency,1
+P001868,74,Female,,122,76,68,68.0,4.4,236.0,3,0,9,0,1,0,0,1,0,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P003672,72,Male,27.2,150,101,81,155.0,7.6,186.0,3,1,11,1,3,1,1,1,0,Never,Moderate,Moderate,Home,1,Private,Emergency,0
+P005286,70,Male,27.5,117,78,97,207.0,8.0,165.0,6,3,6,1,3,1,0,1,0,Never,None,Moderate,Home,1,Medicare,Emergency,1
+P002962,64,Male,,108,68,72,74.0,5.7,214.0,3,0,1,1,0,0,0,0,0,Former,None,Low,Home,0,Private,Urgent,0
+P003432,85,Male,25.6,139,81,77,201.0,8.0,185.0,2,0,6,0,2,1,0,1,0,Never,Low,Low,Home,1,Medicare,Elective,1
+P001816,57,Male,29.1,110,74,68,80.0,5.6,183.0,1,0,2,0,0,0,0,0,0,Current,Low,High,Home Health Care,1,Medicaid,Urgent,0
+P004595,75,Male,29.2,130,72,61,79.0,5.0,242.0,5,3,2,1,2,0,0,0,1,Never,Moderate,Moderate,Home,1,Medicaid,Urgent,1
+P000953,71,Male,30.7,138,88,62,88.0,5.6,287.0,7,3,3,1,2,0,1,0,0,Never,Low,High,Rehabilitation,0,Private,Urgent,1
+P000174,46,Female,27.4,126,68,78,129.0,5.2,142.0,6,1,2,1,2,0,0,0,1,Former,None,Low,Home,1,Uninsured,Emergency,0
+P003952,100,Male,,133,86,83,147.0,7.6,244.0,10,6,6,1,4,1,1,0,1,Never,Low,Low,Rehabilitation,1,Medicare,Emergency,1
+P004512,61,Female,27.3,118,68,76,191.0,7.4,243.0,8,1,8,4,3,1,1,0,0,Former,Low,Low,Home,1,Private,Emergency,0
+P004568,67,Female,21.6,108,63,60,75.0,5.6,219.0,9,0,4,0,2,0,0,0,0,Former,None,Low,Home,0,Medicare,Elective,0
+P002388,74,Male,38.4,126,67,75,124.0,4.3,175.0,5,0,2,0,0,0,0,0,0,Never,None,Moderate,Home Health Care,1,Medicare,Emergency,0
+P000462,51,Female,31.6,133,73,93,,4.2,190.0,4,1,1,0,0,0,0,0,0,Current,Low,Low,Home,0,Private,Elective,0
+P003669,38,Male,30.6,100,66,70,77.0,4.4,216.0,2,1,6,0,0,0,0,0,0,Former,Low,Moderate,Home,1,Private,Emergency,0
+P004814,63,Female,27.3,123,75,99,68.0,5.2,223.0,1,0,9,0,0,0,0,0,0,Current,Moderate,Low,Home,1,Uninsured,Emergency,0
+P000657,51,Female,32.4,109,71,69,166.0,,209.0,2,1,7,0,1,1,0,0,0,Former,None,Low,Home,0,Medicaid,Emergency,0
+P005832,67,Male,21.5,134,70,76,140.0,7.0,148.0,4,1,5,2,3,1,0,0,0,Current,None,High,Home,0,Medicare,Emergency,0
+P004233,50,Male,17.3,94,60,88,71.0,5.2,187.0,5,2,5,2,5,0,0,0,0,Current,Moderate,High,Home,0,Private,Emergency,1
+P002754,66,Male,20.5,162,79,69,130.0,5.5,217.0,4,0,9,1,2,0,1,0,0,Never,Low,High,Home,1,Medicare,Emergency,0
+P001752,55,Female,22.4,129,63,60,91.0,4.9,135.0,1,0,8,0,1,0,0,0,0,Never,None,High,Home,0,Private,Emergency,0
+P003726,85,Male,24.2,139,75,82,140.0,6.6,147.0,1,0,1,1,0,0,0,0,0,Former,Low,Low,Home Health Care,1,Medicaid,Elective,0
+P001090,60,Female,24.3,151,76,77,165.0,8.1,164.0,2,1,9,1,3,1,1,0,0,Never,Moderate,Low,Home,1,Private,Emergency,0
+P003189,59,Female,23.8,112,83,73,114.0,5.5,221.0,1,0,6,0,0,0,0,0,0,Current,High,Moderate,Home,1,Private,Emergency,0
+P002865,48,Male,36.2,103,77,71,93.0,6.5,171.0,3,1,5,0,2,0,0,0,0,Former,None,Low,Home,0,Uninsured,Urgent,1
+P005384,70,Female,27.6,148,88,84,73.0,4.7,134.0,9,0,4,1,5,0,1,1,1,Never,None,Low,Home Health Care,1,Uninsured,Elective,0
+P001894,32,Male,30.9,114,61,81,76.0,5.0,437.0,2,0,7,0,1,0,0,0,0,Former,None,Low,Home,0,Private,Emergency,0
+P001402,59,Female,27.4,114,82,64,60.0,5.9,255.0,1,1,7,0,1,0,0,0,0,Never,Low,Moderate,Home,0,Private,Emergency,0
+P001019,59,Female,37.0,165,100,74,176.0,7.8,177.0,5,0,6,1,4,1,1,0,1,Never,None,Moderate,Home,1,Medicaid,Elective,0
+P003679,54,Male,18.8,130,70,98,89.0,5.7,195.0,4,0,3,0,0,0,0,0,0,Current,Moderate,High,Home,0,Medicaid,Emergency,0
+P005356,77,Female,30.9,113,66,67,175.0,,249.0,5,1,12,4,5,1,0,0,0,Never,Low,Low,Rehabilitation,0,Medicare,Emergency,1
+P004140,69,Male,26.6,126,82,78,91.0,5.0,181.0,7,2,5,1,3,0,0,0,0,Never,None,Moderate,Home,1,Medicare,Emergency,0
+P004313,65,Male,30.5,144,86,84,95.0,4.6,269.0,2,0,2,1,0,0,0,0,0,Never,Moderate,Low,Home,0,Private,Urgent,0
+P004217,82,Female,27.6,146,81,54,120.0,4.7,225.0,3,3,16,5,3,0,1,1,1,Never,None,Low,Rehabilitation,1,Medicare,Emergency,1
+P004615,56,Female,33.4,126,83,63,110.0,5.0,182.0,2,1,3,1,2,0,0,0,0,Never,Low,Moderate,Home,1,Private,Elective,0
+P004673,72,Female,21.4,146,81,65,96.0,4.4,192.0,2,3,9,4,3,0,1,1,0,Former,None,Low,Skilled Nursing Facility,0,Medicare,Emergency,1
+P001902,80,Female,32.8,107,69,69,101.0,4.9,166.0,2,0,3,0,0,0,0,0,0,Never,None,Moderate,Home,1,Medicare,Urgent,0
+P001876,37,Male,34.3,126,80,85,60.0,6.1,178.0,1,1,5,0,0,0,0,0,0,Never,None,Low,Home Health Care,0,Uninsured,Elective,0
+P000409,34,Male,,109,71,80,,,181.0,6,1,6,1,3,0,1,0,0,Former,Moderate,Low,Home,1,Uninsured,Emergency,0
+P002535,61,Female,29.3,149,81,90,65.0,5.1,110.0,2,2,5,3,3,0,1,0,1,Never,Low,High,Home,0,Private,Emergency,1
+P002442,73,Male,18.8,161,89,70,85.0,5.9,181.0,6,0,7,1,2,0,1,0,0,Former,Moderate,High,Home,1,Medicare,Urgent,0
+P004130,49,Male,24.0,106,67,92,85.0,5.1,182.0,7,0,6,0,3,0,1,1,0,Never,,Moderate,Skilled Nursing Facility,0,Private,Elective,0
+P003239,78,Female,39.3,133,72,74,209.0,7.3,189.0,6,3,8,0,5,1,1,1,1,,Moderate,Low,Home,1,Medicare,Emergency,1
+P002683,79,Female,20.7,138,94,60,131.0,5.6,169.0,5,0,3,1,2,0,0,0,0,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P003068,71,Male,38.3,130,81,92,83.0,4.6,160.0,4,2,6,3,4,0,0,0,0,Never,Moderate,Low,Home,1,Medicare,Emergency,0
+P003360,66,Female,27.2,118,75,92,136.0,6.7,234.0,11,2,9,2,4,1,0,1,1,Never,None,Low,Other,1,Medicare,Emergency,1
+P002311,76,Male,31.3,118,69,70,180.0,,120.0,11,2,2,3,5,1,0,0,0,Never,Low,Moderate,Home,0,Private,Urgent,0
+P003380,60,Male,27.1,106,89,93,185.0,7.5,207.0,1,2,7,3,1,1,0,0,0,Current,Moderate,Low,Home,0,Private,Emergency,1
+P004540,74,Female,23.7,130,86,99,203.0,8.2,145.0,5,1,2,0,2,1,0,0,1,Current,Low,Moderate,Home,1,Medicare,Elective,0
+P003673,73,Male,30.4,152,79,84,107.0,4.8,259.0,6,3,6,1,4,0,1,1,0,Former,Low,Moderate,Home,0,Private,Emergency,0
+P004150,38,Male,32.0,147,86,58,97.0,5.3,245.0,2,0,2,0,0,0,0,0,0,Former,High,High,Home,0,Uninsured,Elective,0
+P003784,84,Female,32.0,142,71,99,115.0,5.3,265.0,6,2,2,0,2,0,1,0,1,Never,Low,Low,Home,1,Private,Urgent,0
+P002193,49,Male,29.0,142,70,70,103.0,5.0,146.0,2,0,5,0,1,0,1,0,0,Never,Moderate,Low,Home,1,Medicaid,Emergency,0
+P003675,44,Female,23.3,128,68,78,81.0,4.7,189.0,2,0,3,0,0,0,0,0,0,Never,Moderate,Low,Home,1,Medicaid,Urgent,0
+P002853,85,Male,28.6,159,86,87,81.0,4.6,171.0,5,2,9,3,2,0,1,0,0,Never,Moderate,Moderate,Rehabilitation,1,Private,Elective,1
+P002632,49,Male,37.3,143,81,81,60.0,5.3,211.0,4,1,4,0,2,0,1,0,0,Never,High,Low,Home,1,Private,Elective,0
+P000019,77,Female,19.5,107,61,84,112.0,5.4,197.0,2,0,7,3,0,0,0,0,0,Never,Moderate,Moderate,Rehabilitation,1,Private,Emergency,0
+P001600,48,Female,37.2,120,78,71,130.0,5.1,197.0,2,0,4,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Private,Emergency,0
+P003520,74,Male,,118,75,81,191.0,6.7,173.0,5,2,9,3,3,0,0,0,0,,None,Low,Home,1,Medicaid,Emergency,0
+P005164,67,Male,15.4,135,86,93,89.0,4.9,188.0,0,1,4,0,0,0,0,0,0,Never,,Moderate,Home,1,Private,Urgent,0
+P003556,60,Male,26.8,124,73,76,159.0,6.9,144.0,7,0,8,3,3,1,1,0,0,Never,Low,Low,Home,1,Private,Elective,0
+P004941,70,Other,35.9,159,100,86,148.0,7.4,210.0,2,2,6,1,2,1,1,0,0,Former,Moderate,Low,Home,1,Medicare,Emergency,0
+P001484,69,Male,35.1,150,88,85,,7.7,212.0,8,1,8,2,5,1,1,1,1,Never,Moderate,High,Home Health Care,1,Medicare,Emergency,1
+P003023,70,Male,34.2,120,81,96,174.0,8.1,219.0,7,0,5,0,3,1,0,1,0,Former,Moderate,Moderate,Home,0,Medicare,Elective,0
+P000153,39,Female,27.8,100,65,70,75.0,4.7,152.0,2,0,6,0,0,0,0,0,0,Current,None,Moderate,Home,1,Private,Emergency,0
+P003453,93,Male,28.1,120,75,82,159.0,6.9,237.0,6,2,6,2,2,1,0,1,0,Never,None,Low,Home,1,Medicaid,Emergency,0
+P000867,44,Female,25.3,121,69,71,87.0,5.1,265.0,3,0,6,0,1,0,0,1,0,Never,Low,Moderate,Rehabilitation,0,Uninsured,Emergency,0
+P003151,68,Male,16.6,104,80,79,89.0,4.9,259.0,1,0,6,1,0,0,0,0,0,Current,None,High,Rehabilitation,1,Medicare,Emergency,0
+P005337,76,Female,23.2,124,60,81,147.0,5.3,221.0,6,1,3,0,1,0,0,1,0,Former,High,Moderate,Home,0,Medicare,Emergency,0
+P001549,72,Male,27.1,116,75,66,121.0,4.6,216.0,2,3,10,1,1,0,0,0,0,Never,Moderate,Low,Rehabilitation,1,Medicare,Emergency,0
+P002605,82,Female,38.0,150,76,89,165.0,,217.0,4,1,6,0,3,1,0,1,0,Never,Low,Moderate,Home,0,Medicare,Emergency,0
+P004306,64,Male,,124,84,70,87.0,4.6,189.0,6,0,3,0,2,0,0,0,0,Never,None,Low,Other,1,Private,Elective,0
+P004960,50,Female,34.5,129,75,60,156.0,7.6,190.0,5,0,3,2,2,1,1,0,0,Never,Low,Low,Home,1,Private,Urgent,0
+P002048,71,Male,31.5,136,78,86,192.0,7.2,213.0,3,1,6,1,3,1,0,0,0,Former,Low,Low,Home,1,Medicare,Emergency,0
+P003401,70,Male,28.6,141,73,76,157.0,7.2,230.0,6,1,5,2,2,1,1,0,0,Never,None,High,Home,0,Medicare,Urgent,0
+P003930,53,Male,24.8,117,70,74,86.0,5.7,292.0,2,1,1,2,0,0,0,0,0,Never,Low,Low,Home,1,Private,Elective,0
+P001967,68,Male,28.1,91,66,80,148.0,7.6,207.0,5,1,7,0,2,1,0,1,0,Never,Low,High,Home,1,Medicare,Emergency,0
+P002134,69,Female,29.8,118,66,92,82.0,6.2,201.0,4,1,11,2,2,0,0,0,0,Former,None,Low,Other,1,Medicare,Emergency,0
+P004080,56,Female,35.1,126,77,86,105.0,4.4,148.0,0,1,5,4,1,0,1,0,0,Former,Moderate,Moderate,Home,1,Private,Emergency,0
+P003533,84,Female,25.5,140,90,56,87.0,4.3,194.0,3,0,6,1,1,0,0,0,0,Former,Low,Moderate,Home,1,Medicare,Emergency,0
+P000240,56,Male,21.3,120,72,50,106.0,5.2,156.0,4,0,2,0,1,0,0,0,1,Former,None,Low,Home,1,Uninsured,Emergency,0
+P005584,48,Female,31.9,98,73,66,85.0,4.8,123.0,0,0,3,1,0,0,0,0,0,Former,Moderate,Moderate,Home,1,Private,Elective,0
+P004789,94,Female,34.4,168,103,78,114.0,6.2,192.0,4,1,5,0,1,0,1,0,0,Former,None,High,Home,1,Medicare,Urgent,0
+P005380,79,Female,43.1,143,69,81,193.0,7.3,177.0,8,3,11,3,5,1,1,1,1,Former,None,High,Skilled Nursing Facility,1,Private,Emergency,1
+P002180,58,Female,31.2,140,77,65,159.0,5.4,245.0,3,1,7,0,0,0,0,0,0,Former,Low,Low,Home,1,Medicare,Emergency,0
+P004885,71,Female,35.3,131,81,78,81.0,5.3,181.0,4,0,2,0,1,0,1,0,0,Former,High,Low,Home,0,Medicare,Urgent,0
+P004799,57,Male,23.3,127,73,81,169.0,7.4,112.0,5,0,6,1,2,1,0,0,0,Current,Moderate,Moderate,Home,1,Uninsured,Elective,0
+P001192,79,Female,25.3,138,87,74,180.0,7.8,271.0,2,1,6,0,1,1,0,0,0,Former,Low,Moderate,Home Health Care,1,Medicare,Elective,1
+P003320,76,Female,36.2,146,76,47,182.0,7.8,193.0,6,1,5,0,3,1,1,0,0,Former,,High,Home,0,Medicare,Emergency,1
+P005538,31,Female,,114,72,69,116.0,,167.0,0,1,3,1,1,0,0,0,0,Never,None,Low,Home Health Care,1,Private,Elective,0
+P000060,79,Male,30.0,160,99,88,68.0,5.2,159.0,8,1,3,1,4,0,1,0,0,Former,None,Low,Home,0,Medicare,Urgent,0
+P003616,77,Female,30.6,158,77,79,86.0,5.8,146.0,2,4,8,0,1,0,1,0,0,Current,Low,High,Home Health Care,1,Private,Urgent,0
+P005995,50,Female,18.5,133,81,81,81.0,4.8,183.0,1,0,4,0,0,0,0,0,0,Former,None,High,Home,0,Private,Elective,0
+P002749,61,Male,34.1,158,84,99,176.0,7.6,242.0,1,0,5,0,3,1,1,0,0,Current,None,Moderate,Home,1,Private,Elective,0
+P003622,55,Male,27.5,125,73,94,65.0,5.5,,6,0,10,3,2,0,0,0,0,Current,Low,Low,Home,0,Private,Elective,1
+P000280,68,Male,,130,86,71,131.0,4.5,177.0,3,0,4,1,0,0,0,0,0,Never,,Moderate,Home,0,Uninsured,Elective,0
+P001064,81,Male,15.7,124,83,81,114.0,5.1,186.0,6,1,4,1,2,0,0,1,0,Former,None,Moderate,Home,0,Medicare,Urgent,0
+P003454,75,Female,30.0,145,73,80,98.0,5.3,230.0,7,1,5,1,2,0,1,1,0,Former,Moderate,High,Home Health Care,1,Medicare,Emergency,0
+P005505,65,Female,23.7,141,89,67,85.0,5.5,181.0,5,0,4,1,1,0,1,0,0,Never,Moderate,Low,Home,0,Private,Urgent,0
+P003105,63,Female,24.2,149,92,83,125.0,4.2,259.0,4,0,7,4,2,0,1,1,0,Never,High,Moderate,Skilled Nursing Facility,1,Private,Emergency,0
+P000856,64,Female,34.0,122,81,81,63.0,5.2,129.0,3,0,3,1,0,0,0,0,0,Never,None,High,Home,1,Private,Urgent,0
+P001802,71,Female,34.1,131,78,64,172.0,7.1,456.0,9,3,4,3,3,1,1,0,1,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P003498,80,Female,33.6,136,71,71,75.0,4.9,318.0,6,0,6,2,2,0,1,0,1,Current,Low,High,Home,1,Medicare,Emergency,0
+P001819,71,Female,32.6,119,67,80,115.0,5.5,169.0,4,2,8,1,3,0,1,0,0,Never,Low,High,Home,0,Medicare,Emergency,1
+P004982,67,Male,35.9,142,76,68,85.0,5.9,204.0,1,2,5,1,2,0,1,0,0,Former,Low,High,Home,0,Medicare,Emergency,0
+P004874,46,Male,33.7,116,74,84,99.0,5.5,239.0,2,1,3,2,0,0,0,0,0,Never,High,Low,Other,1,Private,Elective,0
+P004089,57,Male,37.8,117,59,75,156.0,7.3,197.0,2,3,3,1,2,1,0,0,0,Never,Moderate,High,Home,0,Uninsured,Elective,1
+P002532,72,Female,31.8,117,73,72,179.0,8.0,201.0,4,2,5,1,3,1,0,0,0,Never,Low,High,Home,1,Medicare,Emergency,0
+P002658,50,Male,40.4,134,69,72,109.0,4.6,192.0,2,0,4,1,1,0,0,0,0,Former,Moderate,Low,Home,1,Private,Elective,0
+P001358,56,Male,20.2,117,82,90,,5.6,255.0,3,1,1,2,1,0,0,1,0,,Low,Low,Home,1,Private,Elective,0
+P005819,71,Male,30.5,132,81,63,95.0,4.8,,3,0,3,0,1,0,0,0,0,Never,Low,High,Home Health Care,1,Uninsured,Emergency,0
+P004805,57,Male,30.0,147,79,45,97.0,5.2,149.0,4,0,5,1,1,0,1,0,0,Former,Moderate,Moderate,Home Health Care,0,Private,Emergency,0
+P005929,73,Male,33.3,124,81,82,82.0,4.7,222.0,4,0,5,0,0,0,0,0,0,Former,None,Low,Home Health Care,0,Private,Urgent,0
+P002520,38,Male,,104,65,69,123.0,5.3,244.0,2,1,9,1,1,0,0,1,0,Former,Moderate,Moderate,Skilled Nursing Facility,1,Private,Emergency,0
+P003455,86,Female,28.9,146,89,78,69.0,5.4,225.0,2,0,8,1,1,0,1,0,0,Current,Low,Low,Home,0,Medicare,Emergency,0
+P001408,74,Male,30.0,157,85,97,186.0,,198.0,8,1,6,2,5,1,1,1,1,Former,Low,Low,Home,1,Medicare,Emergency,1
+P000710,74,Male,29.9,121,86,70,122.0,5.0,188.0,7,0,8,1,3,0,1,1,0,Former,Low,Low,Home,1,Medicare,Urgent,0
+P000314,71,Female,25.5,132,83,51,114.0,5.4,,1,1,4,0,0,0,0,0,0,Former,None,Moderate,Home,0,Uninsured,Urgent,0
+P005404,64,Male,33.1,150,90,65,128.0,6.1,152.0,4,1,3,1,1,0,0,0,1,Never,Low,Moderate,Home,0,Private,Emergency,1
+P003472,59,Male,39.1,155,79,93,136.0,6.8,204.0,8,2,7,2,4,1,1,0,0,Never,None,Low,Skilled Nursing Facility,1,Medicaid,Elective,0
+P000012,76,Male,33.3,159,85,96,87.0,5.3,204.0,5,2,5,1,1,0,1,0,0,Former,Moderate,Low,Home,0,Private,Urgent,1
+P005786,91,Female,28.5,134,66,100,107.0,5.2,222.0,9,4,4,2,4,0,1,1,0,Never,Low,High,Home Health Care,1,Medicare,Emergency,1
+P005026,25,Male,30.6,92,58,73,74.0,5.6,203.0,2,1,4,0,0,0,0,0,0,Current,None,Low,Home,1,Private,Emergency,0
+P001470,37,Male,33.6,102,86,84,132.0,5.9,215.0,5,0,9,2,2,0,0,0,0,Never,Low,Moderate,Rehabilitation,0,Uninsured,Emergency,1
+P004116,55,Female,26.8,127,73,86,184.0,7.0,239.0,7,2,6,1,5,1,1,0,1,Never,None,Low,Home,0,Uninsured,Urgent,1
+P004712,56,Female,33.6,154,80,88,107.0,5.2,205.0,4,0,2,0,1,0,1,0,0,Never,Moderate,Moderate,Home,1,Medicaid,Emergency,0
+P000965,63,Male,27.0,124,82,63,181.0,7.5,,2,0,6,0,1,1,0,0,0,Former,Moderate,Low,Home,0,Uninsured,Emergency,0
+P002647,89,Female,26.1,137,67,56,163.0,7.3,270.0,7,6,12,1,6,1,1,1,1,Former,Moderate,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,1
+P000791,53,Female,31.7,114,87,80,,6.1,158.0,2,0,6,0,0,0,0,0,0,Never,None,High,Home,0,Medicaid,Emergency,0
+P003255,58,Female,34.0,117,70,83,118.0,6.3,206.0,1,0,7,0,1,0,1,0,0,Current,Moderate,Moderate,Home,0,Private,Emergency,0
+P003746,58,Female,25.9,137,87,72,112.0,6.3,212.0,2,1,5,0,2,0,1,0,0,Former,Low,High,Home,1,Medicaid,Urgent,0
+P001066,63,Female,35.0,139,82,78,199.0,8.1,269.0,9,2,1,1,3,1,1,0,0,Never,Low,High,Home,1,Private,Elective,0
+P001083,70,Male,15.0,119,71,87,79.0,4.2,172.0,3,2,6,0,1,0,0,0,0,Former,Low,Moderate,Home,1,Medicare,Emergency,0
+P004179,33,Female,31.5,126,57,75,142.0,5.2,189.0,2,1,5,0,1,0,0,0,0,Former,None,Low,Home Health Care,0,Private,Urgent,0
+P001094,67,Female,34.7,95,54,81,,5.4,174.0,0,1,4,1,0,0,0,0,0,Never,Low,Moderate,Home,0,Medicare,Urgent,0
+P005732,64,Female,27.4,120,81,78,,5.7,185.0,1,0,4,1,0,0,0,0,0,Never,High,Low,Home,1,Private,Emergency,0
+P002903,79,Male,23.8,127,72,66,179.0,7.4,185.0,4,0,4,1,3,1,0,0,1,Former,None,Low,Home,1,Medicare,Urgent,0
+P005739,37,Female,32.2,93,70,58,125.0,4.6,181.0,5,1,3,1,1,0,0,0,0,Never,,High,Home Health Care,1,Private,Elective,0
+P005246,66,Male,37.0,145,73,106,98.0,5.7,250.0,6,1,3,4,5,0,1,1,0,Former,None,Moderate,Home,1,Medicare,Elective,0
+P001992,72,Female,30.7,121,80,95,113.0,4.8,185.0,1,0,3,0,1,0,0,1,0,Former,None,Moderate,Home,1,Medicare,Urgent,0
+P004442,32,Female,17.8,106,51,83,100.0,4.7,192.0,2,0,6,0,0,0,0,0,0,Former,High,Low,Home,1,Private,Urgent,0
+P000630,28,Female,31.2,105,85,60,118.0,4.4,124.0,1,0,5,0,0,0,0,0,0,Never,None,Moderate,Home,0,Private,Emergency,0
+P005601,89,Female,28.9,127,80,94,60.0,5.5,184.0,7,3,5,6,2,0,0,0,0,Never,Moderate,High,Other,1,Medicare,Urgent,0
+P001123,53,Female,20.9,126,68,78,84.0,4.8,179.0,2,1,4,1,2,0,1,0,0,Former,High,Moderate,Home,1,Uninsured,Elective,0
+P005945,82,Female,17.2,132,86,62,168.0,6.6,217.0,2,0,4,0,1,1,0,0,0,Never,Low,High,Home,1,Uninsured,Emergency,0
+P003919,67,Male,31.3,144,93,73,100.0,5.4,242.0,4,0,4,0,1,0,1,0,0,Current,,Moderate,Home,1,Medicare,Emergency,0
+P001048,72,Female,22.8,141,92,74,121.0,5.0,242.0,5,3,9,0,4,0,1,0,0,Never,None,Low,Home,1,Medicare,Urgent,1
+P004383,71,Female,25.7,129,79,79,212.0,7.7,157.0,3,1,6,0,2,1,1,0,0,Former,Low,Moderate,Home,0,Medicare,Urgent,0
+P005790,85,Female,29.6,175,88,81,165.0,7.7,170.0,7,1,3,1,5,1,1,0,1,Current,None,Moderate,Skilled Nursing Facility,0,Uninsured,Urgent,0
+P005315,64,Male,31.4,133,96,83,172.0,7.9,216.0,0,0,2,0,1,1,0,0,0,Former,None,Low,Home,1,Private,Urgent,0
+P002227,66,Female,38.8,135,76,79,138.0,6.8,151.0,5,1,4,3,4,1,1,0,0,Never,Low,High,Home,0,Medicare,Emergency,0
+P005410,72,Female,32.7,114,69,70,186.0,7.6,234.0,5,2,3,1,3,1,0,0,0,Never,Moderate,Moderate,Home,0,Medicare,Elective,0
+P001291,67,Male,28.6,133,76,84,199.0,8.1,185.0,9,3,11,0,5,1,1,1,0,Former,Moderate,High,Home,1,Private,Emergency,1
+P002911,57,Female,22.6,136,66,80,85.0,5.5,152.0,2,2,1,1,1,0,0,0,0,Never,Low,Moderate,Home,1,Private,Urgent,0
+P002176,65,Male,27.3,128,75,102,93.0,5.6,125.0,4,0,6,0,1,0,0,1,0,Never,Moderate,High,Home,1,Private,Urgent,0
+P004058,75,Male,32.2,108,76,85,119.0,4.6,114.0,3,1,4,2,2,0,0,1,0,Never,Low,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P004195,83,Female,21.9,128,77,83,,5.1,201.0,2,0,5,0,1,0,1,0,0,Former,None,Moderate,Home Health Care,0,Medicare,Emergency,0
+P005401,59,Female,26.2,119,77,71,122.0,6.0,161.0,3,2,7,2,2,0,0,0,0,Former,Low,Moderate,Rehabilitation,0,Medicare,Emergency,0
+P000144,68,Male,20.5,121,56,62,107.0,5.4,,5,2,3,2,2,0,1,0,0,Never,,Moderate,Home,1,Medicare,Elective,0
+P003305,100,Male,18.9,161,94,72,60.0,5.2,247.0,4,3,4,2,3,0,1,1,1,Never,None,Low,Home,1,Private,Elective,0
+P003692,63,Male,34.5,120,73,62,78.0,5.1,251.0,1,0,7,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Private,Emergency,0
+P000779,65,Female,22.6,140,81,95,106.0,4.9,233.0,5,0,8,0,1,0,1,0,0,Former,None,Low,Home,1,Medicare,Emergency,0
+P002703,77,Female,35.0,133,70,57,240.0,8.9,197.0,2,0,3,1,2,1,0,0,0,Never,None,Moderate,Home,0,Medicare,Elective,0
+P002616,54,Female,27.6,107,81,80,106.0,5.5,204.0,3,0,4,0,1,0,0,0,0,Never,Low,Moderate,Home,0,Uninsured,Elective,0
+P004544,49,Female,27.2,114,77,107,424.0,5.0,241.0,4,1,6,2,3,0,0,1,0,Former,Moderate,Moderate,Home,1,Private,Urgent,0
+P003452,75,Male,29.2,168,85,73,180.0,7.0,248.0,11,0,3,2,4,1,1,1,1,Never,Moderate,Moderate,Other,1,Medicare,Urgent,0
+P002464,46,Male,24.6,134,65,73,90.0,4.8,232.0,4,0,6,0,1,0,1,0,0,Never,None,Moderate,Home,1,Private,Elective,0
+P000468,93,Female,32.3,148,89,93,167.0,7.2,175.0,5,1,9,2,4,1,1,1,0,Never,Moderate,Moderate,Home,1,Medicaid,Emergency,1
+P004112,72,Female,28.5,108,76,79,106.0,4.5,151.0,5,1,9,2,2,0,0,1,0,Never,Moderate,Moderate,Other,1,Medicare,Emergency,0
+P002376,27,Female,29.1,105,65,57,168.0,7.7,224.0,2,2,68,2,3,1,0,0,0,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P005565,52,Female,33.6,155,80,85,128.0,5.3,110.0,1,0,6,0,1,0,1,0,0,Never,Moderate,Low,Home,1,Private,Elective,0
+P005435,50,Female,30.9,113,62,108,191.0,8.8,231.0,6,1,5,1,3,1,0,0,0,Current,Low,High,Rehabilitation,1,Private,Emergency,0
+P004977,66,Female,20.3,118,70,66,101.0,5.0,,0,1,5,0,0,0,0,0,0,Never,None,Low,Home Health Care,1,Medicare,Urgent,0
+P001257,76,Male,21.5,165,111,58,84.0,4.5,214.0,7,1,5,0,1,0,1,0,0,Former,Low,Moderate,Home,0,Private,Elective,0
+P005386,81,Female,33.1,139,92,65,173.0,7.6,145.0,8,3,2,1,4,1,0,0,1,Never,Low,Low,Home,0,Medicare,Urgent,0
+P000978,58,Female,22.0,111,72,92,99.0,4.9,166.0,3,1,4,1,1,0,0,1,0,Current,Moderate,High,Home,1,Private,Elective,0
+P002635,81,Male,23.2,137,73,95,123.0,5.3,,7,3,3,2,2,0,1,1,0,Never,None,Moderate,Skilled Nursing Facility,1,Medicare,Elective,0
+P005981,53,Female,27.1,135,83,51,90.0,5.4,182.0,1,0,3,0,1,0,0,1,0,Former,,High,Home,1,Private,Emergency,0
+P001788,40,Male,36.1,113,64,96,81.0,4.8,164.0,4,2,7,0,2,0,0,0,0,Never,Moderate,High,Home,1,Private,Emergency,1
+P002175,69,Male,31.5,104,73,110,204.0,8.0,203.0,4,1,3,0,2,1,0,0,0,Never,Moderate,Low,Home,1,Medicare,Urgent,0
+P002929,44,Female,31.1,116,70,76,60.0,5.7,230.0,6,4,8,3,5,0,0,0,0,Never,None,Moderate,Home,0,Private,Elective,1
+P005032,76,Male,32.3,118,68,78,83.0,4.7,223.0,4,1,5,2,3,0,0,1,0,Never,Low,Low,Home Health Care,1,Medicare,Elective,0
+P003716,51,Male,37.6,107,75,85,97.0,5.3,142.0,4,0,6,0,1,0,0,0,0,Former,Low,Low,Home,1,Private,Elective,0
+P000827,64,Male,24.0,134,75,73,97.0,4.3,194.0,5,0,6,2,5,0,0,0,0,,Moderate,Moderate,Home,1,Private,Emergency,1
+P004777,51,Female,25.6,101,72,73,103.0,5.3,179.0,6,0,14,4,3,0,0,0,0,Current,None,Moderate,Home,1,Medicare,Emergency,0
+P004467,64,Male,33.7,125,79,96,101.0,6.7,271.0,1,0,6,2,1,0,0,0,0,Never,Low,Low,Home Health Care,0,Medicare,Elective,0
+P001555,43,Female,28.9,149,93,83,114.0,4.4,198.0,6,1,3,0,1,0,1,0,0,Current,,High,Home Health Care,1,Private,Urgent,0
+P000229,51,Female,28.9,131,78,85,126.0,,224.0,3,2,7,0,1,0,0,0,0,Never,Low,Low,Home,1,Private,Emergency,0
+P002414,42,Male,29.3,111,60,82,112.0,6.0,204.0,2,0,2,0,0,0,0,0,0,Former,Moderate,High,Home,1,Private,Urgent,0
+P001863,85,Female,22.9,141,90,75,91.0,5.8,202.0,5,1,8,0,3,0,1,0,0,Never,Low,Low,Home Health Care,0,Medicare,Urgent,0
+P001126,60,Female,26.4,113,62,70,72.0,5.2,278.0,2,0,7,0,0,0,0,0,0,Former,Low,Moderate,Home,1,Private,Urgent,0
+P003482,77,Male,23.6,123,78,85,95.0,4.6,191.0,2,0,4,0,1,0,0,0,0,Former,Moderate,Low,Home,1,Medicare,Elective,0
+P004392,83,Female,34.0,136,84,85,162.0,7.2,169.0,3,2,3,2,3,1,1,0,0,Never,,Moderate,Home Health Care,0,Medicare,Urgent,0
+P002484,63,Male,22.4,130,81,81,155.0,7.1,262.0,0,0,3,0,1,1,0,0,0,Never,None,Low,Home Health Care,1,Medicare,Elective,0
+P003750,83,Female,26.1,157,91,76,105.0,4.6,193.0,5,1,3,0,2,0,1,0,1,Never,Low,Low,Home,0,Medicaid,Urgent,0
+P005498,73,Male,21.2,135,70,69,123.0,5.0,163.0,2,1,5,1,1,0,1,0,0,Former,None,Moderate,Home,1,Medicare,Emergency,0
+P002061,42,Male,36.3,117,70,65,116.0,5.2,,3,1,3,0,0,0,0,0,0,Never,Moderate,Moderate,Home,1,Medicare,Emergency,0
+P005891,76,Female,33.9,147,82,72,177.0,7.3,147.0,5,0,7,1,2,1,1,0,0,Never,Moderate,Moderate,Skilled Nursing Facility,1,Medicare,Urgent,0
+P000479,64,Male,20.8,131,83,89,99.0,4.2,216.0,5,0,5,0,2,0,0,1,0,Former,Moderate,High,Home,1,Medicare,Elective,0
+P003696,52,Female,28.6,119,74,86,67.0,5.8,,3,0,4,1,1,0,1,0,0,Former,Low,Moderate,Other,1,Medicaid,Elective,0
+P000553,68,Male,19.0,129,89,83,99.0,4.5,183.0,4,0,3,2,2,0,1,0,1,Never,Low,Moderate,Home,0,Medicaid,Emergency,0
+P001746,52,Female,37.1,144,79,76,128.0,5.2,161.0,6,0,8,0,3,0,1,0,0,Never,Moderate,High,Other,1,Medicaid,Emergency,1
+P003547,88,Male,25.3,154,80,88,81.0,5.2,261.0,4,1,8,2,2,0,1,1,0,Never,,High,Home,1,Private,Urgent,0
+P004245,67,Male,27.9,140,78,75,75.0,4.5,190.0,3,0,3,2,2,0,1,1,0,Never,Low,Moderate,Home Health Care,0,Medicare,Elective,1
+P000876,35,Other,38.1,142,77,76,129.0,5.1,160.0,1,1,6,1,1,0,0,0,0,Never,Low,High,Home,1,Private,Urgent,0
+P005917,65,Female,27.9,116,79,75,107.0,6.0,286.0,6,1,2,2,2,0,0,0,0,Former,Low,High,Home,1,Medicare,Urgent,0
+P001717,55,Male,23.5,112,71,70,67.0,4.7,187.0,1,1,3,0,0,0,0,0,0,Never,Low,Low,Home,1,Uninsured,Urgent,0
+P005846,75,Female,24.2,103,73,73,94.0,6.4,168.0,4,1,3,0,1,0,0,1,0,Former,High,Moderate,Home,1,Medicare,Elective,0
+P002827,92,Male,36.3,128,75,94,189.0,7.4,227.0,9,2,12,1,7,1,1,1,1,Never,Low,Moderate,Home Health Care,0,Private,Urgent,1
+P003962,84,Male,31.0,155,73,96,199.0,6.3,190.0,6,2,4,4,6,1,1,1,1,Never,Low,Moderate,Skilled Nursing Facility,1,Private,Urgent,0
+P001489,69,Female,24.5,114,92,69,199.0,7.5,214.0,6,1,8,1,3,1,0,0,1,Never,None,Low,Home,1,Uninsured,Emergency,0
+P000841,93,Female,29.8,147,94,86,60.0,4.7,224.0,7,2,11,4,3,0,1,1,1,Never,Low,Moderate,Skilled Nursing Facility,0,Medicare,Emergency,0
+P002277,45,Female,24.9,110,71,59,94.0,5.7,160.0,1,0,4,0,0,0,0,0,0,Current,None,Moderate,Home,0,Private,Emergency,0
+P005092,71,Male,34.5,121,70,72,226.0,7.7,,3,0,6,1,1,1,0,0,0,Former,High,Low,Home,0,Medicare,Emergency,1
+P003343,89,Female,25.3,146,99,83,192.0,7.8,232.0,4,1,8,1,4,1,1,1,0,Former,Moderate,Low,Home Health Care,1,Medicare,Urgent,0
+P001088,41,Male,26.0,104,78,88,116.0,,177.0,3,0,6,0,2,0,0,0,0,Current,High,Moderate,Home,0,Private,Urgent,0
+P001287,44,Female,38.0,108,75,80,147.0,7.4,220.0,4,0,5,2,1,1,0,0,0,Never,None,Moderate,Home,0,Private,Urgent,0
+P004886,59,Male,25.5,109,60,68,102.0,4.6,155.0,4,0,7,2,1,0,0,0,0,Never,,Moderate,Home,0,Medicaid,Emergency,1
+P000845,66,Male,29.4,125,70,70,66.0,5.6,130.0,11,2,6,1,3,0,1,0,0,Former,Low,High,Home,1,Medicare,Urgent,0
+P002893,63,Female,21.6,142,79,70,168.0,8.2,234.0,0,0,4,1,3,1,1,0,0,Never,Low,High,Home,0,Private,Elective,0
+P004200,69,Male,29.9,147,90,60,122.0,5.0,232.0,5,1,3,0,3,0,1,0,0,Never,None,Low,Skilled Nursing Facility,1,Medicare,Emergency,0
+P003974,90,Male,29.0,153,89,75,97.0,4.6,216.0,2,3,4,1,2,0,1,0,0,Current,Moderate,Low,Home,1,Medicare,Emergency,1
+P003355,59,Male,26.4,150,89,70,78.0,6.0,242.0,1,1,3,1,1,0,0,0,0,Former,Moderate,Low,Other,1,Private,Elective,0
+P005192,72,Male,26.9,150,89,74,102.0,5.5,216.0,4,1,5,0,2,0,0,1,1,,None,Moderate,Home,1,Private,Emergency,0
+P000431,48,Female,28.4,110,75,98,134.0,4.6,161.0,1,1,9,2,1,0,0,0,0,,None,Low,Home,1,Private,Emergency,0
+P002214,91,Female,23.3,168,100,72,115.0,5.2,199.0,4,2,12,0,2,0,0,0,1,Current,Moderate,Low,Skilled Nursing Facility,0,Medicare,Urgent,1
+P002458,55,Male,26.4,141,70,113,239.0,8.7,208.0,5,1,6,3,3,1,1,0,0,Former,None,Low,Rehabilitation,1,Private,Emergency,0
+P001169,58,Female,26.2,142,85,72,111.0,5.3,110.0,4,1,2,2,1,0,1,0,0,,Low,Moderate,Home,1,Private,Elective,0
+P001942,65,Female,32.4,139,74,64,82.0,4.3,110.0,2,1,2,1,0,0,0,0,0,Current,High,Low,Home,0,Medicare,Emergency,0
+P000577,84,Male,36.9,166,90,72,171.0,7.5,178.0,10,3,3,2,4,1,1,1,0,Former,None,Moderate,Home,1,Medicare,Urgent,0
+P005427,54,Other,21.4,147,89,76,86.0,5.5,207.0,4,1,9,3,3,0,0,1,1,Former,None,Low,Home,1,Private,Urgent,0
+P003284,84,Female,27.9,156,84,93,110.0,4.8,196.0,4,0,46,0,2,0,1,1,0,Never,Low,Low,Skilled Nursing Facility,1,Medicare,Urgent,0
+P000602,55,Female,31.5,156,87,88,97.0,4.8,171.0,0,1,46,1,1,0,1,0,0,Former,,Moderate,Home,1,Uninsured,Emergency,0
+P002327,31,Female,27.2,114,73,82,85.0,5.5,281.0,3,3,2,0,0,0,0,0,0,,Low,Moderate,Home,1,Medicaid,Urgent,0
+P002781,87,Male,38.2,135,87,82,113.0,5.0,184.0,4,1,6,0,2,0,1,1,0,Former,High,Low,Home,0,Medicare,Elective,0
+P005041,64,Male,27.4,122,69,62,96.0,,254.0,3,1,7,3,1,0,0,0,0,Never,None,Low,Home,1,Medicaid,Emergency,0
+P000289,60,Female,24.4,113,73,77,60.0,5.9,,6,0,10,0,1,0,1,0,0,Former,,Low,Home Health Care,0,Private,Emergency,0
+P002215,51,Male,20.7,146,73,100,98.0,5.3,198.0,6,1,6,1,3,0,1,0,0,Former,Low,Moderate,Home,1,Medicare,Urgent,0
+P003040,63,Female,34.6,117,69,89,110.0,5.2,172.0,6,3,6,2,2,0,1,1,0,Former,Low,High,Home,1,Private,Elective,1
+P000756,81,Male,29.6,139,67,82,118.0,6.1,268.0,3,0,8,0,1,0,0,1,0,Never,None,Low,Home Health Care,1,Medicare,Emergency,0
+P003574,63,Female,27.5,104,58,81,99.0,5.6,264.0,7,0,6,2,3,0,0,1,0,Never,None,High,Home,1,Medicaid,Emergency,0
+P000190,89,Female,42.9,149,85,75,173.0,7.8,184.0,3,1,1,0,3,1,1,1,0,Never,Low,High,Rehabilitation,0,Private,Emergency,0
+P001671,63,Male,42.9,135,71,83,96.0,6.7,166.0,0,0,2,0,0,0,0,0,0,Former,Low,Low,Home,1,Private,Emergency,0
+P000540,52,Male,19.6,131,84,73,105.0,5.9,193.0,3,0,6,1,0,0,0,0,0,Former,High,High,Home,1,Private,Emergency,0
+P002043,93,Male,29.4,137,72,92,88.0,5.8,,6,0,12,0,3,0,1,1,1,Former,Low,Moderate,Home Health Care,1,Medicaid,Emergency,0
+P003606,76,Female,21.6,128,74,70,77.0,6.4,203.0,10,0,6,2,4,0,1,1,0,Former,Low,Low,Other,1,Medicare,Elective,1
+P000720,49,Female,35.1,132,80,87,95.0,6.0,190.0,5,1,10,3,3,0,1,0,1,Never,Low,Low,Home,1,Private,Emergency,0
+P002275,66,Male,32.6,108,74,80,101.0,5.0,196.0,1,0,4,0,0,0,0,0,0,Former,Low,Moderate,Home,1,Medicaid,Elective,1
+P005476,48,Female,29.1,127,81,75,64.0,4.2,260.0,1,0,7,1,2,0,1,1,0,Current,Low,Low,Home,0,Private,Urgent,1
+P003067,68,Male,25.8,134,84,86,172.0,7.3,213.0,8,2,6,0,5,1,0,0,0,Never,Moderate,Moderate,Home,1,Medicare,Elective,0
+P003426,70,Male,18.9,124,77,70,128.0,5.2,228.0,3,0,7,0,0,0,0,0,0,Former,Low,Moderate,Home,0,Medicare,Emergency,0
+P002546,57,Female,28.7,125,86,68,60.0,5.1,203.0,4,1,6,1,3,0,0,0,0,Former,Low,Low,Home,1,Medicaid,Emergency,0
+P004842,49,Male,22.9,153,96,91,81.0,5.1,147.0,3,0,6,0,1,0,1,0,0,Former,High,High,Home,0,Private,Emergency,0
+P004537,50,Female,24.5,148,85,81,102.0,5.5,243.0,2,1,5,1,2,0,1,0,0,Never,High,Low,Home,0,Private,Emergency,0
+P001261,79,Male,26.8,131,82,84,156.0,6.5,199.0,1,0,3,0,0,0,0,0,0,Former,None,Low,Skilled Nursing Facility,0,Medicare,Elective,0
+P002199,61,Male,28.7,137,91,90,82.0,4.5,237.0,3,0,4,0,1,0,0,0,1,Current,Low,Moderate,Home,1,Private,Elective,0
+P004302,80,Female,31.3,120,72,83,122.0,4.7,147.0,10,1,4,2,2,0,0,0,0,Never,Low,Low,Rehabilitation,0,Medicare,Urgent,1
+P002451,56,Female,27.4,117,79,73,,7.3,157.0,4,0,4,2,1,1,0,0,0,Former,Low,Moderate,Home,0,Private,Urgent,0
+P004181,82,Male,32.5,130,92,53,60.0,4.0,134.0,3,1,7,2,3,0,0,1,0,Never,Low,Low,Home Health Care,0,Medicare,Urgent,0
+P003277,78,Male,23.1,120,72,79,126.0,5.1,175.0,3,2,9,0,1,0,0,1,0,Current,None,Low,Home Health Care,0,Medicare,Emergency,0
+P002866,45,Male,27.9,145,84,89,89.0,5.1,237.0,1,1,6,0,1,0,1,0,0,Current,Low,Moderate,Home,1,Private,Emergency,0
+P005668,61,Female,25.6,145,94,111,60.0,4.8,251.0,7,4,7,1,4,0,1,1,0,Former,Low,Moderate,Other,0,Private,Urgent,0
+P002840,65,Female,34.0,125,76,75,157.0,7.9,180.0,9,0,2,0,4,1,1,1,0,Current,Moderate,Moderate,Skilled Nursing Facility,1,Medicaid,Urgent,0
+P003735,65,Male,31.3,116,79,94,189.0,8.2,243.0,7,4,7,3,2,1,0,0,1,Former,None,Moderate,Home,0,Medicare,Emergency,1
+P000399,72,Female,28.6,157,94,94,182.0,8.3,258.0,6,2,7,0,4,1,1,0,0,Never,Moderate,Low,Home,1,Medicare,Elective,0
+P005228,60,Male,35.3,143,79,46,112.0,5.6,276.0,6,2,9,5,3,0,1,0,1,Current,None,Moderate,Home,1,Private,Emergency,1
+P002909,46,Female,25.6,129,82,55,63.0,4.3,182.0,6,1,6,0,3,0,0,0,0,Current,Low,Low,Other,1,Private,Urgent,0
+P003490,60,Female,26.9,117,82,89,114.0,5.9,173.0,5,1,3,1,2,0,1,0,0,Former,None,High,Home,1,Private,Urgent,0
+P004472,53,Male,29.6,108,61,94,100.0,5.9,169.0,1,0,5,0,0,0,0,0,0,Former,None,Moderate,Home,1,Private,Elective,0
+P004765,82,Female,28.3,130,92,85,85.0,5.2,161.0,1,0,4,2,0,0,0,0,0,Current,None,Moderate,Home,1,Medicaid,Elective,0
+P002619,52,Female,25.2,135,79,83,111.0,5.0,242.0,6,2,6,2,1,0,1,0,0,Former,None,Moderate,Home,1,Private,Emergency,0
+P000453,93,Male,28.6,157,91,78,100.0,5.5,212.0,3,1,7,2,1,0,1,0,0,Current,Low,Low,Home,1,Private,Emergency,0
+P002972,63,Male,,142,76,93,82.0,5.3,174.0,3,0,5,0,1,0,1,0,0,Never,None,Moderate,Home,1,Private,Elective,0
+P005788,50,Male,27.0,149,79,65,149.0,6.2,208.0,5,2,6,2,3,0,1,1,0,Never,None,Moderate,Home,0,Private,Elective,0
+P004211,65,Female,35.8,127,87,86,147.0,5.0,188.0,3,0,4,1,1,0,0,0,0,Former,,Low,Skilled Nursing Facility,1,Medicare,Emergency,0
+P001184,73,Male,36.7,142,83,87,141.0,5.2,239.0,3,1,6,4,2,0,1,0,1,Never,Low,Moderate,Home,1,Private,Emergency,0
+P004049,61,Male,32.3,99,68,77,85.0,6.5,172.0,3,0,9,2,2,0,0,1,0,Never,None,High,Home,1,Private,Emergency,0
+P003487,75,Female,42.8,157,95,88,194.0,8.2,234.0,8,2,3,3,3,1,1,0,1,Never,Low,Moderate,Home,1,Medicare,Urgent,0
+P002001,57,Female,33.4,96,70,73,84.0,5.5,213.0,2,0,9,1,1,0,0,0,0,Former,Low,Moderate,Home,1,Private,Urgent,0
+P002204,73,Male,30.2,122,86,81,,6.0,241.0,3,1,6,0,2,0,1,0,0,Never,Moderate,Low,Home,0,Medicare,Emergency,0
+P002151,63,Male,30.4,113,79,68,97.0,5.5,,2,1,9,0,1,0,1,0,0,Never,Moderate,Moderate,Home,1,Medicare,Emergency,0
+P004318,56,Male,19.0,106,63,89,76.0,5.4,212.0,3,0,4,0,0,0,0,0,0,Never,Moderate,Low,Home,0,Private,Urgent,0
+P000429,43,Female,32.8,109,80,68,113.0,5.5,145.0,1,0,5,0,0,0,0,0,0,Former,Moderate,Low,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P003813,56,Male,32.6,135,73,90,96.0,4.9,174.0,8,1,5,1,2,0,0,0,0,Never,Low,Low,Home Health Care,1,Medicaid,Emergency,0
+P001948,50,Male,25.8,101,63,71,152.0,5.7,223.0,2,1,5,1,2,0,1,1,0,Current,None,Low,Home,0,Private,Emergency,0
+P001569,75,Male,31.0,158,98,71,173.0,8.0,,7,2,6,4,3,1,1,1,0,Never,Low,Low,Home Health Care,1,Medicare,Urgent,1
+P001562,66,Male,32.9,139,66,70,155.0,8.1,290.0,5,2,5,0,2,1,0,0,0,Former,High,High,Home,1,Medicare,Emergency,0
+P000557,53,Female,29.5,123,77,97,115.0,5.7,209.0,0,0,4,0,0,0,0,0,0,Former,None,Moderate,Home,0,Medicaid,Emergency,0
+P002554,33,Male,29.3,98,65,92,121.0,4.9,135.0,3,0,4,0,0,0,0,0,0,Former,Low,High,Home,1,Private,Urgent,0
+P003527,70,Female,32.3,132,74,75,127.0,5.6,212.0,1,1,6,1,1,0,0,0,0,Former,Low,Moderate,Home,1,Private,Elective,0
+P000459,69,Male,36.3,150,65,76,198.0,8.0,198.0,4,1,8,0,2,1,1,0,0,Never,Low,Low,Rehabilitation,1,Medicare,Emergency,0
+P003529,41,Female,34.1,120,79,95,200.0,7.5,217.0,4,1,4,2,2,1,0,1,0,Former,None,Moderate,Rehabilitation,1,Private,Elective,0
+P004999,65,Male,35.7,139,81,76,183.0,6.8,202.0,9,1,6,1,3,1,1,0,0,Never,None,Low,Home,1,Medicare,Emergency,0
+P005903,62,Male,26.7,102,81,92,190.0,7.6,133.0,3,3,4,2,1,1,0,0,0,Former,High,High,Home Health Care,0,Private,Elective,1
+P004955,81,Male,33.9,135,88,78,87.0,5.4,207.0,4,0,5,0,2,0,1,0,0,Never,Moderate,Moderate,Home Health Care,1,Private,Emergency,1
+P005171,75,Male,24.0,160,117,75,191.0,7.7,163.0,3,2,6,3,3,1,1,0,0,,None,Moderate,Home,1,Medicare,Urgent,0
+P000891,52,Female,26.7,120,68,83,99.0,5.1,159.0,3,0,9,0,1,0,0,1,0,Former,None,Low,Home,1,Private,Emergency,0
+P004588,87,Female,62.7,124,73,78,238.0,7.9,176.0,8,3,8,3,3,1,1,1,0,,High,Low,Skilled Nursing Facility,0,Medicare,Emergency,1
+P003972,67,Female,32.4,136,79,96,106.0,5.7,254.0,0,1,10,1,1,0,1,0,0,Never,Moderate,High,Rehabilitation,1,Medicaid,Emergency,0
+P005351,56,Male,32.1,121,75,64,81.0,4.4,257.0,4,2,4,0,2,0,1,0,0,Former,Low,Moderate,Home,0,Uninsured,Urgent,0
+P005760,18,Male,29.5,100,68,89,88.0,5.2,169.0,2,1,5,0,1,0,0,0,0,Never,Moderate,High,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P002239,50,Male,30.6,105,76,93,134.0,5.7,259.0,1,2,7,0,1,0,0,0,0,Current,,High,Rehabilitation,1,Medicare,Urgent,1
+P000670,26,Female,37.9,126,90,71,67.0,4.5,211.0,7,0,7,1,1,0,0,0,0,Former,None,Moderate,Home,1,Private,Elective,0
+P001218,30,Female,41.0,111,82,85,113.0,5.4,194.0,3,0,9,0,2,0,0,1,0,Current,,Low,Home,0,Medicaid,Emergency,0
+P000245,96,Male,28.6,156,77,66,133.0,6.1,110.0,6,1,3,0,2,0,1,1,0,Current,None,Moderate,Skilled Nursing Facility,0,Medicare,Urgent,0
+P000006,44,Female,29.9,136,60,68,107.0,5.9,207.0,4,0,7,1,3,0,1,0,0,Former,None,Low,Skilled Nursing Facility,1,Private,Elective,0
+P005919,71,Female,26.0,134,91,93,161.0,7.1,222.0,3,3,9,1,4,1,0,1,0,Former,Low,Moderate,Home Health Care,1,Private,Emergency,1
+P002371,47,Female,26.2,102,67,81,110.0,5.0,214.0,5,2,2,1,2,0,0,0,0,Current,High,Low,Home,1,Medicaid,Urgent,0
+P003544,70,Male,22.3,149,80,96,60.0,4.7,237.0,6,1,7,2,4,0,1,0,0,,Low,High,Home,1,Medicare,Emergency,0
+P001202,57,Male,24.1,124,80,66,147.0,5.8,169.0,1,1,2,0,1,0,1,0,0,Never,Low,Moderate,Other,0,Uninsured,Urgent,0
+P004767,49,Female,26.7,110,74,94,81.0,,197.0,2,2,4,1,0,0,0,0,0,Never,High,Moderate,Home Health Care,1,Medicaid,Urgent,1
+P005385,87,Female,29.3,176,97,96,126.0,5.8,232.0,3,0,6,2,4,0,1,1,1,Current,Low,Moderate,Home,1,Medicare,Elective,0
+P003137,83,Other,24.9,136,83,76,98.0,5.9,183.0,2,0,5,1,1,0,0,0,0,Never,None,Moderate,Skilled Nursing Facility,0,Medicare,Urgent,0
+P003779,63,Male,24.7,114,86,73,148.0,5.9,128.0,2,0,5,1,1,0,1,0,0,Current,Low,Moderate,Skilled Nursing Facility,1,Uninsured,Elective,0
+P000290,62,Female,27.8,118,70,66,80.0,5.1,267.0,0,0,1,0,1,0,0,0,0,Current,None,Moderate,Home,0,Private,Elective,0
+P003072,67,Other,24.4,104,75,64,205.0,7.7,222.0,5,0,5,0,1,1,0,0,0,Former,None,Low,Rehabilitation,1,Medicare,Emergency,0
+P002449,76,Male,21.6,149,82,67,120.0,5.1,116.0,6,1,4,1,2,0,0,0,0,Former,None,Moderate,Home Health Care,0,Private,Urgent,0
+P001698,100,Male,25.3,158,85,87,192.0,8.0,140.0,2,1,5,1,4,1,1,0,0,Never,Moderate,Moderate,Home,0,Medicare,Urgent,1
+P000913,72,Male,32.5,139,92,88,199.0,7.8,179.0,8,6,5,3,5,1,1,0,1,Current,Moderate,Low,Home,1,Medicaid,Elective,1
+P003678,73,Female,,114,65,82,86.0,5.5,163.0,3,1,5,1,0,0,0,0,0,Never,Low,High,Home Health Care,0,Private,Elective,0
+P003814,60,Male,30.8,129,75,77,156.0,7.6,205.0,8,3,3,0,3,1,0,0,1,Never,Moderate,High,Home,1,Private,Urgent,0
+P000268,69,Male,27.3,133,88,67,177.0,7.7,256.0,2,1,4,0,2,1,0,0,0,Former,Low,Low,Rehabilitation,1,Medicare,Elective,0
+P001198,50,Female,23.7,117,76,75,,5.5,191.0,1,0,3,0,0,0,0,0,0,Never,None,Low,Home,1,Private,Emergency,0
+P002534,66,Female,23.4,166,77,68,91.0,5.6,,5,1,5,1,2,0,1,1,0,Former,Moderate,High,Home Health Care,0,Medicaid,Emergency,1
+P000943,71,Male,21.3,137,89,100,110.0,4.9,211.0,3,0,5,0,1,0,0,1,0,Never,None,Low,Home,1,Medicare,Emergency,0
+P002343,33,Male,32.2,85,69,84,131.0,6.6,188.0,1,0,1,0,0,0,0,0,0,Former,None,Moderate,Home,1,Medicare,Elective,0
+P001510,66,Male,33.5,94,69,93,75.0,4.6,236.0,5,0,4,0,0,0,0,0,0,Never,None,Moderate,Home,1,Medicare,Emergency,0
+P000447,80,Female,29.3,133,77,77,103.0,5.3,113.0,3,0,11,1,3,0,1,1,0,Former,Low,Moderate,Skilled Nursing Facility,1,Medicare,Emergency,0
+P002244,78,Male,36.3,122,68,74,60.0,4.6,,4,3,9,1,2,0,1,1,0,Current,,Moderate,Home,1,Private,Emergency,0
+P001172,35,Female,30.0,138,72,70,103.0,6.1,189.0,4,1,3,2,1,0,1,0,0,Current,Low,Low,Home,1,Uninsured,Urgent,0
+P001201,44,Female,25.8,130,88,98,109.0,5.3,193.0,4,0,8,1,2,0,0,0,1,Never,Moderate,Low,Home,1,Medicaid,Emergency,0
+P003944,75,Male,28.2,128,65,70,220.0,8.5,166.0,5,2,3,1,2,1,0,0,1,Former,Low,Moderate,Home Health Care,0,Medicare,Urgent,0
+P004741,60,Male,25.2,153,85,66,113.0,5.3,206.0,4,0,9,1,2,0,1,0,1,Never,None,Low,Home,1,Private,Emergency,0
+P005580,79,Male,28.7,164,94,92,162.0,,170.0,5,4,5,4,3,1,1,1,0,Former,Low,Moderate,Home,1,Medicare,Emergency,0
+P004679,50,Male,35.3,125,71,100,120.0,,221.0,1,0,5,1,0,0,0,0,0,Never,Low,Low,Home,0,Uninsured,Urgent,0
+P000266,79,Male,28.7,164,94,68,97.0,4.8,248.0,1,2,3,0,1,0,1,0,0,Current,None,High,Home Health Care,1,Medicare,Emergency,0
+P000241,51,Female,29.4,123,87,91,169.0,7.6,234.0,2,0,10,0,3,1,0,1,0,Never,None,High,Home,1,Private,Emergency,0
+P005392,43,Female,30.0,101,70,82,92.0,4.6,234.0,4,1,5,2,2,0,0,0,0,Never,Low,High,Home,0,Medicaid,Urgent,0
+P001860,43,Female,35.4,126,71,97,91.0,4.0,234.0,2,1,1,0,1,0,1,0,0,Never,Low,Moderate,Home,1,Private,Urgent,0
+P000564,53,Female,22.7,113,66,92,191.0,7.6,166.0,2,1,5,3,2,1,0,0,0,Never,Moderate,Moderate,Home,0,Private,Urgent,0
+P004677,70,Male,20.4,131,83,87,112.0,5.6,170.0,0,0,5,0,0,0,0,0,0,Never,Moderate,High,Home,1,Medicare,Emergency,0
+P003021,46,Male,33.2,130,70,77,99.0,5.7,208.0,3,1,2,2,2,0,1,0,0,Former,Moderate,Low,Home,1,Private,Urgent,0
+P002097,77,Female,27.5,143,83,89,100.0,4.6,174.0,2,0,3,0,1,0,0,0,1,Never,None,Low,Home,1,Medicare,Emergency,0
+P003786,46,Male,27.2,122,87,83,104.0,4.9,121.0,7,1,9,2,3,0,1,1,0,Never,Moderate,High,Home,1,Private,Emergency,0
+P000594,39,Female,22.3,92,66,103,74.0,4.7,181.0,1,1,3,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Medicare,Urgent,0
+P002009,82,Female,29.4,136,71,61,196.0,8.7,133.0,1,0,5,0,4,1,1,0,1,Current,None,Low,Home,1,Medicaid,Elective,1
+P004991,41,Female,28.1,125,87,85,85.0,4.4,171.0,5,2,6,1,3,0,0,0,0,Never,Moderate,Low,Home,1,Private,Emergency,0
+P003080,80,Male,24.9,139,75,82,104.0,,215.0,2,1,4,1,1,0,0,0,0,Never,High,Low,Home Health Care,1,Medicare,Urgent,0
+P000851,59,Female,41.2,161,90,68,165.0,8.0,229.0,5,2,7,3,4,1,1,1,0,Never,None,Moderate,Home,0,Private,Emergency,0
+P000906,95,Female,30.0,174,105,82,178.0,8.5,,7,4,6,1,3,1,1,0,1,Current,None,Moderate,Home Health Care,1,Medicare,Emergency,0
+P001003,58,Female,24.9,159,81,80,99.0,,160.0,2,0,4,1,0,0,0,0,0,Former,None,Low,Home,1,Private,Elective,0
+P003603,43,Female,21.9,128,78,72,80.0,5.0,234.0,2,1,3,1,0,0,0,0,0,Never,None,Moderate,Home,1,Private,Elective,0
+P002653,83,Female,34.2,122,91,82,105.0,4.9,183.0,1,0,4,0,0,0,0,0,0,Current,Low,Low,Other,1,Medicare,Urgent,0
+P000363,79,Male,,145,73,92,96.0,4.7,221.0,2,3,6,2,3,0,1,0,0,Current,Low,Moderate,Home Health Care,1,Medicare,Urgent,0
+P001597,69,Male,22.9,132,88,59,105.0,4.7,188.0,4,0,3,1,2,0,1,0,0,Never,,Low,Home,1,Medicare,Elective,0
+P005037,75,Male,,137,85,58,100.0,4.9,,5,3,7,0,2,0,1,0,0,Current,None,Low,Home Health Care,1,Medicare,Emergency,0
+P003332,63,Female,29.8,115,72,68,211.0,7.6,234.0,4,1,5,2,1,1,0,0,0,Former,Moderate,High,Home,1,Medicaid,Emergency,0
+P001586,40,Female,29.9,118,64,72,191.0,7.7,249.0,6,1,3,0,1,1,0,0,0,Never,None,Moderate,Home,0,Private,Urgent,1
+P001518,84,Female,29.6,139,91,83,160.0,8.4,242.0,5,1,7,1,2,1,0,0,0,Former,Moderate,Low,Home,0,Medicaid,Emergency,0
+P004835,40,Female,28.9,98,64,82,170.0,5.6,181.0,3,0,5,0,2,0,0,0,0,Never,Low,Low,Home,0,Medicaid,Emergency,0
+P000898,51,Male,29.8,146,78,79,112.0,4.6,239.0,2,2,4,0,2,0,1,0,0,Never,Low,Moderate,Home,1,Medicare,Elective,0
+P001977,36,Female,25.6,107,63,73,86.0,5.0,,3,1,9,0,1,0,0,0,0,Current,None,Moderate,Home,1,Private,Emergency,0
+P005016,58,Male,34.3,147,84,102,216.0,8.4,206.0,9,2,5,2,4,1,0,0,0,Current,Low,Moderate,Home,1,Medicaid,Urgent,0
+P002860,51,Male,33.2,118,80,74,130.0,5.3,,2,0,4,0,1,0,1,0,0,Current,Low,Low,Home,1,Private,Urgent,0
+P001543,68,Female,21.3,135,65,89,125.0,5.5,240.0,1,0,5,0,0,0,0,0,0,Never,Moderate,Low,Home,1,Medicare,Urgent,0
+P001817,74,Male,,150,85,90,152.0,5.5,,1,2,5,2,1,0,1,0,0,Never,Moderate,High,Home Health Care,1,Medicare,Urgent,0
+P005941,36,Female,24.9,137,76,90,112.0,4.8,229.0,3,0,5,2,0,0,0,0,0,Former,Low,Moderate,Home,1,Uninsured,Emergency,0
+P001084,65,Male,34.9,113,71,75,98.0,5.5,231.0,5,1,12,0,2,0,1,0,0,Former,None,Moderate,Home Health Care,1,Private,Emergency,0
+P000146,58,Female,25.0,129,77,65,115.0,5.2,178.0,5,3,5,1,2,0,0,0,0,Never,None,High,Home,1,Private,Urgent,0
+P000239,48,Female,56.4,108,76,85,78.0,4.6,204.0,4,1,5,1,1,0,0,0,0,Former,None,High,Home Health Care,0,Private,Urgent,0
+P001250,41,Female,36.2,131,72,45,81.0,4.3,196.0,2,2,9,0,3,0,1,0,0,Never,Low,Low,Home,1,Private,Emergency,0
+P005088,53,Male,27.0,118,71,107,105.0,4.8,153.0,2,0,5,1,1,0,0,0,1,Never,Moderate,Moderate,Home,1,Medicaid,Elective,0
+P003837,73,Male,30.9,118,72,89,82.0,6.1,198.0,9,2,9,2,4,0,1,0,0,Never,None,Low,Home,0,Private,Emergency,0
+P005830,56,Male,25.0,140,91,81,240.0,8.1,220.0,2,1,5,2,4,1,1,1,1,Never,None,High,Home,1,Private,Urgent,0
+P003752,55,Female,24.8,141,74,63,121.0,6.1,203.0,4,1,12,0,1,0,0,0,0,Never,Low,High,Home,0,Medicaid,Emergency,0
+P001612,60,Male,35.5,138,90,79,140.0,8.0,231.0,1,5,8,3,2,1,1,0,0,Never,Low,Moderate,Home,0,Medicaid,Emergency,1
+P002869,65,Male,30.6,134,88,94,106.0,4.5,176.0,3,1,5,0,1,0,1,0,0,Former,Low,Low,Home Health Care,0,Private,Emergency,0
+P004947,85,Male,34.2,136,70,64,156.0,5.7,208.0,3,4,9,1,3,0,0,0,1,Former,Moderate,High,Home,1,Medicare,Urgent,1
+P001952,68,Male,34.6,114,74,85,102.0,5.2,148.0,2,0,5,0,1,0,0,0,0,Never,Moderate,Moderate,Home,0,Uninsured,Emergency,0
+P001160,43,Female,24.3,96,60,80,121.0,5.4,248.0,3,1,6,0,1,0,0,1,0,Never,Low,High,Home,1,Uninsured,Elective,1
+P003249,77,Male,35.4,174,101,86,81.0,4.3,181.0,5,0,6,0,3,0,1,1,0,Never,Moderate,High,Skilled Nursing Facility,1,Medicare,Urgent,0
+P002628,86,Female,20.5,132,86,109,60.0,4.7,,10,4,6,1,5,0,1,1,1,Former,,High,Home Health Care,1,Medicare,Elective,0
+P004500,56,Female,32.3,117,75,95,100.0,5.6,212.0,3,1,5,2,1,0,1,0,0,Never,Low,Moderate,Home,0,Private,Emergency,0
+P000785,64,Female,28.9,117,81,84,94.0,5.1,213.0,2,1,5,0,0,0,0,0,0,Never,Low,Low,Home,1,Private,Emergency,0
+P001577,64,Female,31.7,145,85,63,112.0,5.4,139.0,3,1,7,0,2,0,0,0,1,Never,None,Low,Home Health Care,1,Private,Emergency,0
+P005214,57,Male,38.8,138,75,89,205.0,8.5,145.0,1,1,5,0,1,1,0,0,0,Never,Low,Low,Home Health Care,1,Medicaid,Emergency,0
+P004021,67,Female,26.1,119,83,57,190.0,7.3,457.0,8,3,8,1,2,1,0,0,1,Former,Moderate,High,Home,1,Medicare,Elective,1
+P004576,69,Male,25.3,103,67,76,96.0,,145.0,5,0,6,3,2,0,0,1,0,Never,,Low,Home,0,Medicare,Emergency,0
+P005436,54,Female,31.8,118,83,72,117.0,5.9,252.0,0,0,2,3,0,0,0,0,0,Never,,Moderate,Home Health Care,1,Uninsured,Urgent,0
+P000975,49,Female,28.5,104,72,74,83.0,5.5,186.0,1,1,3,1,1,0,0,0,0,Former,Low,Moderate,Home,0,Private,Elective,0
+P000773,68,Female,26.1,143,77,73,92.0,5.8,233.0,4,0,6,0,1,0,1,0,0,Former,Low,Low,Home Health Care,1,Medicare,Emergency,0
+P002739,100,Male,32.2,140,80,92,86.0,4.7,191.0,5,4,5,4,3,0,1,1,1,,Moderate,Moderate,Home,1,Medicare,Urgent,1
+P004337,66,Male,34.1,133,78,67,96.0,5.3,196.0,7,2,4,1,3,0,1,1,0,Former,Moderate,Moderate,Home,1,Medicare,Urgent,0
+P001110,77,Female,28.3,110,66,61,189.0,7.9,207.0,6,2,6,2,4,1,0,1,1,Never,Moderate,Moderate,Skilled Nursing Facility,0,Medicare,Urgent,1
+P003075,83,Male,33.7,130,78,79,148.0,7.7,178.0,3,0,4,2,1,1,0,0,0,Never,None,Moderate,Home,1,Medicare,Elective,0
+P005267,41,Male,28.2,117,81,67,,4.4,267.0,0,0,4,0,0,0,0,0,0,Current,None,High,Home,1,Private,Emergency,0
+P003997,79,Female,,123,79,73,76.0,5.7,275.0,7,1,6,3,4,0,0,1,0,Current,Low,Moderate,Home,1,Private,Emergency,0
+P003689,100,Female,28.4,157,75,62,149.0,7.1,213.0,4,3,6,0,3,1,1,1,0,Never,None,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P005159,55,Female,,106,68,91,169.0,7.2,175.0,5,2,8,1,2,1,0,0,0,Current,None,Low,Skilled Nursing Facility,1,Uninsured,Elective,1
+P003442,65,Male,28.5,115,85,90,71.0,5.7,207.0,2,0,3,0,1,0,0,1,0,Never,None,Low,Home,0,Medicare,Elective,0
+P001423,70,Female,,130,76,72,121.0,5.1,229.0,0,0,4,0,0,0,0,0,0,Never,Low,High,Home,0,Medicaid,Urgent,0
+P000757,50,Female,26.6,133,99,63,177.0,7.7,208.0,7,1,10,1,4,1,1,0,1,Former,None,High,Rehabilitation,0,Private,Emergency,0
+P004939,74,Female,22.1,131,65,87,134.0,5.8,211.0,5,0,4,0,1,0,0,0,0,Never,Moderate,Low,Home,1,Medicaid,Emergency,0
+P002389,81,Female,36.5,109,68,80,184.0,,160.0,6,0,4,1,1,1,0,0,0,,Low,Low,Home,1,Medicare,Urgent,0
+P001862,48,Female,28.4,126,74,81,70.0,4.6,240.0,2,1,5,0,1,0,0,0,0,Current,None,Moderate,Home Health Care,1,Private,Elective,0
+P003228,63,Female,33.6,115,68,91,67.0,5.0,205.0,0,0,3,0,0,0,0,0,0,Never,Low,Low,Home,1,Private,Urgent,0
+P002166,83,Female,22.3,136,65,84,169.0,7.2,302.0,4,0,6,0,2,1,0,0,0,Never,Moderate,Moderate,Home,1,Medicare,Elective,0
+P005186,67,Female,29.4,115,65,77,88.0,4.9,229.0,1,0,5,1,0,0,0,0,0,Former,Moderate,Low,Home,0,Medicare,Urgent,1
+P001426,50,Female,30.5,141,82,69,67.0,5.1,183.0,5,3,3,0,3,0,1,0,0,Never,Low,Moderate,Home,1,Medicaid,Urgent,0
+P001210,68,Female,25.2,143,70,84,120.0,5.1,273.0,5,0,3,1,2,0,1,0,0,Never,Moderate,Moderate,Home,1,Medicare,Urgent,0
+P001362,78,Female,35.7,146,80,88,130.0,5.5,247.0,5,1,7,0,1,0,1,0,0,,High,High,Skilled Nursing Facility,1,Medicare,Emergency,0
+P000582,47,Male,21.2,124,89,76,85.0,5.6,277.0,2,1,7,1,3,0,0,0,0,Former,None,High,Rehabilitation,1,Private,Emergency,0
+P003575,55,Male,31.4,139,78,83,82.0,4.8,,5,1,5,3,2,0,1,1,0,Former,Moderate,Moderate,Home,1,Private,Elective,0
+P001622,65,Female,35.6,136,84,56,87.0,5.0,155.0,9,0,5,3,2,0,1,0,0,Former,,Low,Home,1,Medicaid,Emergency,0
+P003628,50,Female,25.6,137,96,106,90.0,5.8,226.0,0,1,7,0,1,0,0,1,0,Former,Low,Moderate,Home,1,Private,Emergency,0
+P003646,42,Male,23.5,130,94,80,131.0,5.4,,1,0,3,1,1,0,0,0,0,Current,,High,Home,0,Medicaid,Elective,0
+P003439,60,Female,32.2,140,75,96,170.0,7.9,208.0,11,3,11,4,4,1,1,0,1,Never,Low,Low,Home,1,Private,Emergency,1
+P000561,63,Female,,125,70,90,84.0,,186.0,3,1,5,1,1,0,1,0,0,Former,None,Low,Home,1,Private,Elective,0
+P000336,46,Female,29.0,121,89,84,507.0,5.0,188.0,4,0,1,1,3,0,1,0,0,Never,Moderate,High,Home,1,Private,Elective,0
+P000106,61,Female,28.6,129,68,94,107.0,6.5,,5,2,8,1,2,0,1,0,0,Never,None,Low,Rehabilitation,0,Private,Emergency,0
+P002996,53,Male,30.3,95,75,88,72.0,4.5,233.0,7,1,3,0,1,0,0,0,0,,Low,High,Home,1,Private,Urgent,0
+P001037,79,Male,27.5,140,83,96,112.0,5.7,115.0,4,2,8,3,2,0,0,1,0,Former,None,Moderate,Home Health Care,1,Private,Emergency,0
+P001995,65,Male,21.2,124,74,82,,5.1,231.0,6,1,7,2,3,0,0,1,0,Never,Moderate,Low,Home,0,Medicare,Urgent,0
+P004384,54,Male,26.6,109,63,87,94.0,5.4,212.0,2,0,1,1,0,0,0,0,0,Former,,Low,Home,1,Uninsured,Emergency,0
+P002922,67,Male,33.9,171,84,66,132.0,5.6,252.0,2,0,2,0,1,0,1,0,0,Never,Moderate,Low,Home,0,Medicaid,Elective,0
+P004151,58,Female,30.7,116,92,95,120.0,5.3,168.0,4,0,5,0,1,0,0,1,0,Never,None,Low,Home,0,Uninsured,Urgent,0
+P004659,55,Male,39.2,112,69,91,190.0,8.8,146.0,4,1,5,3,3,1,0,1,0,Never,None,Low,Home,1,Private,Emergency,1
+P004738,77,Female,31.7,143,92,58,181.0,8.1,225.0,3,0,3,0,2,1,1,0,0,Current,Low,Low,Home,1,Medicare,Urgent,0
+P002573,86,Male,28.2,150,82,78,94.0,5.7,167.0,5,1,9,0,3,0,1,1,1,Former,None,Moderate,Skilled Nursing Facility,1,Medicare,Emergency,0
+P003411,31,Male,22.1,131,84,75,82.0,4.6,294.0,2,0,3,0,0,0,0,0,0,Former,Moderate,Moderate,Rehabilitation,0,Uninsured,Elective,0
+P001254,69,Other,34.1,123,87,91,136.0,5.4,308.0,8,0,3,1,4,0,0,1,0,Never,None,Low,Other,1,Medicare,Urgent,0
+P001480,90,Male,30.6,143,93,86,167.0,7.7,207.0,10,1,2,1,3,1,1,1,0,Former,Low,Low,Home Health Care,1,Medicare,Urgent,0
+P002088,57,Female,35.0,143,80,81,103.0,5.1,235.0,3,1,4,0,0,0,0,0,0,Former,Low,Moderate,Rehabilitation,1,Medicaid,Urgent,0
+P003587,49,Male,21.4,140,64,48,108.0,5.6,177.0,5,1,7,2,1,0,1,0,0,Never,Low,High,Home,0,Private,Emergency,1
+P004083,65,Male,28.5,135,80,69,95.0,4.0,,2,0,4,1,2,0,1,1,0,Former,Moderate,Low,Home Health Care,0,Medicare,Urgent,0
+P005155,74,Female,35.5,136,73,80,195.0,7.7,124.0,7,1,9,2,4,1,1,1,0,Former,Moderate,Moderate,Rehabilitation,1,Medicare,Emergency,0
+P003645,60,Female,28.0,136,80,71,104.0,4.8,251.0,2,1,6,0,1,0,0,0,0,Never,None,Moderate,Home,1,Medicaid,Emergency,0
+P004141,62,Male,28.1,99,66,64,117.0,4.8,210.0,0,1,4,0,0,0,0,0,0,Never,None,High,Home Health Care,1,Uninsured,Elective,1
+P003484,84,Female,23.6,117,85,84,143.0,,,7,3,7,1,4,1,1,1,1,Former,None,Low,Skilled Nursing Facility,1,Medicare,Emergency,0
+P003857,47,Female,33.6,143,70,59,106.0,4.9,201.0,4,1,3,3,2,0,1,0,1,Never,None,Moderate,Home,0,Private,Elective,0
+P000909,65,Male,27.4,122,62,53,96.0,5.2,,2,1,5,1,1,0,0,0,0,Never,Moderate,Low,Home,1,Private,Urgent,0
+P003631,75,Male,22.4,136,78,57,70.0,5.2,243.0,2,1,3,0,2,0,0,0,0,Former,Low,High,Rehabilitation,0,Medicare,Elective,0
+P000904,88,Female,31.0,132,86,87,89.0,5.2,110.0,7,4,9,1,3,0,0,1,0,Former,None,Moderate,Home Health Care,0,Medicare,Emergency,1
+P001711,55,Female,20.6,114,65,100,,5.3,170.0,2,1,8,1,4,0,0,1,0,Former,Moderate,Low,Home,0,Uninsured,Elective,1
+P004508,49,Female,25.3,97,78,57,196.0,7.2,,2,1,3,3,1,1,0,0,0,Current,Moderate,High,Home,1,Private,Urgent,0
+P003462,43,Female,28.2,112,70,80,98.0,5.9,220.0,6,3,4,1,3,0,0,0,0,Former,None,Low,Home,1,Private,Emergency,0
+P003612,53,Female,19.5,137,89,86,95.0,5.8,171.0,7,0,4,1,2,0,1,0,0,Never,Low,Low,Home,1,Medicaid,Urgent,0
+P002583,63,Male,24.4,131,78,75,218.0,7.6,299.0,6,1,3,0,1,1,0,0,0,Former,None,High,Home,0,Private,Urgent,0
+P003256,69,Female,30.9,125,78,74,97.0,5.7,186.0,1,1,6,0,1,0,1,0,0,Former,None,Moderate,Home,0,Medicare,Emergency,0
+P005048,48,Female,28.3,109,58,69,167.0,7.7,146.0,4,0,2,0,1,1,0,0,0,Former,None,High,Home,1,Uninsured,Urgent,0
+P001311,46,Female,24.0,149,90,82,145.0,5.6,,2,1,4,0,2,0,1,0,0,Former,None,Low,Home,1,Uninsured,Elective,0
+P003710,60,Male,33.0,130,71,83,103.0,5.1,181.0,4,0,5,0,1,0,0,0,0,Former,Moderate,Low,Skilled Nursing Facility,1,Private,Emergency,0
+P004970,69,Female,33.6,150,96,72,,5.6,233.0,4,2,4,1,2,0,1,0,1,Never,Moderate,Low,Home,1,Medicare,Emergency,0
+P000990,57,Male,29.2,157,95,76,112.0,5.6,208.0,8,1,7,1,4,0,1,0,0,Former,Moderate,Low,Rehabilitation,0,Medicaid,Emergency,1
+P003224,36,Female,31.8,131,76,57,81.0,5.0,241.0,1,0,4,0,0,0,0,0,0,Former,,Moderate,Home,1,Medicaid,Elective,0
+P005562,100,Female,38.5,154,80,85,149.0,7.5,298.0,5,3,7,3,5,1,1,1,1,Current,None,Low,Other,0,Medicare,Emergency,0
+P000149,80,Other,30.1,148,85,58,213.0,8.4,218.0,13,2,7,2,4,1,1,1,1,Current,High,Low,Rehabilitation,1,Medicare,Emergency,0
+P005257,71,Female,24.6,126,67,107,126.0,7.1,200.0,4,4,7,5,5,1,0,1,0,Former,Low,Moderate,Skilled Nursing Facility,1,Medicare,Urgent,1
+P000069,77,Female,24.7,133,76,82,119.0,5.1,230.0,5,1,4,0,1,0,1,0,0,Former,Low,Low,Home,0,Private,Elective,0
+P001937,64,Female,18.8,110,68,66,99.0,5.2,199.0,2,0,2,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Medicaid,Elective,0
+P003523,59,Other,35.4,102,86,78,86.0,5.3,211.0,3,0,1,1,1,0,0,0,1,Current,,Moderate,Home,0,Uninsured,Elective,0
+P001982,56,Male,22.9,124,60,101,95.0,4.9,167.0,2,0,5,0,0,0,0,0,0,Current,Low,High,Skilled Nursing Facility,1,Private,Urgent,0
+P005480,49,Female,25.2,124,88,94,,5.8,171.0,3,1,1,0,0,0,0,0,0,Never,Low,Low,Rehabilitation,0,Medicaid,Urgent,0
+P002562,65,Male,24.8,116,76,88,113.0,6.1,209.0,4,1,58,0,0,0,0,0,0,Current,Moderate,Moderate,Home Health Care,0,Medicare,Emergency,0
+P003048,72,Female,29.7,116,75,67,94.0,5.0,147.0,6,1,7,1,2,0,1,0,1,Current,Low,Moderate,Home,1,Medicaid,Urgent,0
+P003894,48,Female,23.7,130,76,55,,6.5,,1,0,2,0,0,0,0,0,0,Former,Low,Low,Home,1,Private,Urgent,0
+P004391,67,Male,29.7,105,68,65,98.0,5.5,133.0,0,1,1,0,0,0,0,0,0,Current,Moderate,High,Home,0,Medicare,Urgent,0
+P001006,69,Female,28.2,159,92,93,124.0,5.6,141.0,0,0,3,1,1,0,0,0,0,Never,Low,Low,Home,1,Private,Elective,0
+P003856,36,Female,30.2,118,71,77,100.0,5.1,248.0,2,2,2,0,1,0,1,0,0,Never,Low,Moderate,Home,1,Medicaid,Urgent,0
+P003402,76,Female,31.1,126,79,63,199.0,6.6,195.0,3,4,5,7,4,1,1,0,1,Never,None,Moderate,Skilled Nursing Facility,0,Medicare,Elective,1
+P001260,57,Female,15.0,118,79,57,77.0,4.3,181.0,3,0,5,0,0,0,0,0,0,Current,Moderate,Moderate,Home,1,Private,Emergency,0
+P004231,81,Female,28.4,171,98,93,155.0,8.2,211.0,6,3,1,2,3,1,1,1,0,Current,High,Moderate,Rehabilitation,0,Medicare,Urgent,0
+P002981,63,Female,41.1,144,89,76,149.0,7.3,239.0,5,0,4,1,2,1,1,0,0,Never,Low,Moderate,Home,1,Private,Elective,0
+P004239,63,Female,,142,76,90,87.0,6.4,189.0,5,1,3,0,3,0,1,1,0,Former,None,High,Home,1,Medicaid,Urgent,0
+P002095,65,Male,23.8,149,77,64,91.0,5.3,203.0,1,2,6,2,1,0,0,0,0,Current,None,Moderate,Home,1,Medicaid,Urgent,0
+P002842,80,Male,27.1,147,90,96,71.0,5.1,276.0,7,0,3,3,4,0,1,1,1,Current,Low,Low,Home Health Care,0,Medicaid,Urgent,1
+P003778,71,Female,25.1,122,79,66,126.0,6.4,146.0,1,1,4,2,2,0,1,0,0,Current,Low,Low,Home,1,Medicaid,Emergency,0
+P001974,89,Male,36.7,126,71,83,154.0,7.6,298.0,10,1,6,2,5,1,1,1,1,Never,None,Moderate,Skilled Nursing Facility,0,Medicare,Elective,1
+P004870,65,Female,,136,69,77,107.0,5.3,241.0,6,0,8,0,2,0,0,1,0,Never,None,Low,Home Health Care,1,Medicare,Emergency,0
+P004860,61,Female,24.5,111,77,52,129.0,5.1,229.0,6,1,4,0,2,0,0,0,0,Never,None,High,Other,1,Uninsured,Urgent,0
+P003732,75,Female,27.9,123,80,96,,4.8,110.0,1,3,9,1,1,0,1,0,0,Former,None,Low,Other,0,Medicare,Urgent,0
+P001194,75,Male,29.7,138,80,89,130.0,5.6,252.0,10,2,10,1,4,0,1,1,1,Never,Low,High,Home,0,Private,Elective,1
+P005432,69,Male,27.1,140,78,84,167.0,7.6,206.0,8,1,2,0,2,1,0,0,1,Current,,Low,Home,1,Medicare,Urgent,0
+P003854,59,Male,33.0,112,75,73,115.0,5.2,171.0,1,2,4,0,0,0,0,0,0,Never,Low,Moderate,Home,0,Private,Emergency,0
+P005558,71,Male,22.0,101,78,74,148.0,7.6,289.0,3,0,6,0,1,1,0,0,0,Never,Low,Moderate,Home,0,Medicare,Urgent,0
+P001787,81,Female,30.4,142,83,90,147.0,7.0,190.0,10,2,7,2,4,1,1,0,0,Never,Moderate,Low,Skilled Nursing Facility,1,Medicare,Emergency,1
+P003827,77,Male,34.9,145,84,82,73.0,4.1,145.0,3,1,2,0,1,0,0,0,0,Former,Moderate,Low,Rehabilitation,0,Medicare,Elective,0
+P005207,42,Male,33.7,131,72,74,114.0,5.1,191.0,3,1,3,1,1,0,0,1,0,Never,Moderate,Low,Other,1,Medicaid,Emergency,0
+P000466,57,Female,29.9,100,60,84,204.0,7.1,218.0,6,2,8,2,3,1,0,0,1,Never,None,Low,Home Health Care,1,Medicaid,Urgent,1
+P005174,50,Female,38.2,120,75,74,167.0,7.5,248.0,7,1,4,0,1,1,0,0,0,Former,None,Low,Home Health Care,0,Private,Urgent,0
+P003901,74,Male,32.6,166,83,76,94.0,5.1,225.0,3,1,5,0,1,0,1,0,0,Never,Low,Moderate,Home,1,Medicare,Emergency,0
+P001776,68,Female,22.8,133,69,53,138.0,5.8,150.0,3,0,6,1,0,0,0,0,0,Former,High,High,Home,1,Medicare,Emergency,0
+P004317,73,Female,32.2,140,65,78,80.0,5.8,188.0,8,1,5,1,1,0,1,0,0,Former,None,Moderate,Home Health Care,1,Medicare,Urgent,0
+P004225,54,Other,32.9,139,67,73,97.0,5.4,183.0,3,1,6,1,1,0,1,0,0,Never,Moderate,Moderate,Home,1,Private,Emergency,0
+P002211,76,Female,30.4,149,78,100,132.0,7.6,247.0,7,1,6,1,3,1,1,1,0,Former,Moderate,Moderate,Rehabilitation,1,Medicaid,Emergency,0
+P001162,59,Male,27.9,116,64,45,97.0,5.2,178.0,3,2,6,0,1,0,0,0,0,Former,High,Low,Home,1,Medicaid,Emergency,0
+P003501,60,Female,34.9,125,92,64,69.0,5.7,210.0,3,1,4,1,2,0,1,1,0,Former,Low,Low,Home,1,Medicaid,Elective,1
+P005746,77,Female,32.1,131,86,82,161.0,7.7,219.0,6,2,4,3,3,1,1,0,0,Former,Moderate,Low,Skilled Nursing Facility,1,Medicare,Elective,0
+P003272,59,Male,36.1,123,73,71,104.0,,110.0,2,1,3,1,0,0,0,0,0,Former,High,High,Home,1,Private,Urgent,0
+P003115,68,Male,24.2,111,68,80,113.0,4.8,175.0,3,1,5,0,0,0,0,0,0,Former,Low,High,Home,1,Medicare,Urgent,0
+P004852,61,Male,37.3,138,88,76,103.0,4.5,141.0,3,2,10,0,1,0,1,0,0,Never,None,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P001763,55,Female,28.3,136,81,94,175.0,7.1,199.0,3,1,5,1,2,1,0,0,0,,None,Low,Home,0,Private,Urgent,0
+P002543,59,Male,27.7,142,75,77,118.0,5.6,178.0,2,0,5,1,1,0,1,0,0,Current,Moderate,Moderate,Home,0,Private,Elective,0
+P003821,78,Male,39.2,161,96,89,74.0,5.0,151.0,5,5,3,1,3,0,1,0,0,Current,Low,Low,Rehabilitation,0,Medicare,Elective,0
+P004744,63,Male,33.4,171,103,78,110.0,5.5,165.0,8,1,6,1,3,0,1,0,0,Current,Moderate,Low,Home,0,Private,Elective,1
+P000183,58,Female,28.2,140,98,87,91.0,4.0,175.0,2,0,4,0,0,0,0,0,0,Former,Low,Low,Home,1,Uninsured,Urgent,1
+P002835,71,Female,28.8,124,79,79,142.0,7.1,226.0,4,1,6,0,1,1,0,0,0,Former,Low,Low,Other,1,Medicare,Emergency,0
+P004973,79,Male,31.2,178,104,84,60.0,,245.0,2,1,2,1,2,0,1,0,1,Never,High,Moderate,Skilled Nursing Facility,1,Medicare,Emergency,1
+P004270,61,Male,20.9,131,82,73,112.0,5.1,169.0,2,3,5,2,3,0,1,1,0,Current,Low,High,Home,1,Uninsured,Elective,1
+P005993,68,Female,36.1,141,72,93,72.0,5.1,210.0,5,2,2,3,2,0,1,0,0,Never,Moderate,High,Home,0,Medicare,Elective,0
+P004113,54,Male,30.3,151,92,72,111.0,5.6,208.0,3,0,11,1,3,0,1,0,0,Never,Low,Low,Home Health Care,1,Private,Emergency,0
+P004509,50,Male,32.8,116,85,87,80.0,6.0,165.0,1,2,4,1,2,0,0,0,0,Never,Moderate,Low,Rehabilitation,0,Medicaid,Elective,0
+P004458,60,Female,35.3,157,80,88,71.0,5.2,230.0,4,0,5,0,1,0,1,0,0,Former,Moderate,Low,Other,1,Private,Urgent,0
+P001993,67,Male,29.1,151,79,87,125.0,5.4,231.0,4,0,6,0,2,0,1,0,0,Never,Low,Low,Home,0,Medicare,Urgent,0
+P004998,76,Female,25.2,127,79,93,93.0,5.1,193.0,6,2,2,1,3,0,1,1,0,Never,High,Low,Home,0,Medicare,Urgent,0
+P004332,46,Female,25.6,97,61,68,188.0,7.3,180.0,7,4,5,2,4,1,1,0,0,Current,None,Moderate,Home,1,Medicare,Urgent,1
+P004110,64,Female,30.0,126,81,77,90.0,5.8,223.0,6,0,3,1,1,0,0,0,0,Former,None,Low,Home,1,Private,Urgent,1
+P001492,64,Female,20.6,103,58,98,163.0,8.0,177.0,5,5,3,0,2,1,0,0,0,Never,Low,Low,Home,1,Medicare,Emergency,1
+P002267,73,Female,25.7,142,81,67,116.0,5.2,170.0,1,1,4,0,0,0,0,0,0,Never,Low,Low,Home,1,Medicare,Emergency,0
+P004648,53,Female,28.2,131,74,77,128.0,,208.0,1,1,7,0,1,0,1,0,0,Never,Low,Moderate,Home,0,Private,Emergency,0
+P001245,80,Male,23.5,133,69,70,86.0,5.5,233.0,4,1,7,1,3,0,1,1,0,Current,Moderate,Moderate,Home,1,Medicare,Emergency,1
+P005578,57,Female,26.8,116,68,45,144.0,7.8,204.0,1,0,1,1,1,1,0,0,0,Never,,Low,Home,1,Medicaid,Elective,0
+P002294,58,Female,27.3,138,78,78,143.0,6.2,210.0,1,0,2,0,1,0,0,0,0,Never,None,Low,Other,1,Private,Elective,0
+P004968,47,Male,29.9,115,67,70,124.0,4.5,188.0,1,0,3,0,0,0,0,0,0,,None,Low,Home,1,Medicare,Elective,0
+P005985,27,Female,27.6,129,87,94,126.0,6.6,225.0,1,0,5,0,0,0,0,0,0,Never,Low,High,Home,1,Private,Urgent,0
+P000005,35,Female,26.9,119,77,59,69.0,4.8,215.0,2,0,2,0,0,0,0,0,0,Former,Moderate,Moderate,Home,0,Private,Elective,0
+P000858,70,Female,18.2,115,69,77,91.0,5.7,278.0,2,0,2,1,0,0,0,0,0,Never,Low,Low,Home,1,Medicare,Urgent,0
+P005440,71,Female,27.4,127,78,82,70.0,5.1,230.0,1,0,2,0,0,0,0,0,0,Never,Low,Moderate,Home,1,Medicare,Urgent,0
+P001009,75,Female,38.9,120,84,106,129.0,4.9,201.0,7,1,6,2,3,0,1,1,1,Never,Low,High,Home Health Care,1,Medicare,Urgent,0
+P001833,47,Female,19.1,112,83,83,90.0,5.4,153.0,4,0,4,1,0,0,0,0,0,Former,Low,High,Home,1,Medicaid,Emergency,0
+P004427,67,Female,22.8,122,92,90,152.0,7.1,229.0,8,3,6,1,3,1,0,0,0,Former,Low,Low,Home,1,Medicare,Elective,0
+P004578,27,Male,30.8,110,71,62,115.0,5.0,241.0,3,0,4,1,0,0,0,0,0,Former,Low,Low,Home,0,Uninsured,Urgent,0
+P003876,70,Male,24.5,110,60,101,121.0,,253.0,5,0,5,2,2,0,0,0,0,Former,None,Moderate,Rehabilitation,1,Medicare,Emergency,0
+P002957,72,Female,25.4,147,86,84,168.0,7.6,239.0,3,4,7,2,4,1,1,1,0,Former,None,Low,Home,1,Medicaid,Elective,0
+P003582,95,Male,20.1,173,87,77,140.0,5.7,188.0,2,2,5,2,2,0,1,0,1,Never,None,Low,Rehabilitation,0,Medicare,Urgent,0
+P000565,78,Male,30.3,148,82,91,74.0,4.9,216.0,7,0,6,0,3,0,1,1,0,Never,Low,High,Rehabilitation,0,Medicare,Urgent,1
+P002363,59,Male,41.9,111,66,93,80.0,4.7,223.0,5,2,3,1,2,0,0,0,0,Former,Low,Moderate,Home,0,Medicare,Urgent,0
+P002785,70,Male,26.1,129,79,56,112.0,5.0,235.0,7,2,4,2,2,0,1,0,0,Never,Moderate,Moderate,Home Health Care,0,Private,Elective,0
+P003285,53,Female,25.0,136,83,66,106.0,5.8,194.0,5,1,6,1,3,0,0,1,1,Never,None,High,Home Health Care,1,Medicaid,Elective,0
+P004597,59,Female,24.6,107,75,73,109.0,5.0,221.0,2,0,4,1,0,0,0,0,0,Never,Low,Low,Home Health Care,1,Uninsured,Emergency,0
+P002730,45,Male,29.2,106,65,71,141.0,5.4,206.0,1,0,7,0,0,0,0,0,0,Former,Moderate,Low,Home,1,Uninsured,Emergency,1
+P001203,70,Male,27.2,132,80,101,136.0,,235.0,5,1,5,0,2,0,0,0,0,Current,None,Low,Home,1,Medicare,Elective,1
+P005003,54,Male,23.9,135,71,78,169.0,7.5,172.0,4,2,11,0,3,1,1,0,0,Current,Low,Low,Home,1,Private,Emergency,0
+P004868,59,Female,34.0,157,85,86,99.0,5.0,188.0,3,0,8,1,1,0,1,0,0,Never,None,High,Home,1,Private,Emergency,0
+P002854,68,Female,22.5,126,75,83,102.0,5.2,156.0,5,0,3,0,0,0,0,0,0,Never,None,Moderate,Home Health Care,0,Medicaid,Elective,0
+P003206,59,Female,26.2,146,85,85,129.0,6.1,134.0,2,1,3,0,1,0,1,0,0,Never,Low,High,Home,1,Medicaid,Urgent,0
+P002648,56,Male,28.2,135,75,95,180.0,7.2,234.0,2,2,6,2,3,1,1,1,0,Never,None,Low,Home Health Care,1,Private,Emergency,0
+P003145,58,Male,31.1,97,54,76,119.0,5.4,203.0,3,6,6,2,3,0,1,0,0,Never,None,Low,Home,1,Private,Urgent,0
+P003737,57,Male,26.7,132,88,71,94.0,4.8,166.0,1,2,3,0,1,0,1,0,0,Former,Low,High,Home Health Care,1,Medicaid,Emergency,0
+P001251,79,Female,20.0,132,75,60,132.0,5.2,115.0,0,1,7,0,0,0,0,0,0,Current,None,High,Home,1,Private,Urgent,0
+P003925,64,Male,26.1,157,81,73,95.0,5.3,223.0,3,1,4,0,1,0,1,0,0,Current,Low,Moderate,Other,1,Uninsured,Emergency,0
+P001177,53,Male,40.9,128,79,89,78.0,4.5,194.0,3,0,8,0,1,0,0,0,0,Former,Low,High,Home Health Care,1,Private,Elective,0
+P000795,37,Male,23.1,128,88,78,105.0,5.5,136.0,1,0,9,0,0,0,0,0,0,Never,Low,Low,Home,1,Uninsured,Emergency,0
+P002063,68,Male,31.3,132,74,93,186.0,8.1,159.0,3,0,9,0,2,1,1,0,0,Former,High,Low,Home Health Care,1,Medicare,Emergency,0
+P005235,55,Male,34.7,123,82,73,96.0,5.9,183.0,0,1,5,0,0,0,0,0,0,Former,Moderate,Low,Home,1,Private,Urgent,0
+P003250,67,Female,30.3,127,60,87,108.0,4.6,174.0,1,0,6,2,1,0,1,0,0,Never,,High,Home,1,Medicare,Elective,0
+P005068,77,Male,25.3,126,85,68,85.0,4.0,240.0,5,2,2,0,1,0,0,0,0,Never,Low,Moderate,Home,1,Private,Urgent,0
+P001255,53,Female,17.0,126,87,61,88.0,5.3,177.0,2,3,4,2,1,0,1,0,0,Former,Moderate,Low,Home Health Care,0,Uninsured,Elective,1
+P005690,51,Male,37.0,101,62,63,114.0,5.5,162.0,1,0,4,0,0,0,0,0,0,Never,Low,Low,Home Health Care,1,Medicaid,Emergency,0
+P005230,59,Male,38.3,116,78,104,86.0,4.2,258.0,5,0,3,0,1,0,0,0,0,Current,High,High,Home Health Care,0,Private,Emergency,0
+P003773,70,Male,19.3,117,69,77,,,251.0,1,0,4,2,1,1,0,0,0,Current,Low,Moderate,Home,0,Private,Urgent,0
+P004183,43,Male,25.6,144,87,83,182.0,6.6,135.0,3,2,4,0,1,0,1,0,0,Former,None,Moderate,Home,1,Private,Emergency,0
+P005446,53,Male,27.9,143,93,76,95.0,4.5,163.0,1,1,7,0,1,0,0,0,0,Former,Low,Moderate,Home,0,Medicaid,Emergency,1
+P005218,82,Female,20.6,128,77,86,105.0,5.4,172.0,10,2,4,2,4,0,1,1,0,,Moderate,Low,Rehabilitation,0,Medicare,Elective,0
+P001557,53,Female,25.8,124,77,72,100.0,4.8,235.0,5,2,5,1,4,0,1,0,0,Never,Low,Moderate,Home,1,Private,Elective,0
+P005629,74,Female,22.8,150,93,74,81.0,4.5,153.0,3,1,5,3,3,0,1,0,1,Former,None,Low,Home,1,Medicaid,Emergency,1
+P002002,54,Male,28.9,92,72,68,106.0,4.6,134.0,2,0,5,0,0,0,0,0,0,Never,High,Moderate,Home,1,Private,Urgent,0
+P005231,77,Male,27.9,115,77,45,,7.3,173.0,6,2,3,4,3,1,0,0,1,Current,Low,Moderate,Other,0,Medicare,Elective,0
+P005379,60,Male,27.2,109,81,92,86.0,5.3,194.0,1,0,6,2,0,0,0,0,0,Former,Low,Moderate,Home,1,Medicaid,Elective,0
+P003650,65,Male,24.6,135,94,74,201.0,7.2,138.0,5,6,9,3,4,1,1,0,0,Never,Low,High,Home,0,Medicare,Emergency,1
+P003709,62,Male,27.6,126,77,84,121.0,7.2,203.0,8,0,7,2,2,1,0,0,0,Never,Low,Moderate,Home,1,Private,Urgent,0
+P001375,64,Male,20.2,133,82,73,197.0,8.7,241.0,8,2,5,2,3,1,0,1,0,Never,Moderate,Low,Home,1,Private,Emergency,0
+P004136,55,Female,26.6,157,89,96,,5.3,185.0,8,1,5,2,2,0,1,0,0,Never,High,Low,Home,1,Private,Emergency,0
+P004145,85,Male,26.2,167,79,77,156.0,7.1,231.0,1,0,7,2,2,1,1,0,0,Never,Low,High,Home,1,Medicare,Emergency,0
+P002620,89,Male,24.4,115,74,105,177.0,8.4,307.0,5,3,4,1,2,1,0,1,0,Former,Low,Moderate,Other,1,Medicare,Emergency,0
+P001148,58,Female,29.6,126,79,90,187.0,7.6,224.0,3,1,2,1,1,1,0,0,0,Never,Low,Low,Home,1,Private,Emergency,0
+P005227,65,Male,24.3,134,83,69,123.0,4.9,215.0,7,1,7,0,2,0,1,0,1,,High,Moderate,Home,1,Medicaid,Emergency,0
+P002934,80,Male,15.5,98,72,75,142.0,5.8,196.0,4,2,6,1,2,0,1,1,0,Never,Low,Low,Home,0,Medicare,Emergency,1
+P002808,35,Male,23.5,108,75,75,137.0,5.3,,3,0,8,0,2,0,0,0,0,Never,None,Low,Home,0,Private,Elective,0
+P003022,87,Female,18.4,134,82,77,239.0,7.4,165.0,10,0,6,0,6,1,0,1,1,Former,Moderate,Low,Skilled Nursing Facility,1,Medicare,Urgent,1
+P005362,66,Female,35.9,105,85,78,141.0,7.4,263.0,3,1,3,4,1,1,0,0,0,Former,Moderate,Low,Home Health Care,1,Medicare,Emergency,0
+P000708,72,Female,29.8,146,94,90,175.0,8.0,218.0,5,2,3,1,3,1,1,0,0,Former,Low,High,Rehabilitation,0,Medicare,Emergency,0
+P002928,68,Female,27.2,137,79,64,90.0,4.9,158.0,5,4,8,2,4,0,1,0,1,Never,Moderate,Moderate,Home Health Care,1,Medicare,Elective,0
+P000304,59,Female,,118,73,88,104.0,4.3,213.0,3,0,9,0,0,0,0,0,0,Current,,Low,Home,1,Medicaid,Emergency,0
+P005241,77,Male,26.2,133,81,93,152.0,5.4,195.0,2,1,3,1,2,0,1,1,0,Never,Low,Moderate,Skilled Nursing Facility,1,Medicare,Urgent,0
+P004989,57,Female,37.2,124,98,75,105.0,5.5,244.0,5,3,4,3,3,0,0,0,0,Former,High,Low,Home,1,Medicaid,Emergency,0
+P001531,72,Female,26.7,130,74,89,171.0,7.7,233.0,6,4,6,3,4,1,1,0,0,Former,Low,Low,Home,1,Private,Elective,0
+P001695,45,Male,33.4,121,72,75,182.0,7.5,144.0,9,2,9,1,4,1,0,1,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P001482,72,Female,21.6,114,68,76,125.0,5.8,194.0,0,0,3,0,0,0,0,0,0,Current,Low,Low,Home,1,Medicare,Urgent,0
+P000443,69,Female,37.8,145,89,70,64.0,4.7,185.0,4,2,6,1,2,0,1,0,0,Never,None,Low,Home,1,Medicare,Emergency,0
+P003112,82,Female,21.0,137,78,105,236.0,8.5,,6,2,4,0,3,1,0,1,1,Never,Moderate,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P000981,71,Other,19.6,130,87,59,110.0,4.6,197.0,3,2,4,0,1,0,0,0,0,Never,Low,Low,Home,0,Medicare,Emergency,0
+P003565,85,Female,37.0,134,80,86,178.0,7.4,183.0,7,1,5,0,3,1,1,0,0,Former,Low,Moderate,Home,1,Medicare,Urgent,0
+P001610,58,Male,27.2,127,72,77,113.0,5.3,110.0,1,1,9,1,1,0,1,0,0,Current,None,Low,Home,0,Medicaid,Urgent,0
+P001012,86,Female,22.2,141,86,84,127.0,6.6,172.0,6,0,4,0,2,0,1,1,0,Former,Low,High,Home,1,Medicaid,Emergency,0
+P004293,51,Female,19.8,123,70,91,73.0,4.9,246.0,2,1,3,2,1,0,0,0,0,Never,Low,Low,Home,1,Uninsured,Emergency,0
+P002038,79,Female,35.7,163,100,84,162.0,7.2,242.0,7,0,8,1,3,1,1,0,1,Never,None,Low,Other,1,Private,Elective,0
+P004986,70,Male,19.4,133,77,82,152.0,5.1,138.0,4,1,10,3,3,0,0,0,1,Never,None,Moderate,Home,1,Medicare,Elective,0
+P002448,57,Female,27.3,135,98,94,98.0,5.6,258.0,8,1,3,2,2,0,0,0,0,Never,Moderate,Moderate,Home,1,Private,Elective,0
+P005441,64,Female,24.5,139,86,119,84.0,6.0,271.0,6,1,12,1,3,0,1,1,0,Never,None,Moderate,Home,1,Private,Emergency,0
+P002355,46,Male,27.8,118,74,83,76.0,4.6,141.0,4,1,3,0,1,0,1,0,0,Never,Low,Moderate,Other,0,Private,Emergency,0
+P002794,56,Male,38.6,130,84,83,96.0,6.3,162.0,4,0,5,1,1,0,0,0,0,Former,None,Low,Skilled Nursing Facility,1,Private,Urgent,0
+P000928,70,Male,26.0,121,80,93,233.0,,158.0,3,1,9,1,4,1,1,0,0,Never,None,Moderate,Home,1,Medicare,Elective,0
+P004478,56,Female,34.6,125,75,91,125.0,5.6,215.0,1,0,3,0,0,0,0,0,0,Never,None,Moderate,Home,0,Private,Urgent,0
+P003373,42,Male,30.2,105,61,57,60.0,4.0,133.0,1,2,9,3,2,0,0,0,1,Never,Moderate,Low,Home Health Care,0,Private,Emergency,1
+P001903,73,Female,31.5,125,79,89,92.0,4.9,208.0,1,0,3,1,1,0,0,0,0,Never,High,Moderate,Rehabilitation,0,Medicaid,Elective,0
+P000267,66,Female,29.1,153,79,82,87.0,5.8,153.0,3,0,7,1,1,0,1,0,0,Never,Low,Moderate,Home,0,Medicare,Emergency,0
+P003886,65,Female,31.5,101,68,100,205.0,,133.0,1,0,7,0,1,1,0,0,0,Former,Moderate,Low,Home,1,Private,Urgent,0
+P001435,68,Male,17.7,118,75,66,89.0,4.9,140.0,4,0,9,1,1,0,0,0,1,Former,Low,High,Rehabilitation,0,Medicare,Emergency,0
+P000228,92,Female,29.7,139,83,73,201.0,7.3,225.0,4,1,11,0,3,1,1,0,0,Never,None,Moderate,Skilled Nursing Facility,1,Medicare,Emergency,0
+P004321,53,Female,36.5,124,65,83,61.0,5.6,177.0,3,3,10,2,2,0,0,1,0,Never,Low,Moderate,Home,1,Uninsured,Emergency,0
+P001771,57,Other,23.4,114,68,82,102.0,4.6,229.0,1,0,3,0,0,0,0,0,0,Never,None,High,Home,1,Medicaid,Urgent,0
+P005884,63,Male,29.1,136,76,76,160.0,8.2,171.0,10,1,9,0,3,1,1,0,0,Never,None,Moderate,Home,1,Medicare,Elective,0
+P005524,77,Male,30.5,145,86,78,125.0,5.4,195.0,7,1,7,1,3,0,1,0,0,,Low,Moderate,Rehabilitation,0,Medicare,Urgent,1
+P000469,81,Male,30.2,126,80,94,109.0,4.1,233.0,7,3,48,3,4,0,1,0,0,Never,None,High,Rehabilitation,1,Medicare,Urgent,0
+P001605,59,Female,29.2,147,85,78,73.0,5.4,293.0,1,0,5,1,1,0,0,0,1,Never,Moderate,Moderate,Home,0,Medicare,Emergency,0
+P004644,64,Male,23.2,118,72,90,76.0,4.1,225.0,3,0,4,0,0,0,0,0,0,Never,Moderate,Low,Home,1,Private,Emergency,0
+P001171,47,Male,33.6,150,92,98,87.0,5.0,204.0,5,1,9,3,4,0,1,1,0,Never,High,High,Home Health Care,0,Private,Emergency,1
+P000770,89,Female,23.6,151,101,90,165.0,4.7,235.0,10,1,9,4,3,0,1,1,1,Never,Moderate,High,Home,1,Medicare,Emergency,1
+P000829,82,Female,27.9,152,95,96,60.0,4.7,230.0,3,2,6,2,4,0,0,0,0,Former,Low,Low,Home,1,Medicare,Emergency,0
+P003403,53,Female,27.6,137,68,77,92.0,5.6,189.0,4,1,5,1,3,0,1,0,0,Former,Moderate,Moderate,Home,1,Private,Emergency,0
+P003695,83,Female,30.0,129,79,64,200.0,7.8,195.0,7,1,3,0,2,1,0,0,0,Former,None,Moderate,Home Health Care,1,Medicare,Urgent,0
+P002746,81,Female,30.3,152,94,77,94.0,4.3,240.0,1,0,4,0,1,0,1,0,0,Current,Low,Low,Other,1,Private,Urgent,0
+P003559,73,Male,23.0,141,76,60,90.0,5.5,183.0,1,0,7,1,1,0,1,0,0,Former,None,Moderate,Home,0,Medicare,Emergency,0
+P000114,42,Female,27.7,107,70,60,129.0,5.1,,1,1,7,2,2,0,0,0,0,Former,High,Moderate,Home,0,Private,Elective,1
+P005775,100,Male,31.4,140,101,91,151.0,7.3,209.0,5,1,10,2,5,1,1,1,1,Never,None,Moderate,Home,1,Medicare,Elective,0
+P000067,59,Female,23.2,159,106,72,112.0,5.6,,4,1,2,1,1,0,1,0,0,Never,Low,High,Home,1,Uninsured,Elective,1
+P000340,73,Female,38.4,121,84,97,126.0,6.9,153.0,2,1,5,1,2,0,0,0,1,Never,Low,Moderate,Home,1,Uninsured,Emergency,0
+P000662,64,Female,27.0,135,77,91,116.0,5.3,193.0,1,1,4,0,1,0,0,0,0,Former,Low,Low,Home,0,Medicare,Emergency,0
+P001714,62,Female,25.4,102,66,88,101.0,5.8,182.0,4,0,4,0,2,0,0,0,0,Current,Moderate,High,Home,0,Private,Elective,1
+P005885,76,Female,26.9,124,70,74,96.0,4.4,189.0,2,1,2,1,1,0,0,1,0,Never,Low,Moderate,Home,1,Medicare,Elective,0
+P000010,51,Male,37.6,129,87,68,69.0,5.5,221.0,3,1,8,1,2,0,0,0,0,Current,None,Low,Rehabilitation,1,Medicaid,Emergency,0
+P005425,75,Female,30.7,139,102,91,174.0,7.6,209.0,5,2,4,1,2,1,0,0,1,Never,Low,High,Home,1,Medicaid,Elective,0
+P004993,56,Female,31.1,119,83,82,96.0,4.7,233.0,0,0,3,0,0,0,0,0,0,Never,High,Low,Home,1,Private,Urgent,0
+P000731,71,Female,22.5,146,89,88,119.0,5.7,,2,4,6,1,2,0,1,0,0,Never,None,Low,Other,1,Private,Emergency,1
+P000632,100,Male,25.3,134,77,59,67.0,4.8,170.0,4,2,9,0,2,0,1,1,0,Never,Low,Low,Skilled Nursing Facility,1,Medicaid,Urgent,0
+P003504,46,Male,24.8,130,88,98,95.0,4.3,123.0,3,0,4,0,3,0,1,0,0,Former,High,Moderate,Skilled Nursing Facility,0,Private,Elective,0
+P005514,55,Male,33.2,133,71,86,100.0,5.6,175.0,5,1,5,0,2,0,0,0,0,Never,Moderate,Low,Home,1,Medicaid,Emergency,0
+P000361,62,Male,25.1,110,65,61,133.0,5.4,191.0,3,0,6,0,1,0,0,0,0,Current,None,High,Rehabilitation,1,Private,Emergency,0
+P002594,75,Female,28.0,176,82,74,169.0,7.2,181.0,3,3,5,5,4,1,1,0,0,Current,Low,Moderate,Skilled Nursing Facility,0,Medicare,Emergency,1
+P003931,48,Female,31.0,96,68,87,138.0,5.0,212.0,1,0,4,0,0,0,0,0,0,Never,Low,High,Home,1,Medicaid,Urgent,0
+P002790,57,Female,27.5,119,75,67,106.0,5.9,168.0,1,0,4,0,1,0,0,0,1,Current,Low,Moderate,Home,0,Uninsured,Emergency,0
+P000744,36,Female,30.0,122,84,97,190.0,7.6,171.0,2,0,4,0,1,1,0,0,0,Current,None,Moderate,Home Health Care,1,Medicaid,Emergency,0
+P000087,57,Female,31.7,142,80,83,170.0,7.5,167.0,4,0,8,1,3,1,1,0,0,Never,None,Low,Home,0,Private,Elective,0
+P003998,60,Male,22.0,119,49,75,111.0,6.3,175.0,1,0,2,0,0,0,0,0,0,Never,Moderate,Low,Rehabilitation,1,Medicaid,Emergency,0
+P004406,83,Female,19.1,124,81,92,63.0,4.5,215.0,6,5,9,2,4,0,1,1,0,Current,,Low,Home,1,Medicare,Emergency,1
+P002424,57,Female,39.8,136,71,79,158.0,7.7,192.0,13,1,5,1,6,1,1,0,1,Current,Low,High,Rehabilitation,0,Medicaid,Elective,0
+P003363,67,Male,30.2,147,77,69,83.0,4.7,132.0,4,0,5,0,1,0,0,0,1,Never,Moderate,Moderate,Home,1,Medicare,Elective,0
+P002475,50,Female,34.6,137,73,84,105.0,4.3,110.0,6,0,3,0,0,0,0,0,0,Former,Low,Moderate,Home,1,Medicaid,Urgent,0
+P002062,90,Male,28.2,136,93,86,150.0,6.9,193.0,9,1,6,2,4,1,1,1,0,Former,Moderate,Low,Home,0,Medicare,Urgent,1
+P002979,55,Male,28.6,125,74,73,120.0,5.8,237.0,3,0,8,2,1,0,1,0,0,Never,Low,High,Home,0,Private,Emergency,0
+P001351,60,Female,29.6,132,84,63,79.0,5.0,162.0,2,1,3,1,0,0,0,0,0,Never,,Moderate,Rehabilitation,1,Private,Urgent,0
+P001157,64,Female,28.9,177,92,90,87.0,5.0,296.0,6,5,6,2,5,0,1,1,0,Current,,Moderate,Home,1,Private,Emergency,0
+P005968,63,Female,29.3,136,83,67,92.0,5.0,172.0,2,1,4,1,0,0,0,0,0,Never,None,Moderate,Home Health Care,1,Private,Elective,0
+P002354,67,Female,26.7,148,91,89,,5.1,110.0,3,1,6,0,2,0,1,1,0,Former,None,Moderate,Home,1,Medicare,Elective,0
+P001999,56,Male,31.8,90,69,96,62.0,5.0,167.0,3,2,8,2,2,0,0,0,0,Former,Moderate,Low,Home Health Care,0,Private,Emergency,0
+P005478,74,Female,24.8,137,85,65,77.0,,191.0,6,1,5,2,1,0,0,0,0,Never,Low,Moderate,Home,0,Medicaid,Elective,0
+P003955,64,Male,29.0,145,84,82,117.0,5.2,260.0,5,0,4,1,3,0,1,0,0,Current,None,Moderate,Skilled Nursing Facility,1,Medicaid,Emergency,0
+P002708,21,Male,36.2,122,84,81,67.0,4.8,123.0,1,0,6,2,1,0,0,0,0,Former,None,Low,Home,0,Private,Emergency,0
+P002270,57,Male,25.5,128,65,76,144.0,5.7,193.0,5,3,5,3,2,0,0,0,0,Current,None,Moderate,Home,0,Private,Urgent,1
+P005457,36,Male,35.6,95,82,76,61.0,4.0,160.0,5,0,4,0,2,0,0,0,0,Never,High,Low,Skilled Nursing Facility,0,Medicaid,Elective,0
+P003150,68,Male,37.6,163,94,78,148.0,5.3,212.0,2,0,1,0,0,0,0,0,0,Former,None,Moderate,Home,1,Medicare,Elective,0
+P002374,88,Female,23.6,139,77,83,80.0,4.9,189.0,5,1,3,1,2,0,1,0,0,Former,None,Moderate,Home,1,Medicare,Urgent,0
+P004926,81,Female,30.5,133,73,71,152.0,7.3,174.0,6,1,4,1,3,1,0,1,0,Current,Low,Moderate,Home Health Care,1,Uninsured,Emergency,0
+P003213,75,Female,29.8,130,71,67,210.0,6.6,195.0,2,0,9,1,1,1,0,0,0,Former,Moderate,Moderate,Home Health Care,1,Private,Emergency,0
+P002634,64,Female,26.1,111,78,71,208.0,8.0,169.0,1,0,8,3,2,1,0,0,0,Former,None,Low,Home Health Care,1,Private,Emergency,0
+P000111,71,Female,34.5,115,77,74,114.0,5.0,227.0,2,0,2,0,0,0,0,0,0,Current,None,Low,Home,1,Medicare,Emergency,0
+P004946,92,Female,26.6,127,85,85,155.0,7.0,239.0,3,1,6,2,2,1,0,0,1,Former,High,Moderate,Home Health Care,1,Medicare,Emergency,0
+P000658,67,Female,19.7,132,80,67,101.0,4.5,214.0,3,0,8,1,1,0,0,0,0,Former,Low,High,Home,0,Medicaid,Emergency,0
+P003727,67,Female,28.3,140,77,74,188.0,8.0,203.0,3,0,5,0,2,1,0,0,0,Former,Moderate,Low,Home,1,Private,Urgent,0
+P005054,53,Male,20.1,136,89,91,61.0,4.5,227.0,8,2,7,1,2,0,1,0,0,Former,,High,Home,0,Private,Urgent,0
+P004224,46,Female,59.2,111,68,69,,6.0,227.0,4,0,3,1,1,0,0,0,0,Former,High,High,Home,1,Uninsured,Urgent,0
+P002391,35,Male,22.3,89,61,93,127.0,4.4,205.0,4,0,9,0,2,0,0,0,0,Never,High,Moderate,Home,1,Private,Urgent,0
+P001782,65,Male,26.5,109,70,80,98.0,5.3,192.0,1,0,7,1,0,0,0,0,0,Former,None,Moderate,Home,1,Medicare,Emergency,0
+P004987,70,Male,,130,72,88,184.0,8.4,269.0,8,1,11,0,3,1,1,1,0,Former,Moderate,Moderate,Rehabilitation,1,Private,Emergency,0
+P003514,80,Female,66.9,151,96,58,126.0,5.2,220.0,0,3,8,0,1,0,1,0,0,Never,None,Low,Rehabilitation,0,Medicare,Emergency,0
+P002140,83,Male,40.8,162,88,92,95.0,5.1,160.0,7,4,6,4,4,0,1,1,0,Former,High,Low,Rehabilitation,1,Medicaid,Emergency,1
+P005749,53,Female,31.2,85,63,74,116.0,5.0,225.0,2,1,4,2,1,0,0,0,0,Never,Low,High,Home,1,Private,Elective,0
+P002284,68,Female,29.4,135,75,81,62.0,4.8,196.0,2,1,10,2,3,0,1,1,0,Former,None,Low,Home,1,Medicare,Emergency,1
+P005722,76,Male,31.6,169,100,95,94.0,4.8,201.0,1,4,7,1,3,0,1,1,0,Never,Low,Moderate,Other,0,Private,Emergency,1
+P001487,77,Female,16.7,136,83,78,124.0,5.5,126.0,4,2,6,0,3,0,1,1,0,Never,Low,Moderate,Home,1,Medicare,Elective,0
+P002725,55,Female,25.4,112,67,85,93.0,4.6,111.0,6,0,2,0,1,0,0,1,0,Never,Low,High,Home,0,Uninsured,Elective,0
+P003315,80,Female,27.3,153,88,110,108.0,4.7,224.0,3,2,8,0,3,0,1,1,0,Former,Low,Moderate,Rehabilitation,1,Medicare,Emergency,0
+P000093,58,Female,20.3,142,86,72,76.0,,209.0,4,1,10,0,1,0,0,0,0,Current,None,Low,Home,0,Private,Emergency,1
+P001275,55,Male,31.1,118,61,70,103.0,5.3,150.0,4,1,5,1,1,0,0,1,0,Never,High,Moderate,Home,0,Private,Emergency,0
+P001574,64,Female,30.0,94,45,61,99.0,5.3,211.0,2,0,4,1,0,0,0,0,0,Former,None,Low,Other,0,Medicare,Elective,0
+P000263,67,Male,29.0,118,76,97,139.0,5.5,206.0,9,6,54,1,4,0,1,0,0,Never,Moderate,Moderate,Home Health Care,0,Medicare,Urgent,1
+P005869,71,Male,34.4,137,84,78,66.0,5.1,283.0,3,0,6,0,2,0,0,0,0,Never,None,Low,Rehabilitation,1,Medicare,Emergency,0
+P002466,52,Male,28.7,122,93,61,106.0,6.0,224.0,5,0,2,1,3,0,1,0,1,Former,Moderate,High,Home,0,Medicaid,Emergency,0
+P001361,58,Female,,159,87,90,60.0,4.7,252.0,1,1,4,1,1,0,1,0,0,Former,None,Moderate,Home,0,Private,Emergency,1
+P005839,63,Male,,133,84,72,114.0,6.1,170.0,6,1,6,1,4,0,1,0,0,Never,None,Moderate,Home,1,Private,Elective,0
+P000746,78,Female,22.8,147,96,98,183.0,7.4,194.0,5,4,7,1,4,1,1,1,1,Former,,Moderate,Home,0,Medicare,Urgent,1
+P002743,52,Female,24.9,101,60,86,60.0,4.0,170.0,0,0,4,0,0,0,0,0,0,Never,High,Low,Home,1,Medicaid,Emergency,0
+P004917,38,Female,,125,92,90,89.0,5.3,193.0,3,1,3,0,1,0,1,0,0,Never,None,Low,Rehabilitation,1,Medicare,Elective,0
+P000964,62,Male,18.4,122,76,84,92.0,5.4,182.0,3,1,2,1,0,0,0,0,0,Never,Moderate,Moderate,Home,1,Medicare,Urgent,0
+P000132,43,Male,26.2,99,66,66,67.0,,177.0,3,1,8,0,0,0,0,0,0,Never,None,Low,Rehabilitation,1,Medicaid,Emergency,0
+P001938,47,Male,16.4,119,69,89,,5.4,213.0,3,1,6,2,1,0,0,0,0,Never,None,Low,Rehabilitation,1,Private,Emergency,0
+P004524,65,Male,30.6,110,78,68,60.0,4.4,149.0,1,1,14,0,1,0,0,0,0,Former,Moderate,Moderate,Home,1,Medicare,Emergency,0
+P001023,70,Male,23.8,138,79,68,181.0,6.9,138.0,8,0,5,2,4,1,1,1,0,Former,Moderate,Low,Home,1,Private,Emergency,0
+P003563,45,Female,24.3,142,86,58,93.0,5.5,232.0,2,0,10,0,0,0,0,0,0,Former,None,Moderate,Home,1,Medicaid,Emergency,0
+P001576,45,Male,30.5,116,75,64,99.0,4.4,188.0,9,1,5,0,3,0,0,0,0,Former,None,Moderate,Home,1,Private,Emergency,0
+P000173,57,Female,37.2,138,78,60,60.0,4.8,179.0,4,2,5,0,1,0,1,0,0,Current,Low,High,Home,0,Private,Emergency,0
+P002975,66,Female,26.3,156,71,94,102.0,5.1,217.0,7,0,5,1,3,0,1,0,0,Former,Low,Moderate,Home Health Care,1,Medicare,Emergency,0
+P005682,92,Male,41.4,155,75,87,182.0,7.6,238.0,5,3,4,3,4,1,1,1,0,Former,None,High,Home,1,Medicare,Urgent,0
+P000665,63,Female,29.9,122,59,72,67.0,4.3,218.0,2,2,6,1,1,0,0,0,0,Former,Low,Low,Rehabilitation,1,Uninsured,Emergency,0
+P003339,48,Female,36.0,146,99,59,78.0,4.5,182.0,6,0,4,2,1,0,1,0,0,Never,None,Low,Home,1,Uninsured,Emergency,0
+P004820,43,Female,33.3,118,67,88,69.0,4.5,239.0,2,0,5,1,1,0,0,0,0,Never,Low,Low,Home,1,Medicaid,Emergency,0
+P001060,71,Female,,165,84,89,116.0,4.9,139.0,7,0,5,0,2,0,1,0,0,Former,Low,Moderate,Home Health Care,0,Medicare,Emergency,0
+P004636,46,Male,,91,54,105,64.0,5.0,211.0,3,0,7,0,1,0,0,0,1,Never,None,Moderate,Home Health Care,1,Medicaid,Urgent,0
+P003596,100,Female,31.0,156,86,114,206.0,7.0,211.0,2,3,5,1,3,1,1,1,0,Never,Moderate,High,Home,1,Medicare,Elective,0
+P000600,37,Male,30.1,95,67,89,68.0,4.4,,1,0,8,2,1,0,0,0,0,Current,Low,Low,Home Health Care,1,Medicaid,Emergency,0

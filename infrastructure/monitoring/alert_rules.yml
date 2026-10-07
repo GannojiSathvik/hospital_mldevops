@@ -1,0 +1,54 @@
+# Prometheus alerting rules for the readmission API.
+# Metric names follow CONTRACT.md (prometheus_client adds `_total` to counters
+# and `_bucket/_sum/_count` to histograms).
+groups:
+  - name: readmission-api
+    rules:
+      - alert: ApiDown
+        expr: up{job="readmission-api"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Readmission API is down"
+          description: "Prometheus cannot scrape {{ $labels.instance }} for 2 minutes."
+
+      - alert: HighErrorRate
+        expr: |
+          sum(rate(http_requests_total{job="readmission-api",status=~"5.."}[5m]))
+            / clamp_min(sum(rate(http_requests_total{job="readmission-api"}[5m])), 1e-9) > 0.05
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "5xx error rate above 5%"
+          description: "More than 5% of API requests failed with a server error over 5 minutes."
+
+      - alert: HighPredictionLatencyP95
+        expr: |
+          histogram_quantile(0.95, sum by (le) (rate(prediction_latency_seconds_bucket[5m]))) > 0.5
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "p95 prediction latency above 500 ms"
+
+      - alert: HighRiskPredictionSpike
+        expr: |
+          sum(rate(high_risk_predictions_total[1h]))
+            / clamp_min(sum(rate(predictions_total[1h])), 1e-9) > 0.5
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "More than 50% of predictions are High risk"
+          description: "Possible data drift or upstream data problem — check the Evidently drift report."
+
+      - alert: AuthFailureBurst
+        expr: sum by (reason) (rate(auth_failures_total[5m])) * 60 > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "More than 10 auth failures/min (reason={{ $labels.reason }})"
+          description: "Possible API-key brute force or a misconfigured client."

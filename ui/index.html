@@ -1,0 +1,206 @@
+<!doctype html>
+<!--
+  Readmission Risk Console - browser UI for the Healthcare Readmission API.
+
+  Plain HTML + CSS + JavaScript, no framework and no build step, so every line
+  can be read and explained. It is served by the API itself at /ui/ (same
+  origin), which means:
+    * no CORS configuration is needed, and
+    * the strict Content-Security-Policy in api/middleware.py applies: the page
+      may only load its own files (app.js, styles.css) and talk to this API.
+  That is why this file has no inline script blocks or inline style attributes.
+
+  Security model (Lab 6): the UI never decides what you may do. It shows which
+  actions your role is granted (from GET /whoami), but every button still calls
+  the API, and the API returns 401/403 itself. Locked actions stay clickable on
+  purpose, so you can demonstrate the server refusing them.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Readmission Risk Console</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <h1>Readmission Risk Console</h1>
+        <p class="sub">30-day readmission prediction &middot; DevSecMLOps Internal Project 2</p>
+      </div>
+    </div>
+    <div class="status" id="api-status" role="status">
+      <span class="dot"></span><span class="status-text">Checking API&hellip;</span>
+    </div>
+  </header>
+
+  <p class="disclaimer">
+    Educational demo on synthetic data only. Not for clinical diagnosis or treatment decisions.
+  </p>
+
+  <main>
+    <!-- ------------------------------------------------------------ sign-in -->
+    <section class="card" id="signin-card">
+      <h2>Sign in with an API key</h2>
+      <p class="muted">
+        The key is sent in the <code>X-API-Key</code> header. It is kept only in this tab's memory:
+        refreshing the page signs you out. Demo keys for each role are in <code>.env.example</code>.
+      </p>
+      <form id="signin-form" class="signin-row" autocomplete="off">
+        <label class="sr-only" for="api-key">API key</label>
+        <input id="api-key" type="password" placeholder="e.g. demo-clinician-key-change-me" required spellcheck="false">
+        <button type="submit" class="btn primary">Sign in</button>
+      </form>
+      <p class="error" id="signin-error" hidden></p>
+    </section>
+
+    <!-- ------------------------------------------------------------ identity -->
+    <section class="card identity" id="identity-card" hidden>
+      <div class="identity-main">
+        <div>
+          <div class="eyebrow">Signed in as</div>
+          <div class="who"><span id="who-name"></span> <span class="role-badge" id="who-role"></span></div>
+          <div class="muted small" id="who-desc"></div>
+        </div>
+        <button type="button" class="btn ghost" id="signout-btn">Sign out</button>
+      </div>
+      <div class="perm-list" id="perm-list" aria-label="Granted permissions"></div>
+    </section>
+
+    <!-- ------------------------------------------------------------ tabs -->
+    <section id="workspace" hidden>
+      <nav class="tabs" role="tablist">
+        <button role="tab" class="tab active" data-tab="predict"  data-perm="predict:single">Single patient</button>
+        <button role="tab" class="tab"        data-tab="batch"    data-perm="predict:batch">Batch upload</button>
+        <button role="tab" class="tab"        data-tab="drift"    data-perm="monitor:drift">Drift monitor</button>
+        <button role="tab" class="tab"        data-tab="model"    data-perm="model:read">Model info</button>
+        <button role="tab" class="tab"        data-tab="access"   data-perm="">Access matrix</button>
+      </nav>
+
+      <!-- Single prediction -->
+      <div class="panel" data-panel="predict">
+        <div class="grid-2">
+          <form id="patient-form" class="card form-card" novalidate>
+            <div class="card-head">
+              <h2>Patient details</h2>
+              <button type="button" class="btn ghost small" id="reset-sample">Reset to sample</button>
+            </div>
+            <div id="form-fields" class="fields"></div>
+            <div class="actions">
+              <button type="submit" class="btn primary" data-action="predict" data-perm="predict:single">Predict risk</button>
+              <button type="button" class="btn" id="explain-btn" data-perm="predict:explain">Predict + explain</button>
+            </div>
+          </form>
+
+          <div class="stack">
+            <div class="card result-card" id="result-card">
+              <h2>Result</h2>
+              <p class="muted" id="result-empty">Fill in the form and press <b>Predict risk</b>.</p>
+              <div id="result-body" hidden>
+                <div class="risk-row">
+                  <div class="risk-pill" id="risk-pill"></div>
+                  <div>
+                    <div class="prob" id="prob-value"></div>
+                    <div class="muted small">probability of readmission within 30 days</div>
+                  </div>
+                </div>
+                <div class="meter" aria-hidden="true">
+                  <div class="meter-fill" id="meter-fill"></div>
+                  <div class="meter-mark" id="meter-mark"></div>
+                </div>
+                <div class="meter-legend small muted" id="meter-legend"></div>
+                <p class="label-line" id="pred-label"></p>
+                <p class="muted small" id="pred-meta"></p>
+              </div>
+            </div>
+
+            <div class="card" id="explain-card" hidden>
+              <h2>Why this score?</h2>
+              <p class="muted small">
+                SHAP contributions: how much each (transformed) feature pushed this patient's
+                probability up <span class="up-text">(red)</span> or down <span class="down-text">(green)</span>
+                compared with a typical training patient.
+              </p>
+              <div id="explain-bars" class="bars"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batch -->
+      <div class="panel" data-panel="batch" hidden>
+        <div class="card">
+          <h2>Batch prediction from CSV</h2>
+          <p class="muted">
+            Upload a <code>.csv</code> with a <code>patient_id</code> column plus the 25 feature columns
+            (see <code>data/sample_batch_input.csv</code>). The server rejects files over the upload limit (413),
+            non-CSV files (400) and invalid values (400).
+          </p>
+          <div class="upload-row">
+            <input type="file" id="batch-file" accept=".csv,text/csv">
+            <button type="button" class="btn primary" id="batch-btn" data-perm="predict:batch">Score file</button>
+            <a class="btn ghost" id="batch-download" hidden download="predictions.csv">Download results CSV</a>
+          </div>
+          <div id="batch-summary" class="summary-row" hidden></div>
+          <div class="table-wrap" id="batch-table-wrap" hidden><table id="batch-table"></table></div>
+        </div>
+      </div>
+
+      <!-- Drift -->
+      <div class="panel" data-panel="drift" hidden>
+        <div class="card">
+          <h2>Data drift check</h2>
+          <p class="muted">
+            Compares recent prediction inputs (<code>data/inference/inference_log.csv</code>) against the
+            training data with Evidently. Drift means live patients no longer look like the patients the model
+            learned from. Retraining is recommended when more than 30% of features drift.
+          </p>
+          <button type="button" class="btn primary" id="drift-btn" data-perm="monitor:drift">Run drift report</button>
+          <div id="drift-result" hidden></div>
+        </div>
+      </div>
+
+      <!-- Model info -->
+      <div class="panel" data-panel="model" hidden>
+        <div class="card">
+          <div class="card-head">
+            <h2>Deployed model</h2>
+            <button type="button" class="btn ghost small" id="model-btn" data-perm="model:read">Refresh</button>
+          </div>
+          <div id="model-info"><p class="muted">Loading&hellip;</p></div>
+        </div>
+      </div>
+
+      <!-- Access matrix -->
+      <div class="panel" data-panel="access" hidden>
+        <div class="card">
+          <h2>Who can do what (RBAC)</h2>
+          <p class="muted">
+            Mirrors <code>configs/access_control.yaml</code>. The server enforces it on every request:
+            no key or a wrong key gives <b>401</b> (we don't know who you are); a valid key without the
+            permission gives <b>403</b> (we know who you are, but you may not do this).
+          </p>
+          <div class="table-wrap">
+            <table class="matrix" id="matrix"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------ request log -->
+    <section class="card log-card" id="log-card" hidden>
+      <div class="card-head">
+        <h2>Request log</h2>
+        <span class="muted small">Every call this page makes, with the server's status code and request ID</span>
+      </div>
+      <ol class="req-log" id="req-log"></ol>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="alert" hidden></div>
+</body>
+</html>

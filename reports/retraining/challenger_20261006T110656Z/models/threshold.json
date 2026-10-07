@@ -1,0 +1,4 @@
+{
+  "threshold": 0.15757582833369574,
+  "strategy": "max_precision_at_recall>=0.78"
+}

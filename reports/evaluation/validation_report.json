@@ -1,0 +1,24 @@
+{
+  "data_path": "data/raw/healthcare_readmission.csv",
+  "run_by": "m",
+  "is_valid": true,
+  "errors": [],
+  "warnings": [
+    "Class imbalance: minority class is 17.3% of rows (use class weights, PR-AUC and threshold tuning)"
+  ],
+  "stats": {
+    "n_rows": 6000,
+    "n_columns": 27,
+    "missing_fraction": {
+      "bmi": 0.0403,
+      "blood_glucose": 0.0398,
+      "hba1c": 0.0438,
+      "cholesterol": 0.0378,
+      "smoking_status": 0.0378,
+      "alcohol_consumption": 0.038
+    },
+    "duplicate_ids": 0,
+    "positive_rate": 0.1735,
+    "max_abs_target_correlation": 0.3017
+  }
+}

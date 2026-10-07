@@ -1,0 +1,23 @@
+# Tunable parameters tracked by DVC. Changing a value here makes `dvc repro`
+# re-run only the stages that depend on it.
+data:
+  n_rows: 6000
+  seed: 42
+  positive_rate: 0.17
+  missing_rate: 0.04
+  outlier_rate: 0.005
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+train:
+  random_state: 42
+  cv_folds: 3
+  n_iter: 10                     # RandomizedSearchCV iterations per model (kept small for speed)
+  scoring: average_precision     # PR-AUC: the right selection metric for an imbalanced target
+  calibration_method: isotonic
+  calibration_cv: 3
+  min_recall: 0.75               # clinical requirement for threshold selection
+  recall_margin: 0.03            # choose threshold for 0.78 recall on OOF train preds (buffer for unseen data)
+  shap_sample_size: 300

@@ -1,0 +1,2 @@
+10049	IGNORE	(Storable and Cacheable Content) Informational only. Every API response already sends Cache-Control: no-store (api/middleware.py); ZAP still reports the "storability" analysis for each URL, which is noise for a JSON API.
+40026	IGNORE	(Cross Site Scripting, DOM Based) This rule drives a real browser to look for XSS in rendered HTML pages. Every endpoint in /openapi.json returns JSON, never HTML, so it cannot apply; in a local run it also stalled the scan for minutes per thread trying to launch Firefox. Reflected/persistent XSS rules (40012/40014) still run.

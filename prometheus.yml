@@ -1,0 +1,21 @@
+# Prometheus scrape configuration (used by docker-compose).
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    project: healthcare-readmission
+
+rule_files:
+  - /etc/prometheus/alert_rules.yml
+
+scrape_configs:
+  - job_name: readmission-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["api:8000"]
+        labels:
+          service: readmission-api
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

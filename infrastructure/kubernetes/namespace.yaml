@@ -1,0 +1,12 @@
+# Dedicated namespace with the Pod Security Admission "restricted" profile:
+# the cluster rejects pods that run as root, allow privilege escalation, etc.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: healthcare-readmission
+  labels:
+    app.kubernetes.io/part-of: healthcare-readmission
+    pod-security.kubernetes.io/enforce: restricted
+    pod-security.kubernetes.io/enforce-version: latest
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/warn: restricted

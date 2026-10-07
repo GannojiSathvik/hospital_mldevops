@@ -1,0 +1,15 @@
+# Runtime deps for the API container only (kept minimal => smaller attack surface)
+pandas==3.0.6
+numpy==2.4.6
+scikit-learn==1.9.1
+xgboost==3.2.0
+joblib==1.6.0
+shap==0.51.0
+fastapi==0.142.2
+pydantic==2.13.5
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+slowapi==0.1.10
+prometheus-client==0.26.0
+python-json-logger==4.2.0
+PyYAML==6.0.3

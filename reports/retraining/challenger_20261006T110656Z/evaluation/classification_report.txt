@@ -1,0 +1,11 @@
+Model: xgboost (calibrated, isotonic)
+Threshold: 0.1576 (max_precision_at_recall>=0.78)
+
+                    precision    recall  f1-score   support
+
+Not readmitted (0)     0.9179    0.7097    0.8005       992
+    Readmitted (1)     0.3349    0.6971    0.4524       208
+
+          accuracy                         0.7075      1200
+         macro avg     0.6264    0.7034    0.6264      1200
+      weighted avg     0.8168    0.7075    0.7401      1200

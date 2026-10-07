@@ -1,0 +1,128 @@
+# =============================================================================
+# DAST — Dynamic Application Security Testing with OWASP ZAP (Test & Verify)
+# -----------------------------------------------------------------------------
+# SAST (security.yml) reads the source code. DAST does the opposite: it starts
+# the REAL running API and attacks it over HTTP from the outside, like an
+# attacker would, without looking at the code at all.
+#
+#   1. build a model from scratch (the API refuses /predict without one)
+#   2. start the API on localhost with ENV=ci, so /openapi.json is served
+#      (it is disabled only when ENV=production)
+#   3. wait for GET /health to answer
+#   4. ZAP API scan: ZAP imports /openapi.json, learns every endpoint and its
+#      parameters, then sends passive + active attack requests (SQL injection,
+#      path traversal, header checks, error leakage, ...). The admin demo key
+#      is injected as the X-API-Key header on every request, so endpoints
+#      behind authentication are scanned too, not just the 401 page.
+#   5. gate: scripts/zap_gate.py fails the job only on HIGH-risk alerts.
+#      Medium/Low/Informational are reported, not blocking.
+#   6. the HTML/Markdown/JSON reports are uploaded as the `dast-zap-report`
+#      artifact (uploaded by the ZAP action itself).
+#
+# Known false positives are tuned in .zap/rules.tsv (one comment per rule).
+# The keys used here are the OBVIOUSLY FAKE demo keys from .env.example; they
+# only exist inside this ephemeral runner.
+# =============================================================================
+name: DAST
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dast-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.11"
+  PYTHONDONTWRITEBYTECODE: "1"
+  MLFLOW_TRACKING_URI: "sqlite:///mlflow.db"
+  API_PORT: "8000"
+
+jobs:
+  zap-api-scan:
+    name: OWASP ZAP API scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Non-production so FastAPI serves /openapi.json for ZAP to import.
+      ENV: "ci"
+      ENFORCE_PIPELINE_RBAC: "false" # throw-away model build, as in ci.yml
+      API_KEYS: "demo-viewer:viewer:demo-viewer-key-change-me,demo-clinician:clinician:demo-clinician-key-change-me,demo-analyst:analyst:demo-analyst-key-change-me,demo-ml-engineer:ml_engineer:demo-ml-engineer-key-change-me,demo-admin:admin:demo-admin-key-change-me"
+      # The scanner sends thousands of requests; the default 60/minute limit
+      # would turn most of them into 429s and hide real behaviour.
+      RATE_LIMIT: "100000/minute"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+            requirements-dev.txt
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Build model artifacts (data -> preprocess -> train)
+        run: |
+          python -m scripts.generate_dataset
+          python -m scripts.preprocess
+          python -m pipelines.training_pipeline
+
+      - name: Start API in the background
+        run: |
+          nohup python -m uvicorn api.main:app --host 127.0.0.1 --port "$API_PORT" \
+            > api.log 2>&1 &
+      - name: Wait for /health
+        run: |
+          for i in $(seq 1 60); do
+            if curl -sf "http://127.0.0.1:${API_PORT}/health" >/dev/null; then
+              echo "API is up after ${i}s"; exit 0
+            fi
+            sleep 1
+          done
+          echo "API did not become healthy"; cat api.log; exit 1
+
+      - name: Let the ZAP container write its reports into the workspace
+        # ZAP runs as user `zap` (uid 1000) inside Docker, the workspace is
+        # owned by the runner user; without this the report write fails.
+        run: chmod a+w "$GITHUB_WORKSPACE"
+
+      - name: ZAP API scan (OpenAPI, authenticated)
+        uses: zaproxy/action-api-scan@v0.10.0
+        env:
+          # Read by ZAP: add this header to every request it sends.
+          ZAP_AUTH_HEADER: "X-API-Key"
+          ZAP_AUTH_HEADER_VALUE: "demo-admin-key-change-me"
+          ZAP_AUTH_HEADER_SITE: "127.0.0.1"
+        with:
+          target: "http://127.0.0.1:${{ env.API_PORT }}/openapi.json"
+          format: openapi
+          rules_file_name: ".zap/rules.tsv"
+          # -a: also run the alpha (newer) active scan rules.
+          cmd_options: "-a"
+          fail_action: false # the gate step below decides (HIGH only)
+          allow_issue_writing: false # needs no `issues: write` permission
+          artifact_name: dast-zap-report
+
+      - name: DAST gate — fail on HIGH-risk alerts only
+        run: python -m scripts.zap_gate report_json.json --rules .zap/rules.tsv
+
+      - name: Upload API log (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dast-api-log
+          path: api.log
+          retention-days: 7
+          if-no-files-found: warn

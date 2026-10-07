@@ -1,0 +1,23 @@
+# CODEOWNERS — GitHub auto-requests review from these owners on matching PRs.
+# With branch protection "Require review from Code Owners", their approval is
+# mandatory. Replace the handles below with real users/teams.
+# Later rules override earlier ones.
+
+*                               @healthcare-readmission/maintainers
+
+# Security-sensitive areas: security team must approve
+/.github/                       @healthcare-readmission/security
+/src/security/                  @healthcare-readmission/security
+/configs/access_control.yaml    @healthcare-readmission/security
+/Dockerfile                     @healthcare-readmission/security
+/infrastructure/                @healthcare-readmission/security @healthcare-readmission/platform
+/SECURITY.md                    @healthcare-readmission/security
+/.gitleaks.toml                 @healthcare-readmission/security
+
+# ML code, models and data: ML engineers must approve
+/src/models/                    @healthcare-readmission/ml-engineers
+/src/features/                  @healthcare-readmission/ml-engineers
+/pipelines/                     @healthcare-readmission/ml-engineers
+/models/                        @healthcare-readmission/ml-engineers
+/params.yaml                    @healthcare-readmission/ml-engineers
+/dvc.yaml                       @healthcare-readmission/ml-engineers

@@ -1,0 +1,10 @@
+Test set classification report (threshold=0.1327)
+
+                    precision    recall  f1-score   support
+
+Not readmitted (0)     0.9280    0.6109    0.7368       992
+    Readmitted (1)     0.2943    0.7740    0.4265       208
+
+          accuracy                         0.6392      1200
+         macro avg     0.6112    0.6925    0.5816      1200
+      weighted avg     0.8182    0.6392    0.6830      1200

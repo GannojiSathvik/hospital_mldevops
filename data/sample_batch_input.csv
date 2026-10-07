@@ -1,0 +1,21 @@
+patient_id,age,gender,bmi,systolic_bp,diastolic_bp,heart_rate,blood_glucose,hba1c,cholesterol,number_of_medications,previous_admissions,length_of_stay,emergency_visits_last_year,chronic_disease_count,diabetes,hypertension,heart_disease,kidney_disease,smoking_status,alcohol_consumption,physical_activity_level,discharge_destination,follow_up_scheduled,insurance_type,admission_type
+P900001,79,Male,35.2,153,77,89,176,7.9,180,6,0,4,2,2,1,1,0,0,Never,Moderate,Low,Other,1,Medicare,Elective
+P900002,89,Male,26.1,144,72,95,107,5.5,169,4,1,6,1,2,0,1,1,0,Former,Moderate,High,Home Health Care,1,Private,Emergency
+P900003,81,Male,26.4,120,70,92,60,4.7,178,2,2,7,1,1,0,1,0,0,Never,Moderate,Low,Home Health Care,0,Medicare,Urgent
+P900004,49,Female,20.9,103,70,73,182,5.0,171,2,1,5,2,1,0,1,0,0,Former,None,Moderate,Home,1,Private,Urgent
+P900005,43,Male,17.0,100,60,82,134,6.1,203,4,2,2,1,2,0,0,0,0,Never,Moderate,Moderate,Home,1,Private,Elective
+P900006,65,Male,32.0,127,64,71,90,5.7,224,4,0,9,0,2,0,0,0,1,Never,Moderate,High,Skilled Nursing Facility,1,Medicare,Urgent
+P900007,77,Female,22.1,132,77,85,120,5.0,220,2,2,15,2,2,0,1,0,0,Never,Low,Moderate,Rehabilitation,0,Medicare,Emergency
+P900008,72,Male,32.8,132,79,96,192,8.2,182,3,2,6,0,2,1,0,1,0,Never,High,High,Home,0,Medicare,Elective
+P900009,91,Male,38.7,143,89,79,163,7.6,194,7,0,6,1,3,1,1,1,0,Never,Moderate,Low,Home,0,Medicaid,Urgent
+P900010,75,Male,27.9,145,77,81,79,5.0,208,5,2,6,2,3,0,1,0,0,Former,Low,Low,Home,1,Medicare,Urgent
+P900011,74,Male,22.3,134,78,88,115,5.3,136,2,0,7,0,1,0,0,0,0,Never,High,High,Skilled Nursing Facility,1,Medicare,Emergency
+P900012,53,Male,30.7,126,84,87,107,4.8,230,2,3,5,5,4,0,0,0,0,Current,None,High,Home,0,Private,Elective
+P900013,47,Female,32.7,101,60,70,104,5.2,244,1,0,8,0,0,0,0,0,0,Never,None,Low,Home,0,Uninsured,Emergency
+P900014,86,Male,27.1,173,93,94,123,5.4,224,8,3,4,1,2,0,1,0,0,Current,Low,Low,Home,0,Medicare,Elective
+P900015,65,Female,28.6,112,69,88,162,7.6,125,2,0,7,0,3,1,1,1,0,Current,None,Low,Home,0,Medicare,Elective
+P900016,76,Female,35.8,140,70,80,90,4.8,208,5,1,6,1,1,0,1,0,0,Never,None,Moderate,Home,0,Medicare,Emergency
+P900017,43,Male,35.5,101,67,78,168,7.7,127,6,1,6,0,2,1,0,0,0,Never,Low,Low,Other,1,Medicaid,Emergency
+P900018,57,Female,32.4,136,89,90,89,4.8,243,1,2,5,1,2,0,0,1,0,Never,Low,Low,Home,0,Private,Urgent
+P900019,45,Female,23.7,97,85,90,105,5.0,115,2,1,4,0,1,0,0,0,0,Never,None,High,Home,1,Private,Emergency
+P900020,52,Male,28.2,103,57,63,157,5.7,144,7,0,8,0,3,0,0,0,0,Current,High,Low,Home,1,Private,Emergency

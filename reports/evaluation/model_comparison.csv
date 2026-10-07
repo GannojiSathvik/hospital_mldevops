@@ -1,0 +1,4 @@
+model,cv_pr_auc,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,test_pr_auc,train_seconds,best_params
+logistic_regression,0.5079,0.7217,0.3433,0.6635,0.4525,0.7657,0.4551,1.6,"{""C"": 0.03}"
+xgboost,0.5004,0.7417,0.3651,0.6635,0.471,0.7689,0.4478,0.4,"{""subsample"": 1.0, ""n_estimators"": 150, ""min_child_weight"": 1, ""max_depth"": 2, ""learning_rate"": 0.1, ""colsample_bytree"": 0.7}"
+random_forest,0.4803,0.7792,0.4047,0.5817,0.4773,0.7501,0.4118,3.7,"{""n_estimators"": 250, ""min_samples_leaf"": 5, ""max_features"": 0.5, ""max_depth"": 8}"

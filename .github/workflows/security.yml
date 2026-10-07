@@ -1,0 +1,193 @@
+# =============================================================================
+# Security scanning (Lab 5: DevSecOps quality gates)
+# -----------------------------------------------------------------------------
+# Each job is one "security gate". A gate FAILS the workflow when it finds a
+# problem above its threshold, which (with branch protection) blocks the merge.
+#
+#   Gate        Tool          Catches                                  Fails on
+#   ----------  ------------  ---------------------------------------  -------------------------
+#   sast        Bandit        insecure Python patterns (eval, pickle,  any MEDIUM+ severity &
+#                             subprocess shell=True, hardcoded pwd)    MEDIUM+ confidence issue
+#   deps        pip-audit     known CVEs in pinned Python packages     any known vulnerability
+#   secrets     Gitleaks      API keys / tokens committed to git       any leak not allow-listed
+#   iac         Checkov       insecure Docker/K8s/Terraform/Actions    any failed check
+#   codeql      CodeQL        data-flow bugs (injection, path trav.)   alerts shown in Security tab
+#   trivy-fs    Trivy (fs)    CVEs in deps + misconfig + secrets       CRITICAL severity
+#
+# SARIF (Static Analysis Results Interchange Format) results are uploaded to
+# GitHub's Security -> Code scanning tab; that needs `security-events: write`,
+# granted ONLY to the jobs that upload (least privilege).
+# =============================================================================
+name: Security
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 3 * * 1" # weekly Monday 03:17 UTC — catches newly published CVEs
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sast:
+    name: Bandit (Python SAST)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      security-events: write # upload SARIF
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install bandit (pinned)
+        run: pip install "bandit[sarif,toml]==1.9.4"  # keep in sync with requirements-dev.txt
+      - name: Bandit -> SARIF (report everything, never fail here)
+        run: |
+          bandit -c pyproject.toml -r api src pipelines scripts \
+            -f sarif -o bandit.sarif --exit-zero
+      - name: Upload Bandit SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: bandit.sarif
+          category: bandit
+      - name: Bandit gate (fail on MEDIUM+ severity and confidence)
+        run: bandit -c pyproject.toml -r api src pipelines scripts -ll -ii
+
+  deps:
+    name: pip-audit (dependency CVEs)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pip-audit (pinned)
+        run: pip install "$(grep -E '^pip-audit==' requirements-dev.txt)"
+      - name: Audit container runtime dependencies
+        # --strict: fail if any package cannot be audited, too.
+        run: pip-audit -r requirements-api.txt --strict --desc on --format columns
+
+  secrets:
+    name: Gitleaks (secret detection)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # scan full history, not just the last commit
+          persist-credentials: false
+      # Uses the gitleaks binary directly (MIT) instead of gitleaks-action,
+      # which needs a paid licence key for organisation repos.
+      - name: Install gitleaks
+        env:
+          GITLEAKS_VERSION: "8.28.0"
+        run: |
+          curl -sSfL -o gitleaks.tgz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          tar -xzf gitleaks.tgz gitleaks
+          sudo mv gitleaks /usr/local/bin/
+      - name: Scan repository history
+        # --redact: never print the secret itself into the public log.
+        run: gitleaks git --config .gitleaks.toml --redact --verbose --exit-code 1 .
+
+  iac:
+    name: Checkov (IaC scanning)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Checkov — Terraform, Kubernetes, Dockerfile, GitHub Actions
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: .
+          framework: terraform,kubernetes,dockerfile,github_actions,secrets
+          skip_path: .venv
+          output_format: cli,sarif
+          output_file_path: console,checkov.sarif
+          soft_fail: false
+      - name: Upload Checkov SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: checkov.sarif
+          category: checkov
+
+  codeql:
+    name: CodeQL (python)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: python
+          queries: security-extended
+      - uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:python"
+
+  trivy-fs:
+    name: Trivy (filesystem scan)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Trivy fs -> SARIF (all severities, informational)
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret,misconfig
+          skip-dirs: .venv
+          format: sarif
+          output: trivy-fs.sarif
+          exit-code: "0"
+      - name: Upload Trivy SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: trivy-fs.sarif
+          category: trivy-fs
+      - name: Trivy gate — fail on CRITICAL
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,secret
+          skip-dirs: .venv
+          severity: CRITICAL
+          ignore-unfixed: true
+          format: table
+          exit-code: "1"

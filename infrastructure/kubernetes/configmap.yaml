@@ -1,0 +1,11 @@
+# Non-secret runtime configuration. Secrets live in secret.example.yaml's real counterpart.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: readmission-api-config
+  namespace: healthcare-readmission
+data:
+  ENV: "production"
+  MAX_UPLOAD_MB: "5"
+  RATE_LIMIT: "60/minute"
+  LOG_LEVEL: "INFO"

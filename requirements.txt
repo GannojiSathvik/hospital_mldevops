@@ -1,0 +1,7 @@
+# Full dev / pipeline environment (Python 3.11)
+-r requirements-api.txt
+matplotlib==3.11.2
+mlflow==3.16.1
+dvc==3.67.1
+evidently==0.7.23
+prefect==3.8.7

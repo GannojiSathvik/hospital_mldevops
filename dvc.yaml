@@ -1,0 +1,86 @@
+# DVC pipeline: `dvc repro` re-runs only the stages whose deps/params changed.
+# Data and model binaries are DVC outputs (versioned by hash, not committed to git).
+stages:
+  generate:
+    cmd: python -m scripts.generate_dataset
+    deps:
+      - scripts/generate_dataset.py
+      - src/data/generate.py
+      - src/features/schema.py
+    params:
+      - data
+    outs:
+      - data/raw/healthcare_readmission.csv
+      - data/sample_input.json:
+          cache: false
+      - data/sample_batch_input.csv:
+          cache: false
+
+  preprocess:
+    cmd: python -m scripts.preprocess
+    deps:
+      - scripts/preprocess.py
+      - src/data/preprocess.py
+      - src/data/validation.py
+      - configs/validation_config.yaml
+      - data/raw/healthcare_readmission.csv
+    params:
+      - split
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+
+  train:
+    cmd: python -m scripts.train
+    deps:
+      - scripts/train.py
+      - src/models/train.py
+      - src/models/pipeline_factory.py
+      - src/models/evaluate.py
+      - src/features/engineering.py
+      - configs/model_config.yaml
+      - data/processed/train.csv
+      - data/processed/test.csv
+    params:
+      - train
+    outs:
+      - models/readmission_model.joblib
+      - models/preprocessor.joblib
+      - models/threshold.json:
+          cache: false
+      - models/feature_list.json:
+          cache: false
+      - models/model_metadata.json:
+          cache: false
+      - reports/evaluation/model_comparison.csv:
+          cache: false
+      - reports/figures/feature_importance.png:
+          cache: false
+      - reports/figures/shap_summary.png:
+          cache: false
+    metrics:
+      - models/metrics.json:
+          cache: false
+
+  evaluate:
+    cmd: python -m scripts.evaluate
+    deps:
+      - scripts/evaluate.py
+      - src/models/evaluate.py
+      - models/readmission_model.joblib
+      - models/threshold.json
+      - data/processed/test.csv
+    outs:
+      - reports/evaluation/classification_report.txt:
+          cache: false
+      - reports/figures/confusion_matrix.png:
+          cache: false
+      - reports/figures/roc_curve.png:
+          cache: false
+      - reports/figures/pr_curve.png:
+          cache: false
+      - reports/figures/calibration_curve.png:
+          cache: false
+    metrics:
+      - reports/evaluation/metrics.json:
+          cache: false

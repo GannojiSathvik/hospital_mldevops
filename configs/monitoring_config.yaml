@@ -1,0 +1,36 @@
+# Monitoring & retraining configuration.
+# Read by src/monitoring/drift.py, src/monitoring/retrain_policy.py and
+# pipelines/monitoring_pipeline.py. Change thresholds here, not in code.
+
+drift:
+  # Share of feature columns that must drift before we call the WHOLE dataset
+  # "drifted". 0.30 = 30% of the 25 features (i.e. 8 or more columns).
+  dataset_drift_share_threshold: 0.30
+  # Statistical test per column type. null = let Evidently pick automatically
+  # (reference > 1000 rows: Wasserstein distance for numeric, Jensen-Shannon
+  #  for categorical; smaller samples: Kolmogorov-Smirnov / chi-squared / Z-test).
+  # Valid names include: ks, wasserstein, psi, jensenshannon, chisquare, z, kl_div.
+  num_stattest: null
+  cat_stattest: null
+  # Per-column overrides, e.g. {age: psi}. Empty = use the defaults above.
+  per_column_stattest: {}
+  # Threshold for each per-column test. null = Evidently's default
+  # (0.05 p-value for statistical tests, 0.1 distance for Wasserstein/JS/PSI).
+  stattest_threshold: null
+
+retraining:
+  # Retrain if model ROC-AUC on freshly labelled production data drops below this.
+  roc_auc_min: 0.70
+  # Retrain if the share of high-risk (positive) predictions moves by more than
+  # this absolute amount compared with the training data (0.10 = 10 points).
+  prediction_shift_max: 0.10
+  # Below this many logged predictions the comparison is not statistically
+  # meaningful, so the monitoring pipeline will not trigger retraining.
+  min_inference_rows: 30
+
+paths:
+  reference_data: data/processed/train.csv
+  inference_log: data/inference/inference_log.csv
+  labeled_feedback: data/inference/labeled_feedback.csv
+  report_dir: reports/drift
+  retraining_report_dir: reports/retraining

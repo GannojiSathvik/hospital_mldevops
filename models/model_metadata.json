@@ -1,0 +1,57 @@
+{
+  "model_name": "CalibratedLogisticRegression",
+  "model_version": "1.0.0",
+  "trained_at": "2026-10-06T11:12:48.556083+00:00",
+  "feature_columns": [
+    "age",
+    "gender",
+    "bmi",
+    "systolic_bp",
+    "diastolic_bp",
+    "heart_rate",
+    "blood_glucose",
+    "hba1c",
+    "cholesterol",
+    "number_of_medications",
+    "previous_admissions",
+    "length_of_stay",
+    "emergency_visits_last_year",
+    "chronic_disease_count",
+    "diabetes",
+    "hypertension",
+    "heart_disease",
+    "kidney_disease",
+    "smoking_status",
+    "alcohol_consumption",
+    "physical_activity_level",
+    "discharge_destination",
+    "follow_up_scheduled",
+    "insurance_type",
+    "admission_type"
+  ],
+  "threshold": 0.13272914824638962,
+  "metrics": {
+    "accuracy": 0.6392,
+    "precision": 0.2943,
+    "recall": 0.774,
+    "f1": 0.4265,
+    "roc_auc": 0.7648,
+    "pr_auc": 0.454,
+    "threshold": 0.1327,
+    "confusion_matrix": {
+      "tn": 606,
+      "fp": 386,
+      "fn": 47,
+      "tp": 161
+    }
+  },
+  "training_data_hash": "d3678a4a7ee074299c8b3de74c742c7067130864e837f0fb61a4ec16669c9dfd",
+  "trained_by": "local-dev",
+  "best_params": {
+    "C": 0.03
+  },
+  "calibration": "isotonic",
+  "n_train_rows": 4800,
+  "mlflow_run_id": "acb5c1af7d4244fb88f39f5df3599a49",
+  "mlflow_model_uri": "models:/m-b0ff67a800b5434da21715ab1791ee88"
+}

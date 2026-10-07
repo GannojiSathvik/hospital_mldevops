@@ -1,0 +1,111 @@
+# API Deployment with a hardened pod/container security context.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: readmission-api
+  namespace: healthcare-readmission
+  labels:
+    app.kubernetes.io/name: readmission-api
+    app.kubernetes.io/part-of: healthcare-readmission
+  annotations:
+    # Documented Checkov skips (reason after '='):
+    checkov.io/skip1: CKV_K8S_43=Image is referenced by tag in this example; deploy.yml sets image@sha256 digest at rollout time
+    checkov.io/skip2: CKV_K8S_35=App reads API_KEYS from an env var by design (12-factor); secret is env-scoped and never logged
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: readmission-api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: readmission-api
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: /metrics
+    spec:
+      serviceAccountName: readmission-api
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: api
+          image: ghcr.io/example-org/healthcare-readmission-api:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: readmission-api-config
+          env:
+            - name: API_KEYS
+              valueFrom:
+                secretKeyRef:
+                  name: readmission-api-secrets
+                  key: API_KEYS
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 10001
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            privileged: false
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          volumeMounts:
+            # Writable paths only; everything else is read-only.
+            - name: tmp
+              mountPath: /tmp
+            - name: logs
+              mountPath: /app/logs
+            - name: inference
+              mountPath: /app/data/inference
+      volumes:
+        - name: tmp
+          emptyDir:
+            sizeLimit: 64Mi
+        - name: logs
+          emptyDir:
+            sizeLimit: 256Mi
+        # In production ship inference logs to object storage / a PVC for drift jobs.
+        - name: inference
+          emptyDir:
+            sizeLimit: 512Mi

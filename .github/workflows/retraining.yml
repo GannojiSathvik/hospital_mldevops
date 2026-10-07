@@ -1,0 +1,140 @@
+# =============================================================================
+# Scheduled / on-demand retraining (Lab 5 + Lab 6)
+# -----------------------------------------------------------------------------
+# Weekly (Sunday 02:00 UTC) or manual. pipelines.retraining_pipeline:
+#   1. checks RBAC (pipeline:retrain — ml_engineer/admin only),
+#   2. runs drift detection and the retrain policy (drift share > 30%,
+#      ROC-AUC < 0.70, positive-rate shift > 10%),
+#   3. retrains only if the monitoring decision (reports/drift/retrain_decision.json)
+#      says so, or if `force` is requested; promotes the challenger only if its
+#      PR-AUC >= the champion's (champion/challenger).
+# The new model is uploaded as an artifact and — optionally — a pull request
+# with the updated model metadata/metrics JSON is opened so a human reviews the
+# new model before it is promoted (the .joblib itself is DVC-tracked, not git).
+#
+# PR creation needs: Settings -> Actions -> General -> Workflow permissions ->
+# [x] "Allow GitHub Actions to create and approve pull requests".
+# Only the `open-pr` job gets write permissions; training runs read-only.
+# =============================================================================
+name: Retraining
+
+on:
+  schedule:
+    - cron: "0 2 * * 0"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Retrain even if monitoring did not request it (--force)"
+        type: boolean
+        default: false
+      open_pr:
+        description: "Open a PR with the updated model metadata"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: retraining
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  MLFLOW_TRACKING_URI: "sqlite:///mlflow.db"
+
+jobs:
+  retrain:
+    name: Evaluate policy and retrain
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+      - run: pip install -r requirements.txt
+
+      - name: Build baseline data + model (unprotected bootstrap)
+        env:
+          ENFORCE_PIPELINE_RBAC: "false"
+        run: |
+          python -m scripts.generate_dataset
+          python -m scripts.preprocess
+          python -m pipelines.training_pipeline
+          if [ -f scripts/seed_monitoring_data.py ]; then python -m scripts.seed_monitoring_data; fi
+
+      - name: Monitoring -> writes reports/drift/retrain_decision.json
+        run: python -m pipelines.monitoring_pipeline
+
+      - name: Retraining pipeline (RBAC enforced, ml_engineer key)
+        env:
+          ENFORCE_PIPELINE_RBAC: "true"
+          API_KEYS: ${{ secrets.API_KEYS }}
+          PIPELINE_API_KEY: ${{ secrets.PIPELINE_API_KEY }}
+          FORCE: ${{ inputs.force && 'true' || 'false' }}
+        run: |
+          if [ "${FORCE}" = "true" ]; then
+            python -m pipelines.retraining_pipeline --force
+          else
+            python -m pipelines.retraining_pipeline
+          fi
+          cat reports/retraining/decision.json >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Upload retrained artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: retrained-model-${{ github.run_id }}
+          path: |
+            models/
+            reports/drift/
+            reports/evaluation/
+            reports/retraining/
+            logs/audit.log
+          retention-days: 30
+          if-no-files-found: warn
+
+  open-pr:
+    name: Open PR with new model metadata
+    needs: [retrain]
+    if: github.event_name == 'schedule' || inputs.open_pr
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # create a branch
+      pull-requests: write # open the PR
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: retrained-model-${{ github.run_id }}
+          path: retrained
+      - name: Copy only small, reviewable metadata files into models/
+        run: |
+          # Only changed if the challenger was promoted; otherwise the PR action finds no diff and opens nothing.
+          for f in model_metadata.json metrics.json threshold.json feature_list.json; do
+            if [ -f "retrained/models/$f" ]; then cp "retrained/models/$f" "models/$f"; fi
+          done
+          rm -rf retrained
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automated/retraining-${{ github.run_id }}
+          commit-message: "chore(model): automated retraining run ${{ github.run_id }}"
+          title: "Automated retraining — run ${{ github.run_id }}"
+          body: |
+            Automated retraining produced new model metadata.
+
+            - Review `models/metrics.json` against the current production model.
+            - Model binary is available as the `retrained-model-${{ github.run_id }}` workflow artifact.
+            - Merging this PR does NOT deploy; production deploy still needs manual approval.
+          labels: model-retraining
+          add-paths: models/*.json
+          delete-branch: true

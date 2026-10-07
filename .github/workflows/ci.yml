@@ -1,0 +1,153 @@
+# =============================================================================
+# CI — Pull-request validation (Lab 5: Secure CI/CD Pipeline)
+# -----------------------------------------------------------------------------
+# Runs on every PR and every push to main. Three jobs:
+#   1. lint       -> ruff (linter + formatter check)
+#   2. type-check -> mypy on src/ and api/
+#   3. test       -> builds the model artifacts from scratch, then runs unit,
+#                    integration and security tests with a coverage report.
+# Any failing job blocks the merge (configure "required status checks" in
+# Settings -> Branches -> Branch protection rules for `main`).
+#
+# Hardening applied in every workflow of this repo:
+#   * top-level `permissions: contents: read`  -> GITHUB_TOKEN is read-only
+#   * `concurrency`                            -> a new push cancels stale runs
+#   * `timeout-minutes`                        -> a hung job cannot burn minutes
+#   * `persist-credentials: false`             -> token not left in .git/config
+#   * actions pinned to a major version. For maximum supply-chain safety pin
+#     to a full commit SHA instead, e.g.
+#       uses: actions/checkout@<40-char-sha> # v4.2.2
+#     Dependabot (github-actions ecosystem) keeps those pins up to date.
+# =============================================================================
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.11"
+  PYTHONDONTWRITEBYTECODE: "1"
+  # Local, throw-away MLflow store inside the runner workspace.
+  MLFLOW_TRACKING_URI: "sqlite:///mlflow.db"
+
+jobs:
+  lint:
+    name: Lint (ruff)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install ruff (pinned in requirements-dev.txt)
+        run: pip install "$(grep -E '^ruff==' requirements-dev.txt)"
+      - name: Ruff lint
+        run: ruff check api src pipelines scripts tests --output-format=github
+      - name: Ruff format check
+        run: ruff format --check api src pipelines scripts tests
+
+  type-check:
+    name: Type check (mypy)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements-api.txt
+            requirements-dev.txt
+      - name: Install API deps + mypy
+        run: |
+          pip install -r requirements-api.txt
+          pip install "$(grep -E '^mypy==' requirements-dev.txt)" "$(grep -E '^types-PyYAML==' requirements-dev.txt)"
+      - name: mypy
+        run: mypy src api
+
+  test:
+    name: Tests + coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [lint]
+    env:
+      # Lab 6 RBAC is disabled ONLY for this throw-away build of the artifacts;
+      # model-training.yml shows the enforced path with a real ml_engineer key.
+      ENFORCE_PIPELINE_RBAC: "false"
+      ENV: "ci"
+      # Fake, CI-only keys so the RBAC tests can exercise 401/403 paths.
+      # These are NOT secrets — they only exist inside this ephemeral runner.
+      API_KEYS: "ci-viewer:viewer:ci-viewer-key,ci-clinician:clinician:ci-clinician-key,ci-analyst:analyst:ci-analyst-key,ci-ml:ml_engineer:ci-ml-key,ci-admin:admin:ci-admin-key"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+            requirements-dev.txt
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      # The API tests need real model artifacts. We build them from scratch so
+      # CI proves the whole data -> model path is reproducible.
+      - name: Generate synthetic dataset
+        run: python -m scripts.generate_dataset
+      - name: Preprocess (train/test split)
+        run: python -m scripts.preprocess
+      - name: Train model
+        run: python -m pipelines.training_pipeline
+
+      - name: Unit tests
+        run: pytest tests/unit -q --cov=src --cov=api --cov-report=
+      - name: Integration tests
+        run: pytest tests/integration -q --cov=src --cov=api --cov-append --cov-report=
+      - name: Security tests
+        run: pytest tests/security -q --cov=src --cov=api --cov-append --cov-report=
+      - name: Top-level API tests (tests/test_*.py, if any)
+        run: |
+          if ls tests/test_*.py >/dev/null 2>&1; then
+            pytest tests/test_*.py -q --cov=src --cov=api --cov-append --cov-report=
+          else
+            echo "No top-level test files."
+          fi
+      - name: Coverage report (terminal + XML + HTML)
+        run: |
+          mkdir -p reports
+          coverage report --show-missing
+          coverage xml -o reports/coverage.xml
+          coverage html -d reports/coverage_html
+
+      - name: Upload coverage + test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: |
+            reports/coverage.xml
+            reports/coverage_html/
+          retention-days: 14
+          if-no-files-found: warn

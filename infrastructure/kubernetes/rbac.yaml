@@ -1,0 +1,27 @@
+# Kubernetes RBAC (cluster-level access control — complements the app-level
+# RBAC of Lab 6). Least privilege: the API service account may only READ its
+# own non-secret ConfigMap. It cannot list/read Secrets, pods, or anything else.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: readmission-api-read-config
+  namespace: healthcare-readmission
+rules:
+  - apiGroups: [""]
+    resources: ["configmaps"]
+    resourceNames: ["readmission-api-config"]
+    verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: readmission-api-read-config
+  namespace: healthcare-readmission
+subjects:
+  - kind: ServiceAccount
+    name: readmission-api
+    namespace: healthcare-readmission
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: readmission-api-read-config

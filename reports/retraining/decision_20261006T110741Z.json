@@ -1,0 +1,12 @@
+{
+  "run_at": "2026-10-06T11:07:41.830289+00:00",
+  "forced": false,
+  "triggered_by": "local-dev (RBAC disabled)",
+  "monitoring_decision": {
+    "retrain": false,
+    "reasons": [],
+    "evaluated_at": "2026-10-06T11:07:39.688848+00:00"
+  },
+  "action": "skipped",
+  "reason": "monitoring did not request retraining (use --force to override)"
+}

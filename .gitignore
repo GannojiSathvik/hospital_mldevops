@@ -1,0 +1,61 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# --- Secrets (NEVER commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+kubeconfig*
+
+# --- MLflow / experiment tracking ---
+mlruns/
+mlartifacts/
+mlflow.db
+
+# --- Data (versioned with DVC, not git) ---
+/data/raw/*
+!/data/raw/*.dvc
+!/data/raw/.gitkeep
+/data/inference/
+
+# --- Models: commit small JSON metadata, binaries are DVC/artifact-tracked ---
+/models/*.joblib
+
+# --- Runtime output ---
+logs/*
+!logs/.gitkeep
+reports/drift/*.html
+reports/drift/*.json
+reports/coverage_html/
+reports/coverage.xml
+reports/junit.xml
+*.sarif
+sbom*.json
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+
+# --- OS / editors ---
+.DS_Store
+.idea/
+.vscode/
+
+# --- Notebooks ---
+.ipynb_checkpoints/

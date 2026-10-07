@@ -1,0 +1,82 @@
+[project]
+name = "healthcare-readmission-devsecmlops"
+version = "1.0.0"
+description = "30-day hospital readmission risk prediction — end-to-end DevSecMLOps lab project (educational, synthetic data, not for clinical use)."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = { text = "MIT" }
+authors = [{ name = "Healthcare Readmission DevSecMLOps Team" }]
+# Runtime dependencies are pinned in requirements*.txt (installed via `make install`).
+
+# ----------------------------------------------------------------------------- ruff
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "notebooks", "mlruns"]
+
+[tool.ruff.lint]
+# E/W pycodestyle, F pyflakes, I isort, B bugbear, UP pyupgrade, S bandit-lite, SIM simplify
+select = ["E", "W", "F", "I", "B", "UP", "S", "SIM"]
+ignore = [
+  "E501",  # line length is handled by the formatter
+  "UP017", # keep `timezone.utc` (clearer for readers than the datetime.UTC alias)
+  "B008", # FastAPI's Depends()/File() in default args is the idiomatic pattern
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "S311", "SIM115"] # asserts + fake test keys + non-crypto random are fine in tests
+"scripts/generate_dataset.py" = ["S311"]       # synthetic data uses non-crypto RNG on purpose
+"notebooks/**" = ["E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["api", "src", "pipelines", "scripts"]
+
+# ----------------------------------------------------------------------------- mypy
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+check_untyped_defs = true
+exclude = ["^\\.venv/", "^notebooks/", "^tests/"]
+
+# ----------------------------------------------------------------------------- pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+  "unit: fast, isolated unit tests",
+  "integration: tests that exercise the API / pipelines end to end",
+  "security: authentication, RBAC, input-validation and hardening tests",
+  "slow: tests that train models or take more than a few seconds",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+# ----------------------------------------------------------------------------- coverage
+[tool.coverage.run]
+source = ["src", "api", "pipelines"]
+branch = true
+omit = ["tests/*", "*/__init__.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+exclude_lines = [
+  "pragma: no cover",
+  "if __name__ == .__main__.:",
+  "raise NotImplementedError",
+]
+
+[tool.coverage.html]
+directory = "reports/coverage_html"
+
+[tool.coverage.xml]
+output = "reports/coverage.xml"
+
+# ----------------------------------------------------------------------------- bandit
+# Used by: bandit -c pyproject.toml -r api src pipelines scripts
+[tool.bandit]
+exclude_dirs = ["tests", ".venv", "notebooks"]
+# No global skips: every suppression must be an inline `# nosec BXXX` with a reason.
+skips = []

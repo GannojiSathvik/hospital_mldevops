@@ -1,0 +1,19 @@
+# Project-wide paths and service names (not hyperparameters; those live in params.yaml).
+paths:
+  raw_data: data/raw/healthcare_readmission.csv
+  train_data: data/processed/train.csv
+  test_data: data/processed/test.csv
+  sample_input: data/sample_input.json
+  sample_batch: data/sample_batch_input.csv
+  models_dir: models
+  figures_dir: reports/figures
+  evaluation_dir: reports/evaluation
+
+mlflow:
+  tracking_uri_env: MLFLOW_TRACKING_URI
+  default_tracking_uri: sqlite:///mlflow.db
+  experiment_name: healthcare-readmission
+  registered_model_name: healthcare-readmission
+
+model:
+  version: 1.0.0

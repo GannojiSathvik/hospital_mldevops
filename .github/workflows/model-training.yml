@@ -1,0 +1,148 @@
+# =============================================================================
+# Model training (Lab 5 CI/CD + Lab 6 RBAC enforced in CI)
+# -----------------------------------------------------------------------------
+# Triggers: manual (workflow_dispatch) or a push to main that changes training
+# data, hyper-parameters or training code.
+#
+# Lab 6 — Access control in CI:
+#   ENFORCE_PIPELINE_RBAC=true makes pipelines.training_pipeline call
+#   require_pipeline_permission("pipeline:train") before doing any work.
+#   The pipeline reads PIPELINE_API_KEY, resolves it against API_KEYS and
+#   checks the role in configs/access_control.yaml. Only ml_engineer/admin
+#   hold "pipeline:train"; any other key -> PermissionError -> job fails.
+#
+# Repository secrets to create (Settings -> Secrets and variables -> Actions):
+#   API_KEYS          name:role:key,...   e.g. "ci-trainer:ml_engineer:<random>"
+#   PIPELINE_API_KEY  the <random> key of an ml_engineer principal
+# Generate a key with:  python -c "import secrets; print(secrets.token_urlsafe(32))"
+# Secrets are injected as env vars only into the step-level process and GitHub
+# masks them (***) in logs. We never `echo` them.
+#
+# The "rbac-negative-test" job proves the gate works: it runs the same pipeline
+# with a *viewer* key and expects it to be DENIED.
+# =============================================================================
+name: Model Training
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why are you retraining? (recorded in the run summary)"
+        required: false
+        default: "manual"
+  push:
+    branches: [main]
+    paths:
+      - "data/**.dvc"
+      - "params.yaml"
+      - "dvc.yaml"
+      - "configs/model_config.yaml"
+      - "src/models/**"
+      - "src/features/**"
+      - "pipelines/training_pipeline.py"
+      - "scripts/train.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: model-training-${{ github.ref }}
+  cancel-in-progress: false # never kill a training run half-way
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  MLFLOW_TRACKING_URI: "sqlite:///mlflow.db"
+
+jobs:
+  rbac-negative-test:
+    name: RBAC gate denies a viewer key
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ENFORCE_PIPELINE_RBAC: "true"
+      # Ephemeral, CI-only principal — not a secret; it only has model:read.
+      API_KEYS: "ci-viewer:viewer:ci-viewer-only-key"
+      PIPELINE_API_KEY: "ci-viewer-only-key"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+      - run: pip install -r requirements.txt
+      - name: Expect training to be denied for role=viewer
+        run: |
+          if python -m pipelines.training_pipeline; then
+            echo "::error::RBAC gate FAILED — viewer was allowed to train"
+            exit 1
+          fi
+          echo "RBAC gate OK — viewer denied pipeline:train"
+          grep -h '"allowed": false' logs/audit.log | tail -n 1 || true
+
+  train:
+    name: Train (ml_engineer)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    needs: [rbac-negative-test]
+    env:
+      ENFORCE_PIPELINE_RBAC: "true"
+      API_KEYS: ${{ secrets.API_KEYS }}
+      PIPELINE_API_KEY: ${{ secrets.PIPELINE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+      - run: pip install -r requirements.txt
+
+      - name: Check RBAC secrets are configured (without printing them)
+        run: |
+          if [ -z "${PIPELINE_API_KEY}" ] || [ -z "${API_KEYS}" ]; then
+            echo "::error::Secrets PIPELINE_API_KEY and API_KEYS must be set (see header comment)."
+            exit 1
+          fi
+
+      - name: Generate data
+        run: python -m scripts.generate_dataset
+      - name: Validate data (needs pipeline:validate)
+        run: python -m pipelines.validation_pipeline
+      - name: Preprocess
+        run: python -m scripts.preprocess
+      - name: Train (needs pipeline:train)
+        run: python -m pipelines.training_pipeline
+
+      - name: Run summary
+        env:
+          REASON: ${{ github.event.inputs.reason || 'push to main' }}
+        run: |
+          {
+            echo "### Model training"
+            echo "- Trigger: ${REASON}"
+            echo "- RBAC enforced: ${ENFORCE_PIPELINE_RBAC}"
+            echo '```json'
+            cat models/model_metadata.json 2>/dev/null || echo '{}'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload model artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-artifacts-${{ github.sha }}
+          path: |
+            models/
+            reports/evaluation/
+            reports/figures/
+            logs/audit.log
+          retention-days: 30
+          if-no-files-found: error

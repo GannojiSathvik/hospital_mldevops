@@ -1,0 +1,13 @@
+# Rules applied by src/data/validation.py. Errors fail the pipeline; warnings are reported.
+min_rows: 100
+max_missing_fraction: 0.20        # per column; above this => ERROR
+warn_missing_fraction: 0.05       # per column; above this => WARNING
+target:
+  allowed_values: [0, 1]
+  min_positive_rate: 0.02         # below => ERROR (cannot learn)
+  max_positive_rate: 0.60         # above => ERROR (suspicious labelling)
+  imbalance_warning_rate: 0.20    # minority class below this => WARNING (use imbalance handling)
+leakage:
+  max_abs_correlation: 0.95       # any feature this correlated with the target => ERROR
+  suspicious_name_patterns: [readmi, target, label, outcome]
+unexpected_columns: warning       # extra columns => schema change warning

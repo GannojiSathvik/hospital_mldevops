@@ -1,0 +1,30 @@
+{
+  "run_at": "2026-10-06T11:06:56.739472+00:00",
+  "forced": false,
+  "triggered_by": "local-dev (RBAC disabled)",
+  "monitoring_decision": {
+    "retrain": true,
+    "reasons": [
+      "dataset drift share 0.52 > threshold 0.30",
+      "ROC-AUC 0.542 < minimum 0.70",
+      "prediction positive-rate shift 0.516 > maximum 0.10"
+    ],
+    "evaluated_at": "2026-10-06T11:06:42.992159+00:00"
+  },
+  "n_feedback_rows_added": 500,
+  "comparison": {
+    "champion": {
+      "pr_auc": 0.454,
+      "roc_auc": 0.7648
+    },
+    "challenger": {
+      "pr_auc": 0.4288,
+      "roc_auc": 0.7574
+    },
+    "champion_recorded_pr_auc": 0.454,
+    "promote": false
+  },
+  "action": "kept_champion",
+  "reason": "challenger PR-AUC < champion PR-AUC; production model unchanged",
+  "challenger_dir": "reports/retraining/challenger_20261006T110656Z"
+}

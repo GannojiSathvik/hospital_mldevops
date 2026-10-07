@@ -1,0 +1,117 @@
+# =============================================================================
+# Local stack: API + MLflow + Prometheus + Grafana
+#   docker compose up -d --build      (or: make docker-up)
+#   API        http://localhost:8000/docs
+#   MLflow     http://localhost:5000
+#   Prometheus http://localhost:9090
+#   Grafana    http://localhost:3000   (admin password from .env GRAFANA_ADMIN_PASSWORD)
+# Secrets come from .env (git-ignored; copy .env.example). Nothing is hardcoded.
+# =============================================================================
+name: healthcare-readmission
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: healthcare-readmission-api:latest
+    container_name: readmission-api
+    env_file: .env
+    environment:
+      ENV: ${ENV:-development}
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+    ports:
+      - "8000:8000"
+    # --- runtime hardening ---
+    read_only: true # root filesystem is immutable
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    volumes:
+      # The only writable paths: logs and the inference log used for drift.
+      - api-logs:/app/logs
+      - api-inference:/app/data/inference
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    user: "10001:10001"
+    pids_limit: 256
+    mem_limit: 1g
+    cpus: 1.0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4).status == 200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    networks: [backend]
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v3.16.1
+    container_name: mlflow
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:////mlflow/mlflow.db
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0 --port 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow-data:/mlflow
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    networks: [backend]
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    container_name: prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=7d
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./infrastructure/monitoring/alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
+      - prometheus-data:/prometheus
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    depends_on: [api]
+    restart: unless-stopped
+    networks: [backend]
+
+  grafana:
+    image: grafana/grafana:12.1.1
+    container_name: grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?set GRAFANA_ADMIN_PASSWORD in .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./infrastructure/monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infrastructure/monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    security_opt:
+      - no-new-privileges:true
+    depends_on: [prometheus]
+    restart: unless-stopped
+    networks: [backend]
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  api-logs:
+  api-inference:
+  mlflow-data:
+  prometheus-data:
+  grafana-data:

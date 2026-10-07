@@ -1,0 +1,62 @@
+{
+  "model_name": "CalibratedXGBClassifier",
+  "model_version": "1.0.0",
+  "trained_at": "2026-10-06T11:07:03.901928+00:00",
+  "feature_columns": [
+    "age",
+    "gender",
+    "bmi",
+    "systolic_bp",
+    "diastolic_bp",
+    "heart_rate",
+    "blood_glucose",
+    "hba1c",
+    "cholesterol",
+    "number_of_medications",
+    "previous_admissions",
+    "length_of_stay",
+    "emergency_visits_last_year",
+    "chronic_disease_count",
+    "diabetes",
+    "hypertension",
+    "heart_disease",
+    "kidney_disease",
+    "smoking_status",
+    "alcohol_consumption",
+    "physical_activity_level",
+    "discharge_destination",
+    "follow_up_scheduled",
+    "insurance_type",
+    "admission_type"
+  ],
+  "threshold": 0.15757582833369574,
+  "metrics": {
+    "accuracy": 0.7075,
+    "precision": 0.3349,
+    "recall": 0.6971,
+    "f1": 0.4524,
+    "roc_auc": 0.7574,
+    "pr_auc": 0.4288,
+    "threshold": 0.1576,
+    "confusion_matrix": {
+      "tn": 704,
+      "fp": 288,
+      "fn": 63,
+      "tp": 145
+    }
+  },
+  "training_data_hash": "9c475baedc54940a0e3eea5195798c02be23903dfcab61ed1acd8f75bb085e1b",
+  "trained_by": "local-dev (RBAC disabled)",
+  "best_params": {
+    "subsample": 1.0,
+    "n_estimators": 150,
+    "min_child_weight": 5,
+    "max_depth": 4,
+    "learning_rate": 0.03,
+    "colsample_bytree": 1.0
+  },
+  "calibration": "isotonic",
+  "n_train_rows": 5300,
+  "mlflow_run_id": "72a27a79f2b84552a99cc5c969053cd9",
+  "mlflow_model_uri": "models:/m-8655573493d84edc968fdd4b3f8ef62a"
+}
