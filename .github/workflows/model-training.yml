@@ -64,10 +64,10 @@ jobs:
       API_KEYS: "ci-viewer:viewer:ci-viewer-only-key"
       PIPELINE_API_KEY: "ci-viewer-only-key"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
@@ -94,10 +94,10 @@ jobs:
       API_KEYS: ${{ secrets.API_KEYS }}
       PIPELINE_API_KEY: ${{ secrets.PIPELINE_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: pip
@@ -136,7 +136,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload model artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: model-artifacts-${{ github.sha }}
           path: |
