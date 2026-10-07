@@ -104,7 +104,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Trivy image scan -> SARIF (informational, all severities)
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.33.1
         with:
           image-ref: ${{ env.LOCAL_TAG }}
           format: sarif
@@ -118,7 +118,7 @@ jobs:
           category: trivy-image
 
       - name: Trivy gate — FAIL on CRITICAL vulnerabilities
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.33.1
         with:
           image-ref: ${{ env.LOCAL_TAG }}
           severity: CRITICAL
