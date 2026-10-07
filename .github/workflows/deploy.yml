@@ -80,7 +80,7 @@ jobs:
       name: staging
       url: https://staging.readmission.example.com
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       - name: Render Kubernetes manifests offline (kustomize build)
@@ -115,7 +115,7 @@ jobs:
       name: production
       url: https://readmission.example.com
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       - name: Deploy
