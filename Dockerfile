@@ -13,7 +13,7 @@
 # =============================================================================
 
 # ---------- Stage 1: builder ----------
-FROM python:3.11-slim AS builder
+FROM python:3.12-slim AS builder
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
@@ -28,7 +28,7 @@ COPY requirements-api.txt .
 RUN pip install --no-cache-dir -r requirements-api.txt
 
 # ---------- Stage 2: runtime ----------
-FROM python:3.11-slim AS runtime
+FROM python:3.12-slim AS runtime
 
 LABEL org.opencontainers.image.title="healthcare-readmission-api" \
       org.opencontainers.image.description="30-day readmission risk API (educational demo, not for clinical use)" \
