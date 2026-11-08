@@ -1,7 +1,7 @@
 {
   "model_name": "CalibratedLogisticRegression",
   "model_version": "1.0.0",
-  "trained_at": "2026-10-06T11:12:48.556083+00:00",
+  "trained_at": "2026-11-08T08:35:31.926856+00:00",
   "feature_columns": [
     "age",
     "gender",
@@ -52,6 +52,6 @@
   },
   "calibration": "isotonic",
   "n_train_rows": 4800,
-  "mlflow_run_id": "acb5c1af7d4244fb88f39f5df3599a49",
-  "mlflow_model_uri": "models:/m-b0ff67a800b5434da21715ab1791ee88"
+  "mlflow_run_id": "3be0af5f74a04b4286d98eeb990a928a",
+  "mlflow_model_uri": "models:/m-d0a580729685469fa465f2730f639262"
 }
