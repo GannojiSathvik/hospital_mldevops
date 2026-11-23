@@ -59,10 +59,10 @@ jobs:
       # would turn most of them into 429s and hide real behaviour.
       RATE_LIMIT: "100000/minute"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
@@ -120,7 +120,7 @@ jobs:
 
       - name: Upload API log (on failure)
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: dast-api-log
           path: api.log
